@@ -1,0 +1,14 @@
+<!-- Soliyog app-icon mark — exact copy of soliyog.com/icon.svg (authoritative).
+     Rising gradient line-chart + upward arrow on an amber baseline, dark rounded square. -->
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soliyog">
+  <defs>
+    <linearGradient id="soliyog-mark-grad" x1="6" y1="25" x2="26" y2="7" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#151527"/>
+  <path d="M7 24 H25" stroke="#FBBF24" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M7 19 L14 11.5 L18.5 16 L24.5 9" fill="none" stroke="url(#soliyog-mark-grad)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26.5 5.5 L18.4 6.6 L25 13.6 Z" fill="url(#soliyog-mark-grad)" stroke="url(#soliyog-mark-grad)" stroke-width="2.2" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "_comment": "Role-family -> Soliyog's generic 'what this kind of role usually tests' lines + one 'why worth a look' hook. Matched loosely against the job title (lowercased). No match -> the poster/caption omits the 'Soliyog's read' block rather than inventing intel.",
+  "data analyst": {
+    "tests": ["SQL — joins, window functions, one messy-data cleanup", "A metrics case: pick the number, then defend it", "Excel / spreadsheet modelling basics", "No DSA, no brain teasers"],
+    "read": "Fresher-friendly analyst roles are the fastest way into data — SQL + clear thinking beats a CS degree here."
+  },
+  "analyst": {
+    "tests": ["SQL basics + spreadsheet analysis", "A case: structure the problem, pick a number, defend it", "Attention to detail on a data task", "Clear written communication"],
+    "read": "Analyst roles reward structured thinking and clean work over fancy tooling — a solid fresher entry point."
+  },
+  "business analyst": {
+    "tests": ["Requirements: turn a vague ask into a spec", "Basic SQL + spreadsheet analysis", "A case: estimate, structure, recommend", "Stakeholder-comms question"],
+    "read": "BA roles reward structured thinking over tooling — good first step if you like problems more than code."
+  },
+  "software|developer|engineer|sde|programmer": {
+    "tests": ["DSA — arrays, strings, hashmaps, one medium problem", "Language fundamentals + a small debugging task", "Basic system-design conversation", "A project walkthrough — what you built and why"],
+    "read": "Fresher SWE roles still hinge on DSA + one solid project you can explain end to end."
+  },
+  "data scien|machine learning|ml engineer|ai engineer": {
+    "tests": ["Python + pandas / numpy", "ML basics: train/test split, overfitting, a metric choice", "One SQL question", "Explain a model you've actually built"],
+    "read": "Entry ML roles want practical Python and honest project stories, not paper-level theory."
+  },
+  "accountant|accounts|finance exec|bookkeep": {
+    "tests": ["Journal entries, ledgers, trial balance", "Tally / ERP + Excel", "GST & TDS basics", "A reconciliation scenario"],
+    "read": "Accounting roles are steady entry points in finance — Tally + Excel + GST basics get you in the room."
+  },
+  "equity research|research analyst|investment analyst": {
+    "tests": ["Build / read a 3-statement model", "Value a company and defend the number", "Explain a stock you'd buy and why", "Accounting adjustments"],
+    "read": "Research roles test whether you can defend a view under pressure — not just build the model."
+  },
+  "support|customer success|operations associate|process": {
+    "tests": ["A scenario: handle an upset customer / stuck process", "Basic Excel + written communication", "Prioritisation under load", "Why this role, why now"],
+    "read": "Ops and support roles are underrated first jobs — they teach you how a business actually runs."
+  }
+}

@@ -1,0 +1,4 @@
+# cached employer logos, fetched at build time via fetch-logo.mjs
+*.png
+*.svg
+!.gitignore

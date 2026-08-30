@@ -1,0 +1,22 @@
+{
+  "_comment": "Company name (as it appears on the soliyog.com listing) -> primary website domain. Used to fetch the employer logo via Brandfetch. Add a row whenever a new company comes up; if a company is missing, the poster falls back to the text-only company line.",
+  "Amazon": "amazon.com",
+  "Google": "google.com",
+  "Microsoft": "microsoft.com",
+  "Stripe": "stripe.com",
+  "CRED": "cred.club",
+  "Razorpay": "razorpay.com",
+  "Meesho": "meesho.com",
+  "Swiggy": "swiggy.com",
+  "Zomato": "zomato.com",
+  "Zluri": "zluri.com",
+  "Flipkart": "flipkart.com",
+  "PhonePe": "phonepe.com",
+  "Groww": "groww.in",
+  "Zerodha": "zerodha.com",
+  "Freshworks": "freshworks.com",
+  "Zoho": "zoho.com",
+  "Postman": "postman.com",
+  "Chargebee": "chargebee.com",
+  "Broadwings": "broadwingsdefence.com"
+}

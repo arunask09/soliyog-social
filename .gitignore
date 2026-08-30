@@ -1,0 +1,24 @@
+# --- keep the public soliyog-social repo to just the soliyog pipeline ---
+.claude/
+HANDOFF.md
+
+# leetdata content (private — not part of this repo)
+social/_index.json
+social/calendar/
+social/hn/
+social/linkedin/
+social/reddit/
+social/x/
+
+# secrets & build cruft
+**/.env
+**/.env.*
+!**/.env.example
+node_modules/
+social/soliyog/automation/log/
+social/soliyog/templates/exports/_build-*
+social/soliyog/templates/_build-*
+social/soliyog/queue/assets/_build-*
+
+.DS_Store
+**/.DS_Store

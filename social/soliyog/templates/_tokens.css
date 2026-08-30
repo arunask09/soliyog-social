@@ -1,0 +1,228 @@
+/* Soliyog social templates — shared design tokens. Source of truth: edit here, not in templates.
+   Canvas reference width 1080px; sizes tuned for that. Palette confirmed against soliyog.com. */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Anton&display=swap');
+
+:root {
+  /* Ground + surfaces */
+  --ink:          #151527;   /* site ground */
+  --ink-2:        #1a1a36;   /* glow-lit corner */
+  --panel:        #1c1c33;   /* dark card */
+  --panel-line:   #2c2c47;   /* dark card border / dividers */
+  --card:         #ffffff;   /* white info card (matches reference panels) */
+  --card-ink:     #151527;   /* text on white card */
+  --card-muted:   #5b6172;   /* muted text on white card */
+
+  /* Brand */
+  --indigo:       #6366f1;
+  --indigo-deep:  #4f46e5;
+  --teal:         #2dd4bf;
+  --teal-deep:    #0f766e;
+  --amber:        #fbbf24;   /* CORE brand colour — logo bracket, drive accents, CTAs */
+
+  /* Text on dark */
+  --text:         #f8fafc;
+  --text-muted:   #9ca3c4;   /* site lavender-grey */
+  --text-dim:     #6b7192;
+
+  --grad:      linear-gradient(120deg, #4f46e5 0%, #2dd4bf 100%);
+  --grad-flat: linear-gradient(90deg, #6366f1 0%, #2dd4bf 100%);
+  --card-shadow: 8px 8px 0 rgba(0,0,0,.30);
+
+  /* Type */
+  --font-poster:  'Anton', 'Arial Narrow', sans-serif;   /* chunky hero headline */
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --pad: 72px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.canvas {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- atmosphere (matches the site OG image) ---- */
+.topbar {                       /* full-bleed 5px gradient hairline on the top edge */
+  position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  background: var(--grad-flat); z-index: 5;
+}
+.glow {                         /* soft indigo radial, top-left */
+  position: absolute; top: -280px; left: -260px;
+  width: 760px; height: 760px; border-radius: 50%;
+  background: radial-gradient(circle, #1f1e49 0%, rgba(31,30,73,0) 70%);
+  pointer-events: none; z-index: 0;
+}
+.canvas.poster > *:not(.topbar):not(.glow):not(.skyline) { position: relative; z-index: 1; }
+
+/* ---- LIGHT THEME ---- token remap; every component reads var(--*) so this cascades.
+   Roles swap: the "card" surface becomes navy (pops on a light ground), the "panel"
+   surface becomes white, body text goes dark. */
+.canvas.light,
+.card-canvas.light {
+  --ink:        #f4f5fb;
+  --ink-2:      #eef1f8;
+  --panel:      #ffffff;
+  --panel-line: #cdd3e6;
+  --card:       #171730;
+  --card-ink:   #f8fafc;
+  --card-muted: #9aa0c4;
+  --text:       #1a1a30;
+  --text-muted: #565c78;
+  --text-dim:   #8a90a8;
+  --card-shadow: 7px 7px 0 rgba(23,23,48,.14);
+}
+.canvas.light .glow,
+.card-canvas.light .glow {
+  background: radial-gradient(circle, rgba(99,102,241,0.16) 0%, rgba(99,102,241,0) 70%);
+}
+
+/* ---- brand lockup ---- */
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand .mark { width: 46px; height: auto; flex-shrink: 0; display: block; }
+.brand .name {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 30px; letter-spacing: -0.03em; color: var(--text);
+}
+
+/* ---- kicker badge ("HIRING DRIVE") ---- */
+.kicker-badge {
+  align-self: flex-start;
+  padding: 10px 20px; border: 2px solid var(--amber); border-radius: 999px;
+  background: var(--ink);
+  font-family: var(--font-body); font-weight: 700; font-size: 20px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber);
+}
+
+/* ---- sticker card (reference drop-shadow look) ---- */
+.sticker {
+  background: var(--card); color: var(--card-ink);
+  border-radius: 22px; box-shadow: var(--card-shadow);
+  padding: 34px 38px;
+}
+.sticker--dark { background: var(--panel); color: var(--text); border: 1px solid var(--panel-line); }
+.sticker--accent { border: 3px solid var(--amber); }
+
+/* ---- ribbon ---- */
+.ribbon {
+  align-self: flex-start;
+  background: var(--grad); color: #fff;
+  padding: 14px 30px 14px 24px;
+  font-weight: 700; font-size: 24px; letter-spacing: -0.01em;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 100%, 0 100%);
+}
+
+/* ---- star divider ---- */
+.stars {
+  display: flex; align-items: center; gap: 18px;
+  font-weight: 700; font-size: 22px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.stars::before, .stars::after {
+  content: "★"; color: var(--amber); font-size: 18px; letter-spacing: 0;
+}
+.stars .line { flex: 1; height: 1px; background: var(--panel-line); }
+
+/* ---- circular icon badge ---- */
+.badge {
+  width: 62px; height: 62px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; background: var(--indigo);
+}
+.badge svg { width: 30px; height: 30px; stroke: #fff; fill: none; stroke-width: 2.2; }
+.badge--teal  { background: var(--teal-deep); }
+.badge--amber { background: var(--amber); }
+.badge--amber svg { stroke: #171730; }
+
+/* ---- info chip: uppercase label over a value ---- */
+.infochip .label {
+  font-weight: 700; font-size: 17px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 6px;
+}
+.infochip .value {
+  font-family: var(--font-display); font-weight: 500; font-size: 27px;
+  letter-spacing: -0.02em; color: var(--card-ink); line-height: 1.2;
+}
+.sticker--dark .infochip .value { color: var(--text); }
+
+/* ---- skills / bullet list ---- */
+.bullets { display: flex; flex-direction: column; gap: 14px; }
+.bullets li {
+  list-style: none; display: flex; gap: 14px; align-items: flex-start;
+  font-size: 25px; line-height: 1.35; color: var(--text);
+}
+.bullets li::before {
+  content: ""; width: 11px; height: 11px; border-radius: 3px;
+  background: var(--grad-flat); margin-top: 12px; flex-shrink: 0;
+}
+
+/* ---- bottom contact bar ---- */
+.contactbar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--panel); border: 1px solid var(--panel-line);
+  box-shadow: inset 6px 0 0 var(--amber);
+  border-radius: 16px; padding: 22px 30px 22px 36px;
+}
+.contactbar .cta {
+  font-family: var(--font-display); font-weight: 500; font-size: 26px;
+  letter-spacing: -0.02em; color: var(--text);
+}
+.contactbar .cta .arrow { color: var(--amber); }
+.contactbar .handle { font-size: 22px; color: var(--text-muted); font-weight: 500; }
+
+/* =========================================================================
+   SECONDARY / MINIMALIST CARDS  (insight-card, carousel-*, openings, role-decoded)
+   ========================================================================= */
+
+.card-canvas {                 /* used by the minimalist templates */
+  padding: 200px var(--pad) 200px;
+  justify-content: center;
+}
+.card-canvas > *:not(.topbar):not(.glow):not(.chip):not(.num):not(.footer):not(.topleft) {
+  position: relative; z-index: 1;
+}
+
+.chip {
+  position: absolute; top: var(--pad); left: var(--pad); z-index: 2;
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 12px 22px; border: 1px solid var(--panel-line); border-radius: 999px;
+  font-family: var(--font-body); font-weight: 600; font-size: 22px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted);
+}
+.chip::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: var(--grad-flat); }
+.chip.is-openings { color: var(--amber); border-color: rgba(251,191,36,.35); }
+.chip.is-openings::before { background: var(--amber); }
+
+.headline {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 68px; line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance;
+}
+.headline .accent { color: var(--teal); }
+
+.body { font-size: 30px; line-height: 1.5; color: var(--text-muted); }
+
+.footer {
+  position: absolute; left: var(--pad); right: var(--pad); bottom: var(--pad); z-index: 2;
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 26px; border-top: 1px solid var(--panel-line);
+}
+.handle { font-size: 22px; color: var(--text-dim); }
+.spacer { display: none; }
+
+.topleft { position: absolute; top: var(--pad); left: var(--pad); z-index: 2; }
+.num {
+  font-family: var(--font-display); font-weight: 700; font-size: 40px;
+  color: var(--teal); letter-spacing: -0.02em;
+}
+.rule { width: 72px; height: 4px; background: var(--grad-flat); border-radius: 2px; margin: 22px 0 38px; }
+
+.cta { font-size: 26px; font-weight: 600; color: var(--text); }
+.cta .arrow { color: var(--amber); }

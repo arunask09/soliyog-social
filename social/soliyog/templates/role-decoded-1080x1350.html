@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<link rel="stylesheet" href="_tokens.css">
+<style>
+  html, body { width: 1080px; height: 1350px; }
+  .canvas { width: 1080px; height: 1350px; }
+  .headline { font-size: 58px; margin-top: 36px; }
+  .points { margin-top: 52px; display: flex; flex-direction: column; gap: 34px; }
+  .point { display: flex; gap: 22px; align-items: flex-start; }
+  .point .dot { width: 14px; height: 14px; border-radius: 4px; background: var(--grad); margin-top: 14px; flex-shrink: 0; }
+  .point .txt { font-size: 32px; line-height: 1.45; color: var(--text); }
+  .point .txt b { color: var(--teal); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="canvas card-canvas">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <span class="chip">Role decoded</span>
+
+    <!-- EDIT: "What a <role> actually does" -->
+    <h1 class="headline">What an Equity Research Analyst actually does</h1>
+
+    <div class="points">
+      <!-- EDIT: 3 concrete day-to-day realities -->
+      <div class="point"><span class="dot"></span><span class="txt"><b>Builds and updates models.</b> Most of the week is in Excel, keeping earnings models current after company filings.</span></div>
+      <div class="point"><span class="dot"></span><span class="txt"><b>Writes the note, not just the number.</b> A recommendation nobody can follow is worthless. The argument matters as much as the target price.</span></div>
+      <div class="point"><span class="dot"></span><span class="txt"><b>Defends the call.</b> Sales and clients push back hard. You need the second- and third-order reasons ready.</span></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="footer">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Soliyog"><defs><linearGradient id="fm" x1="3" y1="28" x2="29" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#2DD4BF"/></linearGradient></defs><path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/><path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#fm)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#fm)"/></svg>
+        <span class="name">Soliyog</span>
+      </div>
+      <span class="cta">Full guide <span class="arrow">&rarr;</span> soliyog.com/guides</span>
+    </div>
+  </div>
+</body>
+</html>

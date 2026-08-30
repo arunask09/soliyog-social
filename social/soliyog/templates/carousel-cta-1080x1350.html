@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<link rel="stylesheet" href="_tokens.css">
+<style>
+  html, body { width: 1080px; height: 1350px; }
+  .canvas { width: 1080px; height: 1350px; align-items: flex-start; }
+  .headline { font-size: 64px; }
+  .body { margin-top: 28px; font-size: 30px; max-width: 90%; }
+  .ctabox {
+    margin-top: 56px;
+    padding: 36px 40px;
+    border: 1px solid var(--panel-line);
+    border-radius: 24px;
+    background: rgba(15,23,42,0.6);
+    width: 100%;
+  }
+  .ctabox .label { font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
+  .ctabox .link { margin-top: 12px; font-family: var(--font-display); font-weight: 500; font-size: 40px; letter-spacing: -0.02em; }
+  .ctabox .link .arrow { color: var(--teal); }
+</style>
+</head>
+<body>
+  <div class="canvas card-canvas">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <span class="chip">Role decoded</span>
+
+    <div class="spacer"></div>
+
+    <!-- EDIT: payoff line -->
+    <h1 class="headline">The full guide walks through <span class="accent">every round.</span></h1>
+    <p class="body">
+      Day-to-day tasks, the tools that actually matter, and the 6 questions that
+      come up in almost every data analyst interview.
+    </p>
+
+    <div class="ctabox">
+      <div class="label">Read the guide</div>
+      <!-- EDIT: specific URL, never the bare homepage -->
+      <div class="link">soliyog.com/guides/data-analyst <span class="arrow">&rarr;</span></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="footer">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Soliyog"><defs><linearGradient id="fm" x1="3" y1="28" x2="29" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#2DD4BF"/></linearGradient></defs><path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/><path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#fm)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#fm)"/></svg>
+        <span class="name">Soliyog</span>
+      </div>
+      <span class="handle">@soliyog</span>
+    </div>
+  </div>
+</body>
+</html>

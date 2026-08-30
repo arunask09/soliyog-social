@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<link rel="stylesheet" href="_tokens.css">
+<style>
+  html, body { width: 1080px; height: 1350px; }
+  .canvas { width: 1080px; height: 1350px; }
+  .num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--teal);
+    letter-spacing: -0.02em;
+  }
+  .rule { width: 72px; height: 4px; background: var(--grad); border-radius: 2px; margin: 24px 0 40px; }
+  .headline { font-size: 60px; }
+  .body { margin-top: 28px; font-size: 32px; }
+</style>
+</head>
+<body>
+  <div class="canvas card-canvas">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <div class="topleft">
+      <!-- EDIT: slide number, e.g. 01 / 05 -->
+      <span class="num">01 / 05</span>
+      <div class="rule"></div>
+    </div>
+
+    <!-- EDIT: the point -->
+    <h1 class="headline">Week one is mostly cleaning someone else's data</h1>
+
+    <!-- EDIT: 1&ndash;2 sentences of plain explanation -->
+    <p class="body">
+      Before any analysis, you're reconciling exports, fixing date formats, and
+      chasing down why two reports disagree. Interviewers test this with a messy-CSV
+      question, not a brain teaser.
+    </p>
+
+    <div class="spacer"></div>
+
+    <div class="footer">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Soliyog"><defs><linearGradient id="fm" x1="3" y1="28" x2="29" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#2DD4BF"/></linearGradient></defs><path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/><path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#fm)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#fm)"/></svg>
+        <span class="name">Soliyog</span>
+      </div>
+      <span class="handle">@soliyog</span>
+    </div>
+  </div>
+</body>
+</html>

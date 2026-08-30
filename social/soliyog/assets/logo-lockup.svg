@@ -1,0 +1,17 @@
+<!-- Soliyog horizontal lockup — header mark + wordmark. Matches the soliyog.com header.
+     Outline the text before external handoff if the renderer lacks Space Grotesk. -->
+<svg width="220" height="34" viewBox="0 0 220 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soliyog">
+  <defs>
+    <linearGradient id="soliyog-lk" x1="3" y1="30" x2="31" y2="4" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,1)">
+    <path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/>
+    <path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#soliyog-lk)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#soliyog-lk)"/>
+  </g>
+  <text x="44" y="24" font-family="'Space Grotesk','Inter',sans-serif" font-size="24" font-weight="500" letter-spacing="-0.7" fill="#F8FAFC">Soliyog</text>
+</svg>

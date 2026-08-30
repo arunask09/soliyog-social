@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<link rel="stylesheet" href="_tokens.css">
+<style>
+  html, body { width: 1080px; height: 1350px; }
+  .canvas.poster { width: 1080px; height: 1350px; --pad: 58px; gap: 26px; justify-content: center; }
+
+  .prow { display: flex; align-items: center; justify-content: space-between; }
+  .prow .brand .mark { width: 52px; }
+
+  .skyline { position: absolute; top: 0; right: 0; width: 468px; height: 640px; z-index: 0; overflow: hidden; }
+  .skyline img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 52% 58%;
+    filter: grayscale(0.15) brightness(0.7) contrast(1.05) saturate(1.15);
+    opacity: 0.78;
+  }
+  .skyline::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(220deg, rgba(21,21,39,0) 20%, #151527 74%),
+      linear-gradient(270deg, rgba(21,21,39,0) 60%, #151527 100%),
+      linear-gradient(0deg, #151527 1%, rgba(21,21,39,0) 24%),
+      linear-gradient(130deg, rgba(79,70,229,0.20), rgba(45,212,191,0.08));
+  }
+  /* light theme: brighten the photo, fade to the light ground */
+  .poster.light .skyline img { filter: grayscale(0.4) brightness(0.92) contrast(1.05); opacity: 0.5; }
+  .poster.light .skyline::after {
+    background:
+      linear-gradient(220deg, rgba(244,245,251,0) 16%, #f4f5fb 72%),
+      linear-gradient(270deg, rgba(244,245,251,0) 56%, #f4f5fb 100%),
+      linear-gradient(0deg, #f4f5fb 1%, rgba(244,245,251,0) 26%),
+      linear-gradient(130deg, rgba(99,102,241,0.16), rgba(45,212,191,0.07));
+  }
+
+  /* Hero: no card. Role on the ground, company logo block to its right. */
+  .hero { display: flex; align-items: center; justify-content: space-between; gap: 36px; padding: 6px 0 2px; }
+  .hero .role {
+    font-family: var(--font-poster); font-size: 116px; line-height: 0.88;
+    letter-spacing: 0.5px; color: var(--text); text-transform: uppercase;
+  }
+  .hero .role .l2 { display: inline-block; margin-top: 6px; }
+  .hero .role .hl {
+    background: var(--amber); padding: 4px 18px 12px; color: #171730;
+    border-radius: 12px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .hero .company {
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    flex-shrink: 0; text-align: center;
+  }
+  .hero .logo-tile {
+    width: 132px; height: 132px; border-radius: 26px; background: #fff; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 22px rgba(0,0,0,.28);
+  }
+  .hero .logo-tile img { width: 94px; height: 94px; object-fit: contain; }
+  .hero .co-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .hero .co-text b {
+    font-family: var(--font-display); font-weight: 700; font-size: 30px;
+    letter-spacing: -0.01em; color: var(--text);
+  }
+  .hero .co-text .co-city {
+    font-size: 17px; color: var(--text-muted); margin-top: 4px;
+    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
+  }
+
+  .pbody { display: grid; grid-template-columns: 1fr 468px; gap: 26px; align-items: start; }
+  .readtag {
+    font-size: 15px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--amber); margin-bottom: 14px; white-space: nowrap;
+  }
+  .factlabel {
+    font-size: 15px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 12px;
+  }
+  .pcol-left .stars { margin-bottom: 20px; }
+  .pcol-left .bullets { gap: 18px; }
+  .pcol-left .bullets li { font-size: 24px; }
+
+  .details { padding: 22px 26px; display: flex; flex-direction: column; justify-content: center; gap: 15px; }
+  .jobrow { display: flex; align-items: center; gap: 12px; }
+  .jobrow .badge { width: 40px; height: 40px; }
+  .jobrow .badge svg { width: 20px; height: 20px; }
+  .jobrow .jlabel {
+    font-size: 15px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--card-muted); width: 116px; flex-shrink: 0;
+  }
+  .jobrow .jval {
+    font-family: var(--font-display); font-weight: 500; font-size: 21px;
+    letter-spacing: -0.01em; color: var(--card-ink); line-height: 1.15;
+  }
+
+  .why { padding: 22px 30px; }
+  .why .why-title {
+    font-family: var(--font-display); font-weight: 700; font-size: 29px;
+    letter-spacing: -0.02em; margin-bottom: 18px;
+  }
+  .why .why-items { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
+  .why .wi { display: flex; align-items: center; gap: 14px; font-size: 22px; color: var(--text); }
+  .why .wi .badge { width: 48px; height: 48px; }
+  .why .wi .badge svg { width: 24px; height: 24px; }
+
+  .disclaimer {
+    font-size: 15px; color: var(--text-dim); line-height: 1.4;
+    border-top: 1px solid var(--panel-line); padding-top: 14px; margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas poster">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+    <div class="skyline"><img src="../assets/skyline-cf.jpg" alt=""></div>
+
+    <header class="prow">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Soliyog">
+          <defs><linearGradient id="m" x1="3" y1="28" x2="29" y2="4" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6366F1"/><stop offset="1" stop-color="#2DD4BF"/></linearGradient></defs>
+          <path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/>
+          <path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#m)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#m)"/>
+        </svg>
+        <span class="name">Soliyog</span>
+      </div>
+      <span class="kicker-badge" data-slot="kicker">Hiring drive</span>
+    </header>
+
+    <div class="hero">
+      <div class="role" data-slot="role">Data<br><span class="l2 hl">Analyst</span></div>
+      <div class="company" data-slot="company">
+        <span class="logo-tile"><img src="../assets/logos/razorpay.png" alt=""></span>
+        <span class="co-text"><b>Razorpay</b><span class="co-city">Bengaluru &middot; Hiring now</span></span>
+      </div>
+    </div>
+
+    <div class="ribbon" data-slot="eligibility">Freshers welcome &middot; Information Technology</div>
+
+    <div class="pbody">
+      <div class="pcol-left">
+        <div class="readtag" data-slot="readtag">Soliyog's take &mdash; not from the listing</div>
+        <div class="stars"><span data-slot="tests-title">What this role tests</span><span class="line"></span></div>
+        <ul class="bullets" data-slot="tests">
+          <li>SQL &mdash; joins, window functions, one messy-data cleanup</li>
+          <li>A metrics case: pick the number, then defend it</li>
+          <li>Excel modelling basics + a stakeholder-comms question</li>
+          <li>No DSA, no brain teasers</li>
+        </ul>
+      </div>
+      <div class="pcol-right">
+        <div class="factlabel">From the listing</div>
+        <div class="sticker details" data-slot="facts">
+          <div class="jobrow">
+            <span class="badge badge--teal"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+            <span class="jlabel">Location</span><span class="jval" data-slot="location">Coimbatore</span>
+          </div>
+          <div class="jobrow">
+            <span class="badge"><svg viewBox="0 0 24 24"><path d="M3 8h18v12H3zM8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+            <span class="jlabel">Type</span><span class="jval" data-slot="type">Contract</span>
+          </div>
+          <div class="jobrow">
+            <span class="badge"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V11M12 20V6M18 20v-8"/></svg></span>
+            <span class="jlabel">Experience</span><span class="jval" data-slot="experience">Freshers welcome</span>
+          </div>
+          <div class="jobrow" data-opt>
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8h6M9 11h6M13 8c0 3.5-4 3.5-4 3.5l4.5 4.5"/></svg></span>
+            <span class="jlabel">Salary</span><span class="jval" data-slot="salary">&#8377;12,000&ndash;15,000/mo</span>
+          </div>
+          <div class="jobrow" data-opt>
+            <span class="badge badge--amber"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+            <span class="jlabel">Apply by</span><span class="jval" data-slot="applyBy">29 Sep</span>
+          </div>
+          <div class="jobrow" data-opt>
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span class="jlabel">Posted</span><span class="jval" data-slot="posted">30 Aug</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticker sticker--dark why">
+      <div class="why-title" data-slot="why-title">Soliyog's read: why this one's worth a look</div>
+      <div class="why-items" data-slot="why">
+        <div class="wi"><span class="badge"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><span>Listing verified this week</span></div>
+        <div class="wi"><span class="badge badge--teal"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2Z"/><path d="M8 3v18"/></svg></span><span>Prep guide linked in bio</span></div>
+        <div class="wi"><span class="badge badge--amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span>Filtered for 0&ndash;2 yrs experience</span></div>
+        <div class="wi"><span class="badge"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 10l7-7 7 7"/></svg></span><span>Direct application link, no aggregator</span></div>
+      </div>
+    </div>
+
+    <div class="contactbar">
+      <span class="cta"><span data-slot="cta">soliyog.com/jobs/213</span> <span class="arrow">&rarr;</span></span>
+      <span class="handle">@soliyog</span>
+    </div>
+
+    <div class="disclaimer">
+      The facts above are from a public listing on soliyog.com. The &ldquo;Soliyog&rsquo;s read&rdquo; notes are our own.
+      Soliyog is not affiliated with or endorsed by <span data-slot="disc-company">the hiring company</span>; the logo is its owner&rsquo;s property.
+      Check their careers page before applying.
+    </div>
+  </div>
+
+  <script id="post-data" type="application/json">{}</script>
+  <script>
+  (() => {
+    let d = {};
+    try { d = JSON.parse(document.getElementById('post-data').textContent) || {}; } catch (e) {}
+    if (d.theme === 'light') document.querySelector('.canvas').classList.add('light');
+
+    // simple text/list slots
+    for (const el of document.querySelectorAll('[data-slot]')) {
+      const k = el.dataset.slot;
+      if (k === 'role' || k === 'company') continue;
+      const v = d[k];
+      if (v == null) continue;
+      el.innerHTML = Array.isArray(v) ? v.map((x) => '<li>' + x + '</li>').join('') : String(v);
+    }
+    // drop optional job-fact rows with no value
+    for (const el of document.querySelectorAll('.jobrow[data-opt]')) {
+      const k = el.querySelector('[data-slot]')?.dataset.slot;
+      if (!k || d[k] == null || d[k] === '') el.remove();
+    }
+    // role: "Data Analyst" -> Data<br><span class="l2 hl">Analyst</span>
+    if (d.role) {
+      const w = String(d.role).trim().split(/\s+/);
+      document.querySelector('.role').innerHTML = w.length > 1
+        ? w.slice(0, -1).join(' ') + '<br><span class="l2 hl">' + w[w.length - 1] + '</span>'
+        : '<span class="l2 hl">' + w[0] + '</span>';
+    }
+    // company lockup
+    const c = document.querySelector('[data-slot="company"]');
+    if (c && d.company) {
+      const tile = c.querySelector('.logo-tile');
+      if (d.logo) tile.querySelector('img').src = d.logo;
+      else if ('logo' in d) tile.remove();
+      c.querySelector('b').textContent = d.company;
+      if (d.companyCity) c.querySelector('.co-city').textContent = d.companyCity;
+    }
+  })();
+  </script>
+</body>
+</html>

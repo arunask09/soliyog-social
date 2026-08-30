@@ -1,0 +1,35 @@
+name: daily-post
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 09:00 IST
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: post a specific queue slug (optional)
+        required: false
+
+concurrency: soliyog-post
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+      - name: post
+        working-directory: social/soliyog/automation
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GH_REPO: ${{ secrets.GH_REPO }}
+          CHROME: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          git config user.name  "soliyog-bot"
+          git config user.email "bot@users.noreply.github.com"
+          node post.mjs ${{ inputs.slug && format('--slug {0}', inputs.slug) || '' }}

@@ -1,0 +1,53 @@
+<!-- Soliyog skyline — geometric glass-tower cluster for the drive poster's top-right corner.
+     Assertive night-skyline: towers a clear step above the ground, indigo glow behind,
+     mullion + floor grid, a few teal/amber lit windows. Fades to ground at the bottom. -->
+<svg width="440" height="620" viewBox="0 0 440 620" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <radialGradient id="sky-glow" cx="0.55" cy="0.30" r="0.6">
+      <stop offset="0" stop-color="#2b2a63" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#2b2a63" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sky-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.68" stop-color="#151527" stop-opacity="0"/>
+      <stop offset="1" stop-color="#151527" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="sky-fade-l" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#151527" stop-opacity="1"/>
+      <stop offset="0.28" stop-color="#151527" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sky-crown" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="440" height="620" fill="url(#sky-glow)"/>
+
+  <g stroke="#4d4d7a" stroke-width="1.6">
+    <rect x="40"  y="170" width="104" height="450" fill="#26264a"/>
+    <rect x="140" y="64"  width="128" height="556" fill="#343460"/>
+    <rect x="264" y="130" width="100" height="490" fill="#2c2c54"/>
+    <rect x="358" y="210" width="80"  height="410" fill="#20203f"/>
+    <rect x="8"   y="310" width="66"  height="310" fill="#30305a"/>
+  </g>
+
+  <g stroke="#606094" stroke-width="1" opacity="0.6">
+    <path d="M140 108h128M140 158h128M140 208h128M140 258h128M140 308h128M140 358h128M140 408h128M140 458h128M140 508h128"/>
+    <path d="M176 64v556M208 64v556M240 64v556"/>
+    <path d="M40 214h104M40 264h104M40 314h104M40 364h104M40 414h104M40 464h104M40 514h104M74 170v450M110 170v450"/>
+    <path d="M264 176h100M264 226h100M264 276h100M264 326h100M264 376h100M264 426h100M300 130v490M332 130v490"/>
+  </g>
+
+  <rect x="140" y="64" width="128" height="8" fill="url(#sky-crown)"/>
+
+  <g>
+    <rect x="188" y="126" width="14" height="20" fill="#FBBF24" opacity="0.9"/>
+    <rect x="216" y="286" width="14" height="20" fill="#2DD4BF" opacity="0.85"/>
+    <rect x="66"  y="270" width="12" height="18" fill="#2DD4BF" opacity="0.7"/>
+    <rect x="312" y="242" width="12" height="18" fill="#FBBF24" opacity="0.7"/>
+    <rect x="102" y="392" width="12" height="18" fill="#FBBF24" opacity="0.45"/>
+  </g>
+
+  <rect x="0" y="0" width="440" height="620" fill="url(#sky-fade)"/>
+  <rect x="0" y="0" width="440" height="620" fill="url(#sky-fade-l)"/>
+</svg>

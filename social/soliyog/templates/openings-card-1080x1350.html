@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<link rel="stylesheet" href="_tokens.css">
+<style>
+  html, body { width: 1080px; height: 1350px; }
+  .canvas { width: 1080px; height: 1350px; }
+  .headline { font-size: 60px; margin-top: 36px; }
+  .list { margin-top: 48px; display: flex; flex-direction: column; }
+  .role {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 26px 0;
+    border-top: 1px solid var(--panel-line);
+  }
+  .role:last-child { border-bottom: 1px solid var(--panel-line); }
+  .role .title { font-family: var(--font-display); font-weight: 500; font-size: 34px; letter-spacing: -0.02em; }
+  .role .meta { font-size: 24px; color: var(--text-muted); white-space: nowrap; }
+  .ctabox { margin-top: 44px; }
+  .ctabox .label { font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
+  .ctabox .link { margin-top: 10px; font-family: var(--font-display); font-weight: 500; font-size: 34px; letter-spacing: -0.02em; }
+  .ctabox .link .arrow { color: var(--amber); }
+</style>
+</head>
+<body>
+  <div class="canvas card-canvas">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <span class="chip is-openings">Open this week</span>
+
+    <!-- EDIT: count + role + qualifier -->
+    <h1 class="headline">5 data analyst roles hiring freshers</h1>
+
+    <div class="list">
+      <!-- EDIT rows: title / company &middot; city -->
+      <div class="role"><span class="title">Junior Data Analyst</span><span class="meta">Zluri &middot; Bengaluru</span></div>
+      <div class="role"><span class="title">Analyst, Business Intelligence</span><span class="meta">CRED &middot; Bengaluru</span></div>
+      <div class="role"><span class="title">Data Analyst (0&ndash;1 yr)</span><span class="meta">Meesho &middot; Remote</span></div>
+      <div class="role"><span class="title">Associate Analyst</span><span class="meta">Razorpay &middot; Bengaluru</span></div>
+      <div class="role"><span class="title">Reporting Analyst</span><span class="meta">Swiggy &middot; Gurugram</span></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="ctabox">
+      <div class="label">Apply &middot; all links in one place</div>
+      <!-- EDIT: filtered listing URL, not the homepage -->
+      <div class="link">soliyog.com/jobs/data-analyst <span class="arrow">&rarr;</span></div>
+    </div>
+
+    <div class="footer" style="margin-top:36px;">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Soliyog"><defs><linearGradient id="fm" x1="3" y1="28" x2="29" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#2DD4BF"/></linearGradient></defs><path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/><path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#fm)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#fm)"/></svg>
+        <span class="name">Soliyog</span>
+      </div>
+      <span class="handle">@soliyog</span>
+    </div>
+  </div>
+</body>
+</html>
