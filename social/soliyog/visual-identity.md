@@ -7,7 +7,9 @@ the minimalist cards are secondary.
 
 ## Quick reference
 
-- **Ground:** `#151527` (site value, confirmed from `icon.svg` + OG image)
+- **Ground:** `#151527` (site value, confirmed from the OG image + rendered header).
+  Note: `soliyog.com/icon.svg` (the favicon) is a **stale, older mark** — do not treat it
+  as the logo source. The live site **header** logo is authoritative (see §3).
 - **Gradient:** indigo `#6366F1` → teal `#2DD4BF`
 - **Amber `#FBBF24`:** a **core brand colour** — it's in the logo. Used for the logo bracket,
   drive accents, CTAs, the hero highlight block. (Earlier "openings only" rule is retired.)
@@ -62,22 +64,36 @@ for the top hairline. In the logo, badges, chips, ribbons. Never a text fill.
 
 ## 3. Logo
 
-Two official lockups, both from soliyog.com:
+**One authoritative mark: the live soliyog.com header logo** (SVG paths verified against the
+rendered site on 2026-08-30). The figure (gradient head dot + rising zigzag body) + teal
+arrowhead, seated on an **amber L-bracket** (the two chart axes). `soliyog.com/icon.svg` is an
+older, simpler mark (no head, no bracket, flat baseline) that the site never updated — **ignore
+it.**
 
-### App-icon — `assets/mark.svg` (exact copy of `soliyog.com/icon.svg`)
-Dark rounded square, gradient zigzag line + arrow, flat amber baseline bar. Use for
-**avatars and favicons** (LinkedIn / Instagram / X profile pictures, browser tab).
+### Header mark — `assets/mark-header.svg`
+The mark, no container. Use **on dark canvases** — every post footer, the poster header, the
+profile avatar. `assets/logo-lockup.svg` adds the "Soliyog" wordmark (Space Grotesk Medium,
+`-0.03em`, `#F8FAFC`).
 
-### Header mark — `assets/mark-header.svg` + `assets/logo-lockup.svg`
-The figure (head circle + rising zigzag body) + upward arrow in the gradient, seated on an
-**amber L-bracket** (the two chart axes). No container. Use **on dark canvases** — every post
-footer, the poster header. `logo-lockup.svg` adds the "Soliyog" wordmark (Space Grotesk
-Medium, `-0.03em`, `#F8FAFC`).
+### Filled tile — `assets/mark-tile.svg` (was `mark.svg`)
+The same mark inset on a `#151527` rounded square (`rx 7`). Use only where a self-contained
+icon tile is needed against a non-brand background (e.g. an app-store listing, a light page).
+On a `#151527` canvas it is visually identical to the bare header mark — prefer the header mark.
+
+### Avatars / profile pictures
+Instagram / Facebook / LinkedIn / X all circle-crop. Use the **bare header mark, centred on
+`#151527`**, ~⅔ of the frame — `templates/profile-avatar-1080x1080.html` (→
+`assets/profile/ig-profile-picture.{png,jpg}`). Do **not** use a square tile; the platforms add
+their own circle.
+
+### Facebook cover — `templates/fb-cover-1640x624.html`
+Centred lockup + rule + one-line positioning + `soliyog.com`, all inside the ~1120px zone that
+survives both the mobile and desktop crops. → `assets/profile/fb-cover.{png,jpg}`.
 
 **Meaning:** a fresher on an upward trajectory — the body *is* the growth line.
 
 **Rules:** never recolour the gradient · never rotate · clear space = height of the arrowhead ·
-minimum 24px (app-icon) / 32px (header mark) · don't box the header mark in a square.
+minimum 24px · don't box the mark in a square except via `mark-tile.svg` as above.
 
 ---
 
@@ -153,8 +169,13 @@ day — dark one day, light the next.**
 ## 6. Secondary / minimalist cards
 
 `insight-card-*`, `carousel-cover/point/cta`, `openings-card`, `role-decoded` — retuned to the
-`#151527` palette with the top hairline, glow, and real footer mark. Same use as before:
+`#151527` palette with the top hairline, glow, and footer mark. Same use as before:
 single insights, teardown carousels, weekly openings round-up. Layout unchanged.
+
+> **Known drift:** these 9 templates (+ both `drive-poster` files) still carry the *earlier
+> reconstructed* footer mark geometry (`M5 28 H24 V12` bracket, flat-indigo head). The
+> verified live mark now lives in `assets/mark-header.svg` / `logo-lockup.svg` / the profile
+> templates. Sync the inline footer `<svg>` in all 11 to the verified paths on the next pass.
 
 ---
 
@@ -169,10 +190,23 @@ cd social/soliyog/templates
 `render.sh` reads the pixel size from the filename and screenshots via headless Chrome at 2×.
 Edit the `<!-- EDIT -->` / `data-slot` spots, re-render.
 
+**Profile assets** (one-off, not in the daily pipeline):
+```bash
+./render.sh profile-avatar-1080x1080.html fb-cover-1640x624.html
+# Meta rejects SVG; upload JPG. Flatten each PNG → JPG and copy to assets/profile/:
+sips -s format jpeg -s formatOptions 92 exports/profile-avatar-1080x1080.png \
+     --out ../assets/profile/ig-profile-picture.jpg
+sips -s format jpeg -s formatOptions 92 exports/fb-cover-1640x624.png \
+     --out ../assets/profile/fb-cover.jpg
+```
+`assets/profile/` holds the upload-ready files (`ig-profile-picture`, `fb-cover`), PNG + JPG.
+
 ---
 
 ## 8. Open items
 
+- **Sync the footer mark** in the 9 secondary cards + 2 drive posters to the verified live
+  paths (see §6 "Known drift").
 - App-icon mark on a light background (white knockout) — when a light context appears
 - Real handle names once accounts are secured (templates say `@soliyog`)
 - Confirm real guide + listing URL patterns for CTAs

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1640, initial-scale=1.0">
+<link rel="stylesheet" href="_tokens.css">
+<style>
+  html, body { width: 1640px; height: 624px; }
+  .canvas { width: 1640px; height: 624px; padding: 0; align-items: center; justify-content: center; background: #151527; }
+  .glow { top: -320px; left: -220px; width: 900px; height: 900px; }
+
+  /* mobile-safe zone ≈ centred 1120px; desktop profile-pic sits bottom-left — keep all
+     content centred and vertically middle so both crops keep it. */
+  .wrap { width: 1120px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+
+  .lockup { display: flex; align-items: center; gap: 26px; }
+  .lockup svg { width: 108px; height: 108px; display: block; }
+  .lockup .name {
+    font-family: var(--font-display); font-weight: 500; font-size: 84px;
+    letter-spacing: -0.03em; color: var(--text);
+  }
+  .rule { width: 132px; height: 4px; background: var(--grad-flat); border-radius: 2px; margin: 30px 0 26px; }
+  .tag {
+    font-family: var(--font-display); font-weight: 500; font-size: 33px;
+    letter-spacing: -0.01em; line-height: 1.4; color: var(--text-muted); max-width: 940px;
+  }
+  .tag b { color: var(--text); font-weight: 700; }
+  .url {
+    margin-top: 28px; font-family: var(--font-body); font-weight: 700; font-size: 22px;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--amber);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas poster">
+    <div class="topbar"></div>
+    <div class="glow"></div>
+
+    <div class="wrap">
+      <div class="lockup">
+        <svg viewBox="1.7 2.75 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soliyog">
+          <defs>
+            <linearGradient id="c" x1="4" y1="27" x2="27" y2="5" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/><stop offset="1" stop-color="#2dd4bf"/>
+            </linearGradient>
+          </defs>
+          <path d="M12.5 27 H27 V12.5" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5 24.5 L13 15.5 L18 20.5 L24.7 10.3" fill="none" stroke="url(#c)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 5.6 L20.2 6 L25.7 13.6 Z" fill="url(#c)" stroke="url(#c)" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="11.6" cy="8.4" r="3.4" fill="url(#c)"/>
+        </svg>
+        <span class="name">Soliyog</span>
+      </div>
+
+      <div class="rule"></div>
+
+      <p class="tag">Real IT &amp; finance jobs for Indian freshers.<br><b>Straight talk on what recruiters actually test.</b></p>
+
+      <div class="url">soliyog.com</div>
+    </div>
+  </div>
+</body>
+</html>

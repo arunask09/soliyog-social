@@ -1,0 +1,19 @@
+<!-- Soliyog filled tile — the live soliyog.com header logo (verified 2026-08-30) inset on a
+     #151527 rounded square. Use ONLY where a self-contained icon tile is needed against a
+     non-brand background. On a #151527 canvas prefer the bare mark-header.svg.
+     (soliyog.com/icon.svg is an older simplified mark — ignore it; this is the current logo.) -->
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soliyog">
+  <defs>
+    <linearGradient id="soliyog-mark" x1="4" y1="27" x2="27" y2="5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#151527"/>
+  <g transform="translate(3.15 2.4) scale(0.82)">
+    <path d="M12.5 27 H27 V12.5" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 24.5 L13 15.5 L18 20.5 L24.7 10.3" fill="none" stroke="url(#soliyog-mark)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 5.6 L20.2 6 L25.7 13.6 Z" fill="url(#soliyog-mark)" stroke="url(#soliyog-mark)" stroke-width="2.6" stroke-linejoin="round"/>
+    <circle cx="11.6" cy="8.4" r="3.4" fill="url(#soliyog-mark)"/>
+  </g>
+</svg>

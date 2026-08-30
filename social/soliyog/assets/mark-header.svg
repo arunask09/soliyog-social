@@ -1,19 +1,15 @@
-<!-- Soliyog header mark — the no-square lockup mark used on dark brand canvases.
-     Figure (head + rising zigzag body) + upward arrow in the indigo->teal gradient,
-     seated on an amber L-bracket (chart axes). Reconstructed from soliyog.com header + icon.svg. -->
-<svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soliyog">
+<!-- Soliyog mark — EXACT copy of the live soliyog.com header logo (2026-08-30).
+     Gradient dot + rising zigzag + arrowhead, seated in an amber L-bracket (chart axes).
+     No-square variant: use on dark brand canvases / post footers / lockups. -->
+<svg width="34" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soliyog">
   <defs>
-    <linearGradient id="soliyog-hdr" x1="3" y1="28" x2="29" y2="4" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6366F1"/>
-      <stop offset="1" stop-color="#2DD4BF"/>
+    <linearGradient id="soliyog-mark" x1="4" y1="27" x2="27" y2="5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
     </linearGradient>
   </defs>
-  <!-- amber L-bracket: one rounded corner, bottom rail + right rail -->
-  <path d="M5 28 H24 V12" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- head -->
-  <circle cx="8.6" cy="7.6" r="3.1" fill="#6366F1"/>
-  <!-- rising zigzag body -->
-  <path d="M4 23.5 L11 12.5 L16 17.5 L25 6.5" fill="none" stroke="url(#soliyog-hdr)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- arrowhead -->
-  <path d="M27.5 4 L19 5.4 L25.6 12.6 Z" fill="url(#soliyog-hdr)"/>
+  <path d="M12.5 27 H27 V12.5" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5 24.5 L13 15.5 L18 20.5 L24.7 10.3" fill="none" stroke="url(#soliyog-mark)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 5.6 L20.2 6 L25.7 13.6 Z" fill="url(#soliyog-mark)" stroke="url(#soliyog-mark)" stroke-width="2.6" stroke-linejoin="round"/>
+  <circle cx="11.6" cy="8.4" r="3.4" fill="url(#soliyog-mark)"/>
 </svg>
