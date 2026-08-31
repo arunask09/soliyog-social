@@ -7,11 +7,13 @@
  *
  * Reads queue/<slug>.md front-matter: source_url (required), theme (dark|light), date,
  * role_tests + soliyog_read (per-post, authored from the listing), kicker (optional).
- * Output: queue/assets/<date>-<slug>.png
+ * Output: queue/assets/<date>-<slug>.png   (2160x2700, for Facebook /photos)
+ *         queue/assets/<date>-<slug>.jpg   (1080x1350, for Instagram /media — JPEG only)
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
+import sharp from 'sharp';
 import { HERE, readItem } from './lib.mjs';
 import { fetchJob } from './lib-job.mjs';
 
@@ -82,6 +84,18 @@ try {
 const outDir = resolve(HERE, '../queue/assets');
 mkdirSync(outDir, { recursive: true });
 const rendered = resolve(HERE, '../templates/exports', buildName.replace('.html', '.png'));
-const dest = resolve(outDir, `${front.date || 'nd'}-${slug}.png`);
-renameSync(rendered, dest);
-console.log(`OK  ${dest}`);
+const base = `${front.date || 'nd'}-${slug}`;
+
+// Facebook: the full 2x PNG.
+const destPng = resolve(outDir, `${base}.png`);
+renameSync(rendered, destPng);
+console.log(`OK  ${destPng}`);
+
+// Instagram: JPEG only, width <= 1440, aspect 4:5..1.91:1. 1080x1350 is IG's native portrait.
+const destJpg = resolve(outDir, `${base}.jpg`);
+await sharp(destPng)
+  .resize(1080, 1350, { fit: 'cover' })
+  .flatten({ background: '#ffffff' })
+  .jpeg({ quality: 88, chromaSubsampling: '4:2:0', mozjpeg: true })
+  .toFile(destJpg);
+console.log(`OK  ${destJpg}  (${(statSync(destJpg).size / 1024).toFixed(0)} KB)`);
