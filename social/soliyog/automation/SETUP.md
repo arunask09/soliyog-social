@@ -23,12 +23,13 @@ Creator accounts can't use `instagram_content_publish`.
    (Full control / Manage). **Generate token** → expiration **Never** → scopes:
    `pages_show_list, pages_read_engagement, pages_manage_posts, instagram_basic,
    instagram_content_publish, business_management`.
-6. Get `IG_USER_ID`:
+   The system user needs an **app role** (Add assets → Apps → Soliyog-poster → Full control)
+   or the token wizard shows "No permissions available". The IG scopes only appear once the
+   app has the "Instagram API with Facebook Login" product and the IG account is assigned.
+6. `IG_USER_ID` is **`17841433325332630`** (`@soliyog`), resolved via:
    ```
    curl "https://graph.facebook.com/v21.0/1289252704274108?fields=instagram_business_account&access_token=<TOKEN>"
    ```
-   No `instagram_business_account` field → the IG↔Page link isn't visible to the token;
-   re-check the system user has the IG account assigned.
 
 > Meta may require **Business Verification** of the Portfolio (Security Center → Start
 > verification) before issuing the token or allowing `instagram_content_publish`.
@@ -46,9 +47,9 @@ Creator accounts can't use `instagram_content_publish`.
 
 `social/soliyog/automation/.env` (git-ignored — the assistant can't create it):
 ```
-META_TOKEN=<never-expiring system-user token>
+META_TOKEN=<never-expiring system-user token — regenerate, don't reuse a pasted one>
 FB_PAGE_ID=1289252704274108
-IG_USER_ID=<from step 6>
+IG_USER_ID=17841433325332630
 GH_REPO=<your-user>/soliyog-social
 BRANDFETCH_CLIENT_ID=       # optional, for employer logos
 CF_ACCOUNT_ID=             # optional, unused AI-image scripts
