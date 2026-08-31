@@ -2,34 +2,33 @@
 
 One-time steps you (the human) do. After this, the pipeline runs itself.
 
-Business Portfolio: `1580269793646236` · Facebook Page asset: `1323735410817115`.
+Business Portfolio: **Soliyog** `1087217197161361` · Facebook Page: **Soliyog** `1289252704274108`
+· Instagram `soliyog` (already connected to the Page) · Ad account `5141323442652641`.
 
-## 1. Instagram → Professional, linked to the Page
+## 1. Instagram → Business, linked to the Page  ✅ done
 
-1. IG app → Settings → *Account type and tools* → **Switch to professional → Business**.
-   A personal IG account cannot be used by the API (this is the cause of the
-   "Instagram username or password provided are invalid" error).
-2. Temporarily disable 2FA on the IG account while linking.
-3. business.facebook.com → *Business settings → Accounts → Instagram accounts → Add* →
-   log in. Then add that IG account to the Page's connected assets. Confirm the Page and
-   the IG account are both owned by Portfolio `1580269793646236`.
+The `soliyog` IG account is already connected to the Soliyog Page (Settings → Accounts →
+Pages → Soliyog → Connected assets). Just confirm it's a **Business** account (IG app →
+Settings → For professionals → Account type and tools — it should offer "Switch to Creator").
+Creator accounts can't use `instagram_content_publish`.
 
 ## 2. Developer app + token
 
-4. developers.facebook.com → **Create App → Business** → attach Portfolio `1580269793646236`.
-   Keep it **In development** (posting to your own assets needs no App Review). Add products
-   **Instagram** — pick the *"Instagram API with Facebook Login"* path, **not** *"Instagram
-   API with Instagram Login"* — and **Facebook Login for Business**.
-5. Business settings → **System users → Add** (`soliyog-poster`, Admin). Assign the Page,
-   the IG account, and the app to it. **Generate token** → expiration **Never** → scopes:
+4. developers.facebook.com → **Create App → Business** → attach Portfolio **Soliyog**
+   (`1087217197161361`). Keep it **In development** (posting to your own assets needs no App
+   Review). Add products **Instagram** — pick the *"Instagram API with Facebook Login"* path,
+   **not** *"Instagram API with Instagram Login"* — and **Facebook Login for Business**.
+5. Business settings → **Users → System users → Add** (`soliyog-poster`, Admin). Select it →
+   **Assign assets** → add the Soliyog Page, the `soliyog` Instagram account, and the app
+   (Full control / Manage). **Generate token** → expiration **Never** → scopes:
    `pages_show_list, pages_read_engagement, pages_manage_posts, instagram_basic,
    instagram_content_publish, business_management`.
-6. Get the IDs:
+6. Get `IG_USER_ID`:
    ```
-   curl "https://graph.facebook.com/v21.0/me/accounts?access_token=<TOKEN>"                       # -> FB_PAGE_ID (expect 1323735410817115)
-   curl "https://graph.facebook.com/v21.0/1323735410817115?fields=instagram_business_account&access_token=<TOKEN>"   # -> IG_USER_ID
+   curl "https://graph.facebook.com/v21.0/1289252704274108?fields=instagram_business_account&access_token=<TOKEN>"
    ```
-   No `instagram_business_account` field → the IG↔Page link (step 3) didn't take; redo it.
+   No `instagram_business_account` field → the IG↔Page link isn't visible to the token;
+   re-check the system user has the IG account assigned.
 
 > Meta may require **Business Verification** of the Portfolio (Security Center → Start
 > verification) before issuing the token or allowing `instagram_content_publish`.
@@ -48,7 +47,7 @@ Business Portfolio: `1580269793646236` · Facebook Page asset: `1323735410817115
 `social/soliyog/automation/.env` (git-ignored — the assistant can't create it):
 ```
 META_TOKEN=<never-expiring system-user token>
-FB_PAGE_ID=1323735410817115
+FB_PAGE_ID=1289252704274108
 IG_USER_ID=<from step 6>
 GH_REPO=<your-user>/soliyog-social
 BRANDFETCH_CLIENT_ID=       # optional, for employer logos
