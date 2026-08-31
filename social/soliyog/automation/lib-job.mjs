@@ -50,6 +50,14 @@ export async function fetchJob(idOrUrl) {
   // experience
   let experience = descField('Experience').replace(/\s*years?\b/i, ' yrs').replace(/\s+/g, ' ').trim();
   if (/^0\s*yrs|^fresh/i.test(experience)) experience = 'Freshers welcome';
+  // Guard: a description that spells out "N years experience" must not be downgraded to
+  // "Freshers welcome" by a JSON-LD experienceRequirements.monthsOfExperience of 0.
+  if (!experience) {
+    const ym = descriptionText.match(
+      /(\d{1,2})\s*(?:\+|-|–|to|and)?\s*(\d{1,2})?\+?\s*years?['’]?\s+(?:[\w-]+\s+){0,3}?experience/i,
+    );
+    if (ym && +ym[1] > 0) experience = ym[2] && +ym[2] > +ym[1] ? `${ym[1]}–${ym[2]} yrs` : `${ym[1]}+ yrs`;
+  }
   if (!experience) {
     const months = ld.experienceRequirements?.monthsOfExperience;
     if (typeof months === 'number') {

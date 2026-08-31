@@ -12,10 +12,8 @@ caption_instagram: |
   
   Location: Bengaluru
   Type: Full-time
-  Experience: Freshers welcome
+  Experience: 5–10 yrs
   Apply by: 12 Oct
-  
-  Soliyog's read: Fresher SWE roles still hinge on DSA + one solid project you can explain end to end.
   
   Full listing and how to apply — link in bio.
   Not affiliated with Point72. Check their careers page before applying.
@@ -26,10 +24,8 @@ caption_facebook: |
   
   Location: Bengaluru
   Type: Full-time
-  Experience: Freshers welcome
+  Experience: 5–10 yrs
   Apply by: 12 Oct
-  
-  Soliyog's read: Fresher SWE roles still hinge on DSA + one solid project you can explain end to end.
   
   Full listing and how to apply: https://www.soliyog.com/jobs/4
   Not affiliated with Point72. Check their careers page before applying.
@@ -40,10 +36,8 @@ caption_linkedin: |
   
   Location: Bengaluru
   Type: Full-time
-  Experience: Freshers welcome
+  Experience: 5–10 yrs
   Apply by: 12 Oct
-  
-  Soliyog's read: Fresher SWE roles still hinge on DSA + one solid project you can explain end to end.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
