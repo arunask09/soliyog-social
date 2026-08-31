@@ -3,12 +3,7 @@
 HANDOFF.md
 
 # leetdata content (private — not part of this repo)
-social/_index.json
-social/calendar/
-social/hn/
-social/linkedin/
-social/reddit/
-social/x/
+social/leetdata/
 
 # secrets & build cruft
 **/.env
