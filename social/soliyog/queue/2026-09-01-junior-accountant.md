@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-01-junior-accountant
 date: 2026-09-01
-status: draft
+status: approved
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/145

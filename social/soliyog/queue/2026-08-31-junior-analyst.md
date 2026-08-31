@@ -1,7 +1,7 @@
 ---
 slug: 2026-08-31-junior-analyst
 date: 2026-08-31
-status: draft
+status: approved
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/213
