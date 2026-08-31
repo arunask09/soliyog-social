@@ -1,7 +1,7 @@
 ---
 slug: 2026-08-31-junior-analyst
 date: 2026-08-31
-status: approved
+status: failed
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/213
@@ -59,7 +59,7 @@ caption_linkedin: |
   Not affiliated with Objectways. Check their careers page before applying.
   
   #junioranalyst #fresherjobs
-image_url:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@eb4d23f5224386e0a7ddc1597ae9a0d3130fe2ed/social/soliyog/queue/assets/2026-08-31-2026-08-31-junior-analyst.jpg
 posted_at:
 post_ids:
 ---
