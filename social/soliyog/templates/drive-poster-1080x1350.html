@@ -42,7 +42,9 @@
     letter-spacing: 0.5px; color: var(--text); text-transform: uppercase;
     min-width: 0; overflow-wrap: break-word;
   }
-  .hero .role .l2 { display: inline-block; margin-top: 6px; }
+  /* each logical line stays on one row; the fit script below shrinks font-size to suit */
+  .hero .role .l1, .hero .role .l2 { display: inline-block; white-space: nowrap; }
+  .hero .role .l2 { margin-top: 6px; }
   .hero .role .hl {
     background: var(--amber); padding: 4px 18px 12px; color: #171730;
     border-radius: 12px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
@@ -223,13 +225,6 @@
     // no per-post "why" read -> drop the whole block; no tests -> drop the left column
     if (!d.why) document.querySelector('.why')?.remove();
     if (Array.isArray(d.tests) && d.tests.length === 0) document.querySelector('.pcol-left')?.remove();
-    // role: "Data Analyst" -> Data<br><span class="l2 hl">Analyst</span>
-    if (d.role) {
-      const w = String(d.role).trim().split(/\s+/);
-      document.querySelector('.role').innerHTML = w.length > 1
-        ? w.slice(0, -1).join(' ') + '<br><span class="l2 hl">' + w[w.length - 1] + '</span>'
-        : '<span class="l2 hl">' + w[0] + '</span>';
-    }
     // company lockup
     const c = document.querySelector('[data-slot="company"]');
     if (c && d.company) {
@@ -240,6 +235,26 @@
       b.textContent = d.company;
       b.classList.toggle('long', d.company.length > 20);
       if (d.companyCity) c.querySelector('.co-city').textContent = d.companyCity;
+    }
+    // role: "Cloud Computing Engineer" -> Cloud Computing<br><span class="l2 hl">Engineer</span>
+    // Runs after the company lockup so the space it leaves is known, then shrinks the
+    // hero type until each logical line fits on one row (keeps every poster to 2 lines).
+    if (d.role) {
+      const w = String(d.role).trim().split(/\s+/);
+      const roleEl = document.querySelector('.role');
+      roleEl.innerHTML = w.length > 1
+        ? '<span class="l1">' + w.slice(0, -1).join(' ') + '</span><br><span class="l2 hl">' + w[w.length - 1] + '</span>'
+        : '<span class="l2 hl">' + w[0] + '</span>';
+      const hero = roleEl.parentElement;
+      const gap = parseFloat(getComputedStyle(hero).columnGap || getComputedStyle(hero).gap) || 36;
+      const parts = roleEl.querySelectorAll('span');
+      for (let fs = 116; fs >= 60; fs -= 2) {
+        roleEl.style.fontSize = fs + 'px';
+        const avail = hero.clientWidth - (c ? c.offsetWidth : 0) - gap - 4;
+        let fits = true;
+        for (const p of parts) if (p.scrollWidth > avail) { fits = false; break; }
+        if (fits) break;
+      }
     }
   })();
   </script>
