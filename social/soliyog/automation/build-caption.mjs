@@ -3,40 +3,39 @@
  * Build the FB / IG / LinkedIn captions for a queued post, in Soliyog voice
  * (brand-guidelines.md: calm, factual, <=1 emoji, no fake urgency, 2 hashtags).
  * Facts come only from the soliyog.com listing (via lib-job.mjs). The one
- * "Soliyog's read" line is a generic-by-role note from role-notes.json, or omitted.
+ * "Soliyog's read" line is the per-post soliyog_read note (authored from the
+ * listing in queue/<slug>.md front-matter), or omitted when there's none.
  *
- *   node build-caption.mjs <job url or id>      # prints the three captions
+ *   node build-caption.mjs <job url or id>      # prints the three captions (no read line)
  *   node build-caption.mjs <slug> --write       # writes them into queue/<slug>.md
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { fetchJob } from './lib-job.mjs';
+import { parseFront } from './lib.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const notes = JSON.parse(readFileSync(resolve(here, 'role-notes.json'), 'utf8'));
 
 const arg = process.argv[2];
 const write = process.argv.includes('--write');
 if (!arg) { console.error('usage: build-caption.mjs <job url|id|slug> [--write]'); process.exit(1); }
 
-// resolve a source_url: direct id/url, or a queue slug
+// resolve a source_url: direct id/url, or a queue slug (which also carries soliyog_read)
 let src = arg;
+let front = {};
 if (!/^\d+$|soliyog\.com\/jobs\//.test(arg)) {
   const qf = resolve(here, `../queue/${arg}.md`);
   if (!existsSync(qf)) { console.error(`no queue file queue/${arg}.md`); process.exit(1); }
-  src = readFileSync(qf, 'utf8').match(/^source_url:\s*(\S+)/m)?.[1];
+  front = parseFront(readFileSync(qf, 'utf8'));
+  src = front.source_url || null;
   if (!src) { console.error(`queue/${arg}.md has no source_url`); process.exit(1); }
 }
 
 const job = await fetchJob(src);
 const roleTag = job.title.toLowerCase().replace(/[^a-z0-9]+/g, '').slice(0, 24);
-const t = job.title.toLowerCase();
-const note = Object.entries(notes)
-  .filter(([k]) => k !== '_comment')
-  .map(([k, v]) => [Math.max(0, ...k.split('|').filter((x) => t.includes(x)).map((x) => x.length)), v])
-  .filter(([len]) => len > 0)
-  .sort((a, b) => b[0] - a[0])[0]?.[1];
+const read = String(front.soliyog_read || '').split('\n')
+  .filter((l) => !l.trim().startsWith('#')).join(' ').replace(/\s+/g, ' ').trim();
 
 const facts = [
   ['Location', job.location],
@@ -51,8 +50,8 @@ const body = (linkLine) => [
   '',
   facts,
   '',
-  note ? `Soliyog's read: ${note.read}` : null,
-  note ? '' : null,
+  read ? `Soliyog's read: ${read}` : null,
+  read ? '' : null,
   linkLine,
   `Not affiliated with ${job.company}. Check their careers page before applying.`,
   '',

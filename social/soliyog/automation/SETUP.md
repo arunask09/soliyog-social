@@ -56,8 +56,15 @@ And add `META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO` as **GitHub Actions 
 ```
 node social/soliyog/automation/new-post.mjs <soliyog.com/jobs/URL-or-id>
 ```
-→ creates `queue/<date>-<slug>.md` (theme alternates dark/light by date) with portal facts
-+ auto captions. Review it, tweak the "Soliyog's read" line if you like, set
+→ creates `queue/<date>-<slug>.md` (theme alternates dark/light by date) with portal facts.
+Then, from the actual listing, fill two front-matter blocks:
+
+- `role_tests:` — 3-4 bullets for "What this role tests" (interview mode, stated
+  requirements, what the work is). Read from *this* listing, not a generic role stereotype.
+- `soliyog_read:` — 1-2 calm sentences for "Why this one's worth a look".
+
+Leave either blank to omit it from the poster/captions (never invent one). Then
+`node build-caption.mjs <slug> --write` to fold `soliyog_read` into the captions, set
 `status: approved`. The cron posts the next approved item each day.
 
 - Preview first: `node social/soliyog/automation/build-image.mjs <slug>` → `queue/assets/<slug>.png`

@@ -5,8 +5,15 @@ status: draft
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/145
-fields:
-  # optional overrides for Soliyog's own commentary; portal facts come from source_url
+role_tests: |
+  - A strong accounting foundation: entries, ledgers, reconciliations
+  - Hands-on Tally and MS Excel
+  - Basic GST and TDS knowledge
+  - Keeping financial records accurate day to day
+soliyog_read: |
+  A standard first accounting job, this time in a family-office setup. Tally, Excel
+  and GST/TDS basics are the whole ask, and the reconciliation work builds habits
+  that senior finance roles assume you already have.
 caption_instagram: |
   Junior Accountant at Broadwings Multi Family Office
   
@@ -15,7 +22,7 @@ caption_instagram: |
   Experience: 1–3 yrs
   Apply by: 28 Sep
   
-  Soliyog's read: Accounting roles are steady entry points in finance — Tally + Excel + GST basics get you in the room.
+  Soliyog's read: A standard first accounting job, this time in a family-office setup. Tally, Excel and GST/TDS basics are the whole ask, and the reconciliation work builds habits that senior finance roles assume you already have.
   
   Full listing and how to apply — link in bio.
   Not affiliated with Broadwings Multi Family Office. Check their careers page before applying.
@@ -29,7 +36,7 @@ caption_facebook: |
   Experience: 1–3 yrs
   Apply by: 28 Sep
   
-  Soliyog's read: Accounting roles are steady entry points in finance — Tally + Excel + GST basics get you in the room.
+  Soliyog's read: A standard first accounting job, this time in a family-office setup. Tally, Excel and GST/TDS basics are the whole ask, and the reconciliation work builds habits that senior finance roles assume you already have.
   
   Full listing and how to apply: https://www.soliyog.com/jobs/145
   Not affiliated with Broadwings Multi Family Office. Check their careers page before applying.
@@ -43,7 +50,7 @@ caption_linkedin: |
   Experience: 1–3 yrs
   Apply by: 28 Sep
   
-  Soliyog's read: Accounting roles are steady entry points in finance — Tally + Excel + GST basics get you in the room.
+  Soliyog's read: A standard first accounting job, this time in a family-office setup. Tally, Excel and GST/TDS basics are the whole ask, and the reconciliation work builds habits that senior finance roles assume you already have.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Broadwings Multi Family Office. Check their careers page before applying.

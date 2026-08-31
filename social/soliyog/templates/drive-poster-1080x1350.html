@@ -40,6 +40,7 @@
   .hero .role {
     font-family: var(--font-poster); font-size: 116px; line-height: 0.88;
     letter-spacing: 0.5px; color: var(--text); text-transform: uppercase;
+    min-width: 0; overflow-wrap: break-word;
   }
   .hero .role .l2 { display: inline-block; margin-top: 6px; }
   .hero .role .hl {
@@ -48,7 +49,7 @@
   }
   .hero .company {
     display: flex; flex-direction: column; align-items: center; gap: 14px;
-    flex-shrink: 0; text-align: center;
+    flex: 0 1 auto; max-width: 320px; text-align: center;
   }
   .hero .logo-tile {
     width: 132px; height: 132px; border-radius: 26px; background: #fff; flex-shrink: 0;
@@ -56,11 +57,14 @@
     box-shadow: 0 6px 22px rgba(0,0,0,.28);
   }
   .hero .logo-tile img { width: 94px; height: 94px; object-fit: contain; }
-  .hero .co-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .hero .co-text { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
   .hero .co-text b {
     font-family: var(--font-display); font-weight: 700; font-size: 30px;
     letter-spacing: -0.01em; color: var(--text);
+    overflow-wrap: break-word; hyphens: auto;
   }
+  /* long names: drop a step so they wrap to 2 lines, not 3+ */
+  .hero .co-text b.long { font-size: 25px; }
   .hero .co-text .co-city {
     font-size: 17px; color: var(--text-muted); margin-top: 4px;
     text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
@@ -95,12 +99,10 @@
   .why { padding: 22px 30px; }
   .why .why-title {
     font-family: var(--font-display); font-weight: 700; font-size: 29px;
-    letter-spacing: -0.02em; margin-bottom: 18px;
+    letter-spacing: -0.02em; margin-bottom: 14px;
   }
-  .why .why-items { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; }
-  .why .wi { display: flex; align-items: center; gap: 14px; font-size: 22px; color: var(--text); }
-  .why .wi .badge { width: 48px; height: 48px; }
-  .why .wi .badge svg { width: 24px; height: 24px; }
+  /* prose read, authored per-post from the listing */
+  .why .why-body { font-size: 23px; line-height: 1.5; color: var(--text); }
 
   .disclaimer {
     font-size: 15px; color: var(--text-dim); line-height: 1.4;
@@ -182,13 +184,8 @@
     </div>
 
     <div class="sticker sticker--dark why">
-      <div class="why-title" data-slot="why-title">Soliyog's read: why this one's worth a look</div>
-      <div class="why-items" data-slot="why">
-        <div class="wi"><span class="badge"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><span>Listing verified this week</span></div>
-        <div class="wi"><span class="badge badge--teal"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2Z"/><path d="M8 3v18"/></svg></span><span>Prep guide linked in bio</span></div>
-        <div class="wi"><span class="badge badge--amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span>Filtered for 0&ndash;2 yrs experience</span></div>
-        <div class="wi"><span class="badge"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 10l7-7 7 7"/></svg></span><span>Direct application link, no aggregator</span></div>
-      </div>
+      <div class="why-title" data-slot="why-title">Why this one's worth a look</div>
+      <div class="why-body" data-slot="why">Soliyog's read on this listing.</div>
     </div>
 
     <div class="contactbar">
@@ -223,6 +220,9 @@
       const k = el.querySelector('[data-slot]')?.dataset.slot;
       if (!k || d[k] == null || d[k] === '') el.remove();
     }
+    // no per-post "why" read -> drop the whole block; no tests -> drop the left column
+    if (!d.why) document.querySelector('.why')?.remove();
+    if (Array.isArray(d.tests) && d.tests.length === 0) document.querySelector('.pcol-left')?.remove();
     // role: "Data Analyst" -> Data<br><span class="l2 hl">Analyst</span>
     if (d.role) {
       const w = String(d.role).trim().split(/\s+/);
@@ -236,7 +236,9 @@
       const tile = c.querySelector('.logo-tile');
       if (d.logo) tile.querySelector('img').src = d.logo;
       else if ('logo' in d) tile.remove();
-      c.querySelector('b').textContent = d.company;
+      const b = c.querySelector('b');
+      b.textContent = d.company;
+      b.classList.toggle('long', d.company.length > 20);
       if (d.companyCity) c.querySelector('.co-city').textContent = d.companyCity;
     }
   })();
