@@ -97,13 +97,6 @@ if (dry) {
   process.exit(0);
 }
 
-const api = async (path, body) => {
-  const r = await fetch(`${G}/${path}`, { method: 'POST', body: new URLSearchParams({ ...body, access_token: META_TOKEN }) });
-  const j = await r.json();
-  if (j.error) throw new Error(`${path}: ${j.error.message}`);
-  return j;
-};
-
 // write queue-file status AND commit+push it — CI checks out fresh each run, so an
 // uncommitted "status: posted" is lost and the item re-posts on the next cron.
 const persist = (fields) => {
@@ -113,6 +106,23 @@ const persist = (fields) => {
     git('commit', '-m', `post: ${slug} -> ${fields.status}`, '--', mdRel);
     push();
   }
+};
+
+// Publishing to a Page (and its linked IG account) needs the PAGE access token, not the
+// system-user token — the latter gives "(#200) publish_actions ... deprecated" on /photos.
+const pageTokenRes = await (await fetch(`${G}/${FB_PAGE_ID}?fields=access_token&access_token=${META_TOKEN}`)).json();
+if (pageTokenRes.error || !pageTokenRes.access_token) {
+  try { persist({ status: 'failed' }); } catch { /* ignore */ }
+  console.error('FAILED: could not get Page access token:', pageTokenRes.error?.message || 'no access_token in response');
+  process.exit(1);
+}
+const PAGE_TOKEN = pageTokenRes.access_token;
+
+const api = async (path, body) => {
+  const r = await fetch(`${G}/${path}`, { method: 'POST', body: new URLSearchParams({ ...body, access_token: PAGE_TOKEN }) });
+  const j = await r.json();
+  if (j.error) throw new Error(`${path}: ${j.error.message}`);
+  return j;
 };
 
 try {
@@ -126,7 +136,7 @@ try {
   if (platforms.includes('instagram')) {
     const c = await api(`${IG_USER_ID}/media`, { image_url: igUrl, caption: capIG });
     for (let i = 0; i < 20; i++) {
-      const s = await (await fetch(`${G}/${c.id}?fields=status_code&access_token=${META_TOKEN}`)).json();
+      const s = await (await fetch(`${G}/${c.id}?fields=status_code&access_token=${PAGE_TOKEN}`)).json();
       if (s.status_code === 'FINISHED') break;
       if (s.status_code === 'ERROR') throw new Error('IG container ERROR');
       await new Promise((r) => setTimeout(r, 3000));
