@@ -27,7 +27,7 @@ caption_facebook: |
   Experience: 5–10 yrs
   Apply by: 12 Oct
   
-  Full listing and how to apply: https://www.soliyog.com/jobs/4
+  Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
   
   #cloudcomputingengineer #fresherjobs

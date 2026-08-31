@@ -60,7 +60,9 @@ const body = (linkLine) => [
 
 const out = {
   caption_instagram: body('Full listing and how to apply — link in bio.'),
-  caption_facebook: body(`Full listing and how to apply: ${job.url}`),
+  // FB down-ranks posts with an outbound link in the body — post.mjs drops the
+  // real link into the first comment instead.
+  caption_facebook: body('Full listing and how to apply — link in the comments.'),
   caption_linkedin: body('Full listing and how to apply — link in the comments.'),
 };
 

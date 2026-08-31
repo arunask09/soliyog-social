@@ -93,6 +93,7 @@ const capIG = front.caption_instagram || front.caption_facebook || '';
 console.log(`FB image: ${fbUrl}\nIG image: ${igUrl}`);
 if (dry) {
   console.log('\n--- FB /photos ---\n', { url: fbUrl, caption: capFB });
+  if (front.source_url) console.log('\n--- FB first comment ---\n', { message: `Full listing and how to apply:\n${front.source_url}` });
   console.log('\n--- IG /media ---\n', { image_url: igUrl, caption: capIG });
   process.exit(0);
 }
@@ -132,6 +133,17 @@ try {
     const r = await api(`${FB_PAGE_ID}/photos`, { url: fbUrl, caption: capFB });
     post_ids.facebook = r.post_id || r.id;
     console.log('FB ok', post_ids.facebook);
+    // Drop the real job link into the first comment — kept out of the caption so FB
+    // doesn't down-rank the post for an outbound link in the body. Non-fatal: the
+    // post is already live, and this needs the pages_manage_engagement scope.
+    if (front.source_url && post_ids.facebook) {
+      try {
+        const c = await api(`${post_ids.facebook}/comments`, { message: `Full listing and how to apply:\n${front.source_url}` });
+        console.log('FB first comment ok', c.id);
+      } catch (e) {
+        console.warn('FB first comment skipped (post is live):', e.message);
+      }
+    }
   }
   if (platforms.includes('instagram')) {
     const c = await api(`${IG_USER_ID}/media`, { image_url: igUrl, caption: capIG });

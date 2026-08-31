@@ -38,7 +38,7 @@ caption_facebook: |
   
   Soliyog's read: A standard first accounting job, this time in a family-office setup. Tally, Excel and GST/TDS basics are the whole ask, and the reconciliation work builds habits that senior finance roles assume you already have.
   
-  Full listing and how to apply: https://www.soliyog.com/jobs/145
+  Full listing and how to apply — link in the comments.
   Not affiliated with Broadwings Multi Family Office. Check their careers page before applying.
   
   #junioraccountant #fresherjobs

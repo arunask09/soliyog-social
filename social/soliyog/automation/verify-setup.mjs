@@ -36,6 +36,8 @@ const need = ['pages_show_list', 'pages_read_engagement', 'pages_manage_posts',
   'instagram_basic', 'instagram_content_publish', 'business_management'];
 const missing = need.filter((s) => !(dbg.scopes || []).includes(s));
 if (missing.length) bad(`missing scopes: ${missing.join(', ')}`);
+if (!(dbg.scopes || []).includes('pages_manage_engagement'))
+  console.log('  !', 'no pages_manage_engagement — FB posts publish fine, first-comment job link is skipped');
 
 if (!FB_PAGE_ID) bad('FB_PAGE_ID not set');
 else {

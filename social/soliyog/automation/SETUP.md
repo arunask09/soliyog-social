@@ -21,8 +21,10 @@ Creator accounts can't use `instagram_content_publish`.
 5. Business settings → **Users → System users → Add** (`soliyog-poster`, Admin). Select it →
    **Assign assets** → add the Soliyog Page, the `soliyog` Instagram account, and the app
    (Full control / Manage). **Generate token** → expiration **Never** → scopes:
-   `pages_show_list, pages_read_engagement, pages_manage_posts, instagram_basic,
-   instagram_content_publish, business_management`.
+   `pages_show_list, pages_read_engagement, pages_manage_posts, pages_manage_engagement,
+   instagram_basic, instagram_content_publish, business_management`.
+   (`pages_manage_engagement` lets post.mjs add the job link as the first comment on FB
+   posts — without it the post still publishes, the comment is just skipped.)
    The system user needs an **app role** (Add assets → Apps → Soliyog-poster → Full control)
    or the token wizard shows "No permissions available". The IG scopes only appear once the
    app has the "Instagram API with Facebook Login" product and the IG account is assigned.
