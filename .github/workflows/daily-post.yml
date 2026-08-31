@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,3 +40,18 @@ jobs:
           git config user.name  "soliyog-bot"
           git config user.email "bot@users.noreply.github.com"
           node post.mjs ${{ inputs.slug && format('--slug {0}', inputs.slug) || '' }}
+      - name: close the review issue for whatever was just posted
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          posted=$(git log -1 --format=%s | sed -n 's/^post: \(.*\) -> posted$/\1/p')
+          [ -n "$posted" ] || { echo "nothing posted this run"; exit 0; }
+          for n in $(gh issue list --label pending-review --state open --json number -q '.[].number'); do
+            slug=$(gh issue view "$n" --json body -q .body \
+              | sed -n 's/.*soliyog-review slug=\([a-z0-9-]*\).*/\1/p' | head -1)
+            if [ "$slug" = "$posted" ]; then
+              gh issue comment "$n" --body "Posted ✅"
+              gh issue close "$n"
+            fi
+          done

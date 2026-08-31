@@ -50,6 +50,17 @@ export function setFront(slug, key, val) {
   writeFileSync(qpath(slug), md);
 }
 
+// replace (or insert) a "key: |" indented block scalar in the front-matter.
+// Same splice shape as build-caption.mjs: from ^key: up to the next ^word: or ^---.
+export function setBlock(slug, key, text) {
+  let { md } = readItem(slug);
+  const indented = String(text).trim().split('\n').map((l) => '  ' + l).join('\n');
+  const block = `${key}: |\n${indented}\n`;
+  const re = new RegExp(`^${key}:.*?(?=^\\w+:|^---)`, 'ms');
+  md = re.test(md) ? md.replace(re, block) : md.replace(/^(---\n)/, `$1${block}`);
+  writeFileSync(qpath(slug), md);
+}
+
 export function listItems() {
   if (!existsSync(QUEUE)) return [];
   return readdirSync(QUEUE).filter((f) => f.endsWith('.md')).map((f) => {

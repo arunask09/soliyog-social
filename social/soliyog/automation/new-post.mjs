@@ -51,7 +51,9 @@ post_ids:
 # ${job.title} — ${job.company}
 Portal facts (auto): ${job.location || '—'} · ${job.employmentType || '—'} · ${job.experience || '—'}${job.salary ? ' · ' + job.salary : ''}${job.applyBy ? ' · apply by ' + job.applyBy : ''}
 
-Review, then set \`status: approved\`.
+Fill \`role_tests\` + \`soliyog_read\` from the listing, then set \`status: ready\`.
+The nightly prep job (20:00 IST) promotes it to \`approved\` and opens a GitHub issue
+so you can veto / edit / approve from a phone before the 09:00 IST post.
 `;
 writeFileSync(qpath(slug), md);
 console.log(`created queue/${slug}.md  (theme: ${theme})`);

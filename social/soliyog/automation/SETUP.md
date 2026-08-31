@@ -64,9 +64,22 @@ Then run `npm ci` in `automation/` (installs `sharp`, used to make the IG JPEG) 
 
 ## 5. GitHub Actions
 
-`.github/workflows/daily-post.yml` (already in the repo) runs `npm ci` + `post.mjs` on a
-cron (09:00 IST) + manual dispatch. It only posts queue items with `status: approved` and
-`date <= today`, then commits `status: posted` back.
+Three workflows (all in `.github/workflows/`, cron times in UTC = IST − 5:30):
+
+- **`prep-post.yml`** — `30 14 * * *` (20:00 IST) + manual dispatch. Promotes the next
+  `status: ready` item (date ≤ tomorrow) to `approved`, renders the poster + captions,
+  commits, and opens a GitHub Issue labelled `pending-review` with the poster + captions
+  for a phone review.
+- **`review-post.yml`** — `issue_comment`. On a `pending-review` issue, **only** a comment
+  from the repo owner: `skip` → `status: held` + close; `read: <text>` → rewrite the
+  "Soliyog's read" line, rebuild, re-post the poster; else a hint.
+- **`daily-post.yml`** — `30 3 * * *` (09:00 IST) + manual dispatch. Posts the oldest
+  `status: approved` item with `date <= today`, commits `status: posted`, and closes the
+  matching review issue with "Posted ✅".
+
+**Opt-out model:** once `prep-post` promotes an item it *will* post at 09:00 IST unless you
+`skip` it. Only `status: ready` items are ever promoted, so the editorial pass always
+happened first.
 
 ---
 
@@ -83,8 +96,10 @@ Then, from the actual listing, fill two front-matter blocks:
 - `soliyog_read:` — 1-2 calm sentences for "Why this one's worth a look".
 
 Leave either blank to omit it from the poster/captions (never invent one). Then
-`node build-caption.mjs <slug> --write` to fold `soliyog_read` into the captions, set
-`status: approved`. The cron posts the next approved item each day.
+`node build-caption.mjs <slug> --write` to fold `soliyog_read` into the captions, and set
+**`status: ready`**. That evening `prep-post` builds it, flips it to `approved`, and opens
+a review issue — approve/skip/edit from the GitHub mobile app; do nothing and it posts at
+09:00 IST. (Set `status: approved` by hand only to bypass the review loop.)
 
 - Preview first: `node automation/build-image.mjs <slug>` → `queue/assets/<date>-<slug>.png`
   (Facebook) + `.jpg` (1080×1350, Instagram)

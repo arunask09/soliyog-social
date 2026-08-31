@@ -1,0 +1,60 @@
+name: review-post
+on:
+  issue_comment:
+    types: [created]
+
+concurrency: soliyog-post
+
+jobs:
+  review:
+    # only the repo owner, only on an open pending-review issue
+    if: >-
+      github.event.issue.state == 'open' &&
+      github.event.comment.author_association == 'OWNER' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'pending-review')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: social/soliyog/automation/package-lock.json
+      - name: install deps
+        working-directory: social/soliyog/automation
+        run: npm ci
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+      - name: find slug
+        id: meta
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          body=$(gh issue view ${{ github.event.issue.number }} --json body -q .body)
+          slug=$(printf '%s' "$body" | sed -n 's/.*soliyog-review slug=\([a-z0-9-]*\).*/\1/p' | head -1)
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+      - name: apply command
+        id: run
+        if: steps.meta.outputs.slug != ''
+        working-directory: social/soliyog/automation
+        env:
+          CHROME: ${{ steps.chrome.outputs.chrome-path }}
+          REPLY_FILE: ${{ runner.temp }}/reply.md
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          git config user.name  "soliyog-bot"
+          git config user.email "bot@users.noreply.github.com"
+          node review-post.mjs --slug "${{ steps.meta.outputs.slug }}" --command "$COMMENT_BODY"
+      - name: reply on the issue
+        if: steps.run.outputs.action != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --body-file "${{ runner.temp }}/reply.md"
+          if [ "${{ steps.run.outputs.close }}" = "true" ]; then
+            gh issue close ${{ github.event.issue.number }}
+          fi
