@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-02-cloud-computing-engineer
 date: 2026-09-02
-status: approved
+status: held
 theme: dark
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/4
