@@ -2,52 +2,69 @@
 
 One-time steps you (the human) do. After this, the pipeline runs itself.
 
-## 1. Meta accounts
+Business Portfolio: `1580269793646236` · Facebook Page asset: `1323735410817115`.
 
-1. **Facebook Page** — create one for Soliyog (category *Education Website*) inside your
-   Business Portfolio `<YOUR_BUSINESS_PORTFOLIO_ID>` (business.facebook.com).
-2. **Instagram** — create an account, Settings → *Account type* → **Professional → Business**.
-3. **Link them** — Business Suite → Settings → *Linked accounts* → connect the IG account to
-   the Page. Confirm both are owned by the Business Portfolio.
+## 1. Instagram → Professional, linked to the Page
+
+1. IG app → Settings → *Account type and tools* → **Switch to professional → Business**.
+   A personal IG account cannot be used by the API (this is the cause of the
+   "Instagram username or password provided are invalid" error).
+2. Temporarily disable 2FA on the IG account while linking.
+3. business.facebook.com → *Business settings → Accounts → Instagram accounts → Add* →
+   log in. Then add that IG account to the Page's connected assets. Confirm the Page and
+   the IG account are both owned by Portfolio `1580269793646236`.
 
 ## 2. Developer app + token
 
-4. developers.facebook.com → **Create app → Business** → attach the Business Portfolio.
-   Add products **Instagram Graph API** + **Facebook Login for Business**. Leave it in
-   **Development mode** (posting only to your own assets — no App Review needed).
-5. Business settings → **System users → Add** (`soliyog-poster`, Admin). Assign the Page +
-   IG account + app to it. **Generate token** → scopes:
+4. developers.facebook.com → **Create App → Business** → attach Portfolio `1580269793646236`.
+   Keep it **In development** (posting to your own assets needs no App Review). Add products
+   **Instagram** — pick the *"Instagram API with Facebook Login"* path, **not** *"Instagram
+   API with Instagram Login"* — and **Facebook Login for Business**.
+5. Business settings → **System users → Add** (`soliyog-poster`, Admin). Assign the Page,
+   the IG account, and the app to it. **Generate token** → expiration **Never** → scopes:
    `pages_show_list, pages_read_engagement, pages_manage_posts, instagram_basic,
-   instagram_content_publish, business_management`. This token does not expire.
+   instagram_content_publish, business_management`.
 6. Get the IDs:
    ```
-   curl "https://graph.facebook.com/v21.0/me/accounts?access_token=<TOKEN>"                       # -> Page id
-   curl "https://graph.facebook.com/v21.0/<PAGE_ID>?fields=instagram_business_account&access_token=<TOKEN>"   # -> IG id
+   curl "https://graph.facebook.com/v21.0/me/accounts?access_token=<TOKEN>"                       # -> FB_PAGE_ID (expect 1323735410817115)
+   curl "https://graph.facebook.com/v21.0/1323735410817115?fields=instagram_business_account&access_token=<TOKEN>"   # -> IG_USER_ID
    ```
+   No `instagram_business_account` field → the IG↔Page link (step 3) didn't take; redo it.
 
-## 3. Repo (Instagram needs a public image URL)
+> Meta may require **Business Verification** of the Portfolio (Security Center → Start
+> verification) before issuing the token or allowing `instagram_content_publish`.
 
-7. `git init` this project, push to a **public** GitHub repo, e.g. `soliyog-social`.
-   jsDelivr serves the rendered PNGs from it; only GitHub **Secrets** hold credentials.
+## 3. Public repo (Instagram needs a public image URL)
+
+7. Create a **public** GitHub repo, e.g. `soliyog-social`. From the repo root:
+   `git remote add origin <url>` then `git push -u origin main` (the `-u` matters — `post.mjs`
+   runs bare `git push`). jsDelivr / raw.githubusercontent.com serve the rendered images;
+   only GitHub **Secrets** hold credentials. The root `.gitignore` keeps the repo scoped to
+   `social/soliyog/**` + `.github/`.
+8. Repo → Settings → Actions → General → Workflow permissions → **Read and write**.
 
 ## 4. Credentials
 
-`social/soliyog/automation/.env` (git-ignored — I can't create it):
+`social/soliyog/automation/.env` (git-ignored — the assistant can't create it):
 ```
-META_TOKEN=<system-user token>
-FB_PAGE_ID=<from step 6>
+META_TOKEN=<never-expiring system-user token>
+FB_PAGE_ID=1323735410817115
 IG_USER_ID=<from step 6>
 GH_REPO=<your-user>/soliyog-social
-BRANDFETCH_CLIENT_ID=<YOUR_BRANDFETCH_CLIENT_ID>
-CF_ACCOUNT_ID=<YOUR_CF_ACCOUNT_ID>
-CF_API_TOKEN=<rotated Workers AI token>
+BRANDFETCH_CLIENT_ID=       # optional, for employer logos
+CF_ACCOUNT_ID=             # optional, unused AI-image scripts
+CF_API_TOKEN=
 ```
-And add `META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO` as **GitHub Actions Secrets**.
+Add `META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO` as **GitHub Actions Secrets**.
+
+Then run `npm ci` in `automation/` (installs `sharp`, used to make the IG JPEG) and
+`node automation/verify-setup.mjs` to check the token, scopes, Page, IG link, and repo.
 
 ## 5. GitHub Actions
 
-`.github/workflows/daily-post.yml` (already in the repo) runs `post.mjs` on a cron
-(09:00 IST) + manual dispatch. It only posts queue items with `status: approved`.
+`.github/workflows/daily-post.yml` (already in the repo) runs `npm ci` + `post.mjs` on a
+cron (09:00 IST) + manual dispatch. It only posts queue items with `status: approved` and
+`date <= today`, then commits `status: posted` back.
 
 ---
 
@@ -67,7 +84,9 @@ Leave either blank to omit it from the poster/captions (never invent one). Then
 `node build-caption.mjs <slug> --write` to fold `soliyog_read` into the captions, set
 `status: approved`. The cron posts the next approved item each day.
 
-- Preview first: `node social/soliyog/automation/build-image.mjs <slug>` → `queue/assets/<slug>.png`
-- Force one now: `node social/soliyog/automation/post.mjs --slug <slug>`
+- Preview first: `node automation/build-image.mjs <slug>` → `queue/assets/<date>-<slug>.png`
+  (Facebook) + `.jpg` (1080×1350, Instagram)
+- Dry-run the publish: `node automation/post.mjs --slug <slug> --dry-run`
+- Force one now: `node automation/post.mjs --slug <slug>`
 - Add an employer domain when a logo is missing: edit `automation/companies.json`, then
   `node automation/fetch-logo.mjs "<Company>"`
