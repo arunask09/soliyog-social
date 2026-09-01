@@ -1,7 +1,7 @@
 name: prep-post
 on:
   schedule:
-    - cron: "30 14 * * *"   # 20:00 IST — the evening before the 09:00 IST post
+    - cron: "30 12 * * *"   # 18:00 IST — the evening before the 09:00 IST post
   workflow_dispatch:
     inputs:
       slug:
