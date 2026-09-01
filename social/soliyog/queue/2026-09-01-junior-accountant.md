@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-01-junior-accountant
 date: 2026-09-01
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/145
@@ -56,9 +56,9 @@ caption_linkedin: |
   Not affiliated with Broadwings Multi Family Office. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@f7d7a60f2d024ae8163b529e985e284543281524/social/soliyog/queue/assets/2026-09-01-2026-09-01-junior-accountant.jpg
+posted_at: 2026-09-01T11:03:09.250Z
+post_ids: {"facebook":"1289252704274108_122098500225464634","instagram":"17870800224637947"}
 ---
 
 # Junior Accountant — Broadwings Multi Family Office
