@@ -42,9 +42,8 @@ jobs:
           now_utc=$(date -u +%H:%M)
           force="${{ inputs.force }}"
 
-          # daily-post target: TEMP TEST — 15:10 IST = 09:40 UTC = minute 580. Window: 09:35-09:55 UTC.
-          # (normal value: 09:00 IST = 03:30 UTC = minute 210, window 03:25-03:40 UTC — restore after test)
-          if { [ "$now_min" -ge 575 ] && [ "$now_min" -le 595 ]; } || [ "$force" = "daily-post" ]; then
+          # daily-post target: 09:00 IST = 03:30 UTC = minute 210. Window: 03:25-03:40 UTC.
+          if { [ "$now_min" -ge 205 ] && [ "$now_min" -le 220 ]; } || [ "$force" = "daily-post" ]; then
             echo "Dispatching daily-post (now $now_utc UTC, force=$force)"
             gh workflow run daily-post.yml --repo "${{ github.repository }}"
           fi
