@@ -9,6 +9,10 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Bypass the time-window check and force-dispatch a target now (daily-post|prep-post) — for testing"
+        required: false
 
 # NOTE: dispatch below MUST use a PAT, not the default GITHUB_TOKEN. GitHub suppresses
 # workflow_dispatch/repository_dispatch events created by GITHUB_TOKEN (its recursion-
@@ -36,15 +40,16 @@ jobs:
 
           now_min=$(( $(date -u +%-H) * 60 + $(date -u +%-M) ))
           now_utc=$(date -u +%H:%M)
+          force="${{ inputs.force }}"
 
           # daily-post target: 09:00 IST = 03:30 UTC = minute 210. Window: 03:25-03:40 UTC.
-          if [ "$now_min" -ge 205 ] && [ "$now_min" -le 220 ]; then
-            echo "In daily-post window ($now_utc UTC) — dispatching"
+          if { [ "$now_min" -ge 205 ] && [ "$now_min" -le 220 ]; } || [ "$force" = "daily-post" ]; then
+            echo "Dispatching daily-post (now $now_utc UTC, force=$force)"
             gh workflow run daily-post.yml --repo "${{ github.repository }}"
           fi
 
           # prep-post target: 13:00 IST = 07:30 UTC = minute 450. Window: 07:25-07:40 UTC.
-          if [ "$now_min" -ge 445 ] && [ "$now_min" -le 460 ]; then
-            echo "In prep-post window ($now_utc UTC) — dispatching"
+          if { [ "$now_min" -ge 445 ] && [ "$now_min" -le 460 ]; } || [ "$force" = "prep-post" ]; then
+            echo "Dispatching prep-post (now $now_utc UTC, force=$force)"
             gh workflow run prep-post.yml --repo "${{ github.repository }}"
           fi
