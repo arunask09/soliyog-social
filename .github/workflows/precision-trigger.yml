@@ -1,0 +1,38 @@
+name: precision-trigger
+# GitHub's own `schedule` trigger on daily-post.yml / prep-post.yml is best-effort and can
+# be delayed by hours or dropped entirely under load (observed directly: two consecutive
+# scheduled daily-post runs never fired at all, and prep-post's first run landed 5h44m late).
+# Mitigation: run this cheap watchdog every 5 minutes and dispatch the real workflow only
+# when the clock is inside the target window. Both target workflows are idempotent
+# (status-gated), so firing more than once inside a window is a harmless no-op.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  fire:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch daily-post / prep-post if in their target windows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          now_min=$(( $(date -u +%-H) * 60 + $(date -u +%-M) ))
+          now_utc=$(date -u +%H:%M)
+
+          # daily-post target: 09:00 IST = 03:30 UTC = minute 210. Window: 03:25-03:40 UTC.
+          if [ "$now_min" -ge 205 ] && [ "$now_min" -le 220 ]; then
+            echo "In daily-post window ($now_utc UTC) — dispatching"
+            gh workflow run daily-post.yml --repo "${{ github.repository }}"
+          fi
+
+          # prep-post target: 13:00 IST = 07:30 UTC = minute 450. Window: 07:25-07:40 UTC.
+          if [ "$now_min" -ge 445 ] && [ "$now_min" -le 460 ]; then
+            echo "In prep-post window ($now_utc UTC) — dispatching"
+            gh workflow run prep-post.yml --repo "${{ github.repository }}"
+          fi
