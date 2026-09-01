@@ -1,7 +1,7 @@
 name: daily-post
 on:
   schedule:
-    - cron: "45 7 * * *"   # TEST: 13:15 IST — temporary, reverting to 09:00 IST once confirmed firing
+    - cron: "30 8 * * *"   # TEST: 14:00 IST — temporary, reverting to 09:00 IST once confirmed firing
   workflow_dispatch:
     inputs:
       slug:
