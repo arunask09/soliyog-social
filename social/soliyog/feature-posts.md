@@ -70,3 +70,17 @@ Most fresher resumes get killed by the ATS, not the recruiter.
 Two-column templates don't parse. We built a free single-page resume builder that does: live preview, PDF export, nothing uploaded.
 
 soliyog.com/tools/cv-builder
+
+### WhatsApp — share with friends & family (manual send, no API connected)
+
+Hey! Soliyog just added a free resume builder: soliyog.com/tools/cv-builder
+
+It's built to actually get past the ATS filters companies use to screen resumes, not just look nice. Single page, live preview as you type, exports straight to PDF. Nothing you type gets uploaded, it all stays in your browser.
+
+If you know anyone job-hunting who needs a resume, this could save them some trouble 🙂
+
+If you get 2 minutes to try it yourself, genuinely want to know what's confusing or missing.
+
+### WhatsApp — shorter variant (status / quick send)
+
+New on Soliyog: a free resume builder built to actually pass ATS screening. Single page, live preview, exports to PDF. soliyog.com/tools/cv-builder
