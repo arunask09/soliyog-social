@@ -11,6 +11,10 @@ social/leetdata/
 !**/.env.example
 node_modules/
 social/soliyog/automation/log/
+_issue-body.md
+_issue-body.md.title
+_next-issue.md
+_next-issue.md.title
 social/soliyog/templates/exports/_build-*
 social/soliyog/templates/_build-*
 social/soliyog/queue/assets/_build-*

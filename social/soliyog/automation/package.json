@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Soliyog daily FB + Instagram job-poster pipeline",
   "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test" },
   "dependencies": {
     "sharp": "^0.33.5"
   }

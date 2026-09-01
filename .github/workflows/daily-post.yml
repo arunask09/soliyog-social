@@ -55,3 +55,26 @@ jobs:
               gh issue close "$n"
             fi
           done
+
+      - name: scaffold the next draft from the listings
+        id: next
+        if: success()
+        working-directory: social/soliyog/automation
+        env:
+          ISSUE_BODY_FILE: ${{ runner.temp }}/next-issue.md
+        run: |
+          git config user.name  "soliyog-bot"
+          git config user.email "bot@users.noreply.github.com"
+          node next-post.mjs
+
+      - name: open a needs-commentary issue for the new draft
+        if: steps.next.outputs.created == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create needs-commentary --color 0E8A16 \
+            --description "Soliyog draft awaiting role_tests + soliyog_read" --force
+          gh issue create \
+            --title "$(cat "${{ steps.next.outputs.title_file }}")" \
+            --body-file "${{ steps.next.outputs.body_file }}" \
+            --label needs-commentary

@@ -75,7 +75,11 @@ Three workflows (all in `.github/workflows/`, cron times in UTC = IST − 5:30):
   "Soliyog's read" line, rebuild, re-post the poster; else a hint.
 - **`daily-post.yml`** — `30 3 * * *` (09:00 IST) + manual dispatch. Posts the oldest
   `status: approved` item with `date <= today`, commits `status: posted`, and closes the
-  matching review issue with "Posted ✅".
+  matching review issue with "Posted ✅". Then runs **`next-post.mjs`**: unless the queue
+  already holds 3 un-posted items, it scrapes the soliyog.com listings, picks the newest
+  fresher/junior India role not already in the queue or `seen-jobs.json`, scaffolds it as
+  `status: draft`, commits, and opens a `needs-commentary` issue. Non-fatal — a scrape
+  failure or "no candidate" is logged and skipped.
 
 **Opt-out model:** once `prep-post` promotes an item it *will* post at 09:00 IST unless you
 `skip` it. Only `status: ready` items are ever promoted, so the editorial pass always
@@ -89,7 +93,10 @@ happened first.
 node social/soliyog/automation/new-post.mjs <soliyog.com/jobs/URL-or-id>
 ```
 → creates `queue/<date>-<slug>.md` (theme alternates dark/light by date) with portal facts.
-Then, from the actual listing, fill two front-matter blocks:
+You usually don't run this by hand any more — `daily-post` auto-scaffolds the next draft
+after each publish and opens a `needs-commentary` issue. Run it manually only to jump the
+queue or feature a specific listing. Either way, from the actual listing, fill two
+front-matter blocks:
 
 - `role_tests:` — 3-4 bullets for "What this role tests" (interview mode, stated
   requirements, what the work is). Read from *this* listing, not a generic role stereotype.
