@@ -223,7 +223,7 @@ async function main() {
     '- `role_tests` — what this role actually tests (interview mode, stated requirements, the work itself). From this listing only.',
     "- `soliyog_read` — 1–2 calm sentences on why it's worth a look.",
     '',
-    'Once `ready`, the nightly prep job promotes it and opens the usual review issue.',
+    'Once `ready`, the afternoon prep job promotes it and opens the usual review issue.',
   ].join('\n'));
 
   if (process.env.GITHUB_OUTPUT) {

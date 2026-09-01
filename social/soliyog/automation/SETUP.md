@@ -66,7 +66,7 @@ Then run `npm ci` in `automation/` (installs `sharp`, used to make the IG JPEG) 
 
 Three workflows (all in `.github/workflows/`, cron times in UTC = IST − 5:30):
 
-- **`prep-post.yml`** — `30 14 * * *` (20:00 IST) + manual dispatch. Promotes the next
+- **`prep-post.yml`** — `30 7 * * *` (13:00 IST) + manual dispatch. Promotes the next
   `status: ready` item (date ≤ tomorrow) to `approved`, renders the poster + captions,
   commits, and opens a GitHub Issue labelled `pending-review` with the poster + captions
   for a phone review.

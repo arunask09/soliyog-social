@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
- * Nightly prep for the daily poster (runs ~20:00 IST, the evening before).
+ * Afternoon prep for the daily poster (runs ~13:00 IST, the day before).
  *
  * Promotes the next `status: ready` queue item to `status: approved`, renders its
  * poster + captions, commits, and emits a GitHub Issue body so the post can be

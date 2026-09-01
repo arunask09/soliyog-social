@@ -53,7 +53,7 @@ const body = (linkLine) => [
   read ? `Soliyog's read: ${read}` : null,
   read ? '' : null,
   linkLine,
-  `Not affiliated with ${job.company}. Check their careers page before applying.`,
+  `Not affiliated with ${job.company.replace(/\.+$/, '')}. Check their careers page before applying.`,
   '',
   `#${roleTag} #fresherjobs`,
 ].filter((l) => l !== null).join('\n').replace(/\n{3,}/g, '\n\n').trim();

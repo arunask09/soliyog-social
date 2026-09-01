@@ -21,7 +21,7 @@ caption_instagram: |
   Apply by: 25 Sep
   
   Full listing and how to apply — link in bio.
-  Not affiliated with K.S.Gupta & Co.. Check their careers page before applying.
+  Not affiliated with K.S.Gupta & Co. Check their careers page before applying.
   
   #articletrainee #fresherjobs
 caption_facebook: |
@@ -33,7 +33,7 @@ caption_facebook: |
   Apply by: 25 Sep
   
   Full listing and how to apply — link in the comments.
-  Not affiliated with K.S.Gupta & Co.. Check their careers page before applying.
+  Not affiliated with K.S.Gupta & Co. Check their careers page before applying.
   
   #articletrainee #fresherjobs
 caption_linkedin: |
@@ -45,7 +45,7 @@ caption_linkedin: |
   Apply by: 25 Sep
   
   Full listing and how to apply — link in the comments.
-  Not affiliated with K.S.Gupta & Co.. Check their careers page before applying.
+  Not affiliated with K.S.Gupta & Co. Check their careers page before applying.
   
   #articletrainee #fresherjobs
 image_url:
