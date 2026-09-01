@@ -1,7 +1,7 @@
 name: daily-post
 on:
   schedule:
-    - cron: "30 8 * * *"   # TEST: 14:00 IST — temporary, reverting to 09:00 IST once confirmed firing
+    - cron: "30 3 * * *"   # 09:00 IST — best-effort native trigger; precision-trigger.yml is the reliable path
   workflow_dispatch:
     inputs:
       slug:

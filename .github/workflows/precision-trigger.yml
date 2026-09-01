@@ -10,8 +10,14 @@ on:
     - cron: "*/5 * * * *"
   workflow_dispatch:
 
+# NOTE: dispatch below MUST use a PAT, not the default GITHUB_TOKEN. GitHub suppresses
+# workflow_dispatch/repository_dispatch events created by GITHUB_TOKEN (its recursion-
+# prevention rule — only workflow_run is exempt), so a GITHUB_TOKEN-driven `gh workflow
+# run` call here would report success while never actually starting the target workflow.
+# Create a fine-grained PAT scoped to this repo only, with "Actions: Read and write"
+# permission, and add it as a repo secret named DISPATCH_PAT (Settings > Secrets and
+# variables > Actions > New repository secret).
 permissions:
-  actions: write
   contents: read
 
 jobs:
@@ -20,8 +26,14 @@ jobs:
     steps:
       - name: Dispatch daily-post / prep-post if in their target windows
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.DISPATCH_PAT }}
         run: |
+          set -e
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::DISPATCH_PAT secret is not set — see the note at the top of this file."
+            exit 1
+          fi
+
           now_min=$(( $(date -u +%-H) * 60 + $(date -u +%-M) ))
           now_utc=$(date -u +%H:%M)
 
