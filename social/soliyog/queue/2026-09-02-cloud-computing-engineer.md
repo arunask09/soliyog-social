@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-02-cloud-computing-engineer
 date: 2026-09-02
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/4
@@ -56,9 +56,9 @@ caption_linkedin: |
   Not affiliated with Point72. Check their careers page before applying.
   
   #cloudcomputingengineer #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@d5f73d3c16c15c00281631a825441110ada8ab05/social/soliyog/queue/assets/2026-09-02-2026-09-02-cloud-computing-engineer.jpg
+posted_at: 2026-09-02T03:31:10.753Z
+post_ids: {"facebook":"1289252704274108_122099008173464634","instagram":"18115067387104006"}
 ---
 
 # Cloud Computing Engineer — Point72
