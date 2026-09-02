@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: social/soliyog/automation/package-lock.json
       - name: install deps
@@ -63,12 +63,25 @@ jobs:
         env:
           ISSUE_BODY_FILE: ${{ runner.temp }}/next-issue.md
         run: |
+          posted=$(git log -1 --format=%s | sed -n 's/^post: \(.*\) -> posted$/\1/p')
+          [ -n "$posted" ] || { echo "nothing posted this run — not scaffolding"; exit 0; }
           git config user.name  "soliyog-bot"
           git config user.email "bot@users.noreply.github.com"
           node next-post.mjs
 
-      - name: open a needs-commentary issue for the new draft
+      - name: write commentary for the new draft
+        id: commentary
         if: steps.next.outputs.created == '1'
+        working-directory: social/soliyog/automation
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          git config user.name  "soliyog-bot"
+          git config user.email "bot@users.noreply.github.com"
+          node write-commentary.mjs --slug "${{ steps.next.outputs.slug }}"
+
+      - name: open a needs-commentary issue only if commentary could not be written
+        if: steps.next.outputs.created == '1' && steps.commentary.outputs.still_draft == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

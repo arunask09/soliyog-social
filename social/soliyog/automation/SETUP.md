@@ -64,26 +64,52 @@ Then run `npm ci` in `automation/` (installs `sharp`, used to make the IG JPEG) 
 
 ## 5. GitHub Actions
 
-Three workflows (all in `.github/workflows/`, cron times in UTC = IST − 5:30):
+Four workflows (all in `.github/workflows/`, cron times in UTC = IST − 5:30):
 
-- **`prep-post.yml`** — `30 7 * * *` (13:00 IST) + manual dispatch. Promotes the next
-  `status: ready` item (date ≤ tomorrow) to `approved`, renders the poster + captions,
-  commits, and opens a GitHub Issue labelled `pending-review` with the poster + captions
-  for a phone review.
+- **`prep-post.yml`** — `30 7 * * *` (13:00 IST) + manual dispatch. Takes the next
+  `ready`-or-`draft` item (date ≤ tomorrow). If it's still `draft`, runs
+  `write-commentary.mjs` once to fill it (safety net). Then promotes it to `approved`,
+  renders the poster + captions, commits, and opens a `pending-review` GitHub Issue for a
+  phone review — skipping that if one is already open for the slug.
 - **`review-post.yml`** — `issue_comment`. On a `pending-review` issue, **only** a comment
   from the repo owner: `skip` → `status: held` + close; `read: <text>` → rewrite the
   "Soliyog's read" line, rebuild, re-post the poster; else a hint.
 - **`daily-post.yml`** — `30 3 * * *` (09:00 IST) + manual dispatch. Posts the oldest
   `status: approved` item with `date <= today`, commits `status: posted`, and closes the
-  matching review issue with "Posted ✅". Then runs **`next-post.mjs`**: unless the queue
-  already holds 3 un-posted items, it scrapes the soliyog.com listings, picks the newest
-  fresher/junior India role not already in the queue or `seen-jobs.json`, scaffolds it as
-  `status: draft`, commits, and opens a `needs-commentary` issue. Non-fatal — a scrape
-  failure or "no candidate" is logged and skipped.
+  matching review issue with "Posted ✅". Only if something actually posted this run: runs
+  **`next-post.mjs`** (scrapes soliyog.com, scaffolds the next `draft` unless the queue
+  already holds 3 un-posted items), then **`write-commentary.mjs`** to fill `role_tests` +
+  `soliyog_read` from the listing via Gemini and flip it to `ready`. A `needs-commentary`
+  issue is opened **only if** that generation failed.
+- **`precision-trigger.yml`** — `*/5` watchdog that dispatches the two above inside their
+  windows. GitHub's scheduler is unreliable, so the real trigger is an external cron
+  (cron-job.org) hitting the `workflow_dispatch` API at `30 3` and `30 7` UTC; this stays
+  as a best-effort backup. Both targets are status-gated, so a double trigger is a no-op.
 
 **Opt-out model:** once `prep-post` promotes an item it *will* post at 09:00 IST unless you
-`skip` it. Only `status: ready` items are ever promoted, so the editorial pass always
-happened first.
+`skip` it. Commentary is auto-written, but you still see the finished poster in the review
+issue before it goes.
+
+### Secrets
+
+`META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO`, `DISPATCH_PAT` (precision-trigger),
+and **`GEMINI_API_KEY`** (auto-commentary):
+
+```
+gh secret set GEMINI_API_KEY -R arunask09/soliyog-social   # paste the key from ~/.claude/settings.json
+```
+
+### External trigger (cron-job.org, one-time)
+
+Two jobs, both `POST` with headers `Authorization: Bearer <PAT>`,
+`Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28`, body `{"ref":"main"}`:
+
+| Schedule (UTC) | URL |
+|---|---|
+| `30 3 * * *` | `https://api.github.com/repos/arunask09/soliyog-social/actions/workflows/daily-post.yml/dispatches` |
+| `30 7 * * *` | `https://api.github.com/repos/arunask09/soliyog-social/actions/workflows/prep-post.yml/dispatches` |
+
+PAT: fine-grained, this repo only, **Actions: Read and write** (the `DISPATCH_PAT` value works).
 
 ---
 
@@ -93,20 +119,22 @@ happened first.
 node social/soliyog/automation/new-post.mjs <soliyog.com/jobs/URL-or-id>
 ```
 → creates `queue/<date>-<slug>.md` (theme alternates dark/light by date) with portal facts.
-You usually don't run this by hand any more — `daily-post` auto-scaffolds the next draft
-after each publish and opens a `needs-commentary` issue. Run it manually only to jump the
-queue or feature a specific listing. Either way, from the actual listing, fill two
-front-matter blocks:
+You don't run this by hand any more — `daily-post` auto-scaffolds the next draft after each
+publish, then `write-commentary.mjs` fills its two front-matter blocks from the listing and
+flips it to `ready`. Run `new-post.mjs` manually only to jump the queue or feature a
+specific listing (then `node write-commentary.mjs --slug <slug>` to fill it, or hand-write):
 
 - `role_tests:` — 3-4 bullets for "What this role tests" (interview mode, stated
   requirements, what the work is). Read from *this* listing, not a generic role stereotype.
 - `soliyog_read:` — 1-2 calm sentences for "Why this one's worth a look".
 
-Leave either blank to omit it from the poster/captions (never invent one). Then
-`node build-caption.mjs <slug> --write` to fold `soliyog_read` into the captions, and set
-**`status: ready`**. That evening `prep-post` builds it, flips it to `approved`, and opens
-a review issue — approve/skip/edit from the GitHub mobile app; do nothing and it posts at
-09:00 IST. (Set `status: approved` by hand only to bypass the review loop.)
+Leave either blank to omit it from the poster/captions (never invent one). `prep-post` then
+builds the poster, flips it to `approved`, and opens a review issue — approve/skip/edit from
+the GitHub mobile app; do nothing and it posts at 09:00 IST. (Set `status: approved` by hand
+only to bypass the review loop.)
+
+- Auto-write commentary for a draft: `node automation/write-commentary.mjs --slug <slug>`
+  (`--dry-run` to preview). Needs `GEMINI_API_KEY`.
 
 - Preview first: `node automation/build-image.mjs <slug>` → `queue/assets/<date>-<slug>.png`
   (Facebook) + `.jpg` (1080×1350, Instagram)

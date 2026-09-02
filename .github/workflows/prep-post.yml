@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: social/soliyog/automation/package-lock.json
       - name: install deps
@@ -33,6 +33,7 @@ jobs:
         working-directory: social/soliyog/automation
         env:
           CHROME: ${{ steps.chrome.outputs.chrome-path }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ISSUE_BODY_FILE: ${{ runner.temp }}/issue-body.md
         run: |
           git config user.name  "soliyog-bot"
@@ -43,6 +44,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          slug='${{ steps.prep.outputs.slug }}'
+          open=$(gh issue list --label pending-review --state open --json body \
+            -q "[.[] | select(.body | contains(\"slug=$slug\"))] | length")
+          if [ "$open" != "0" ]; then
+            echo "a pending-review issue for $slug is already open — not opening another"
+            exit 0
+          fi
           gh label create pending-review --color FBBF24 \
             --description "Soliyog post awaiting phone review" --force
           gh issue create \

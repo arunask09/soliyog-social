@@ -35,15 +35,29 @@ const istTomorrow = new Date(istMs + 24 * 3600 * 1000).toISOString().slice(0, 10
 const item = slugArg
   ? listItems().find((x) => x.slug === slugArg)
   : listItems()
-      .filter((x) => x.status === 'ready' && (x.date || '9999') <= istTomorrow)
+      .filter((x) => (x.status === 'ready' || x.status === 'draft') && (x.date || '9999') <= istTomorrow)
       .sort((a, b) => (a.date || '').localeCompare(b.date || ''))[0];
 
 if (!item) {
-  console.log(slugArg ? `no queue item "${slugArg}"` : 'no `ready` item due — nothing to prep');
+  console.log(slugArg ? `no queue item "${slugArg}"` : 'no `ready` or `draft` item due — nothing to prep');
   process.exit(slugArg ? 1 : 0);
 }
 
 const slug = item.slug;
+
+// Safety net: a draft that reached prep without commentary (its daily-post
+// auto-commentary attempt failed). Try once more here before giving up.
+if (readItem(slug).front.status === 'draft') {
+  if (dry) { console.log(`[dry-run] ${slug} is draft — would run write-commentary.mjs first`); process.exit(0); }
+  console.log(`${slug} is still draft — attempting auto-commentary`);
+  try {
+    execFileSync('node', [resolve(HERE, 'write-commentary.mjs'), '--slug', slug], { stdio: 'inherit' });
+  } catch { /* non-fatal — status check below decides */ }
+  if (readItem(slug).front.status !== 'ready') {
+    console.log(`${slug} could not be made ready — leaving it for a human, nothing to prep`);
+    process.exit(0);
+  }
+}
 const { front } = readItem(slug);
 if (!front.source_url) { console.error(`queue/${slug}.md has no source_url`); process.exit(1); }
 const job = await fetchJob(front.source_url);
