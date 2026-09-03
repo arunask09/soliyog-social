@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 3 Oct
   
+  Soliyog's read: This KPMG trainee role offers real internal audit exposure in Gurgaon under ICAI guidelines. Expect a steep learning curve in testing controls and compliance across complex business functions.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with KPMG India. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 3 Oct
   
+  Soliyog's read: This KPMG trainee role offers real internal audit exposure in Gurgaon under ICAI guidelines. Expect a steep learning curve in testing controls and compliance across complex business functions.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with KPMG India. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 3 Oct
+  
+  Soliyog's read: This KPMG trainee role offers real internal audit exposure in Gurgaon under ICAI guidelines. Expect a steep learning curve in testing controls and compliance across complex business functions.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with KPMG India. Check their careers page before applying.
