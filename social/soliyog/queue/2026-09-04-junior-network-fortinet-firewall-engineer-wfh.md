@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-04-junior-network-fortinet-firewall-engineer-wfh
 date: 2026-09-04
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/307
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Network and Fortinet firewall engineering in a full-time remote setup
+  - Late-night India hours extending until 4 AM for US shift overlap
+  - Strict screening questions that result in auto-rejection if answered incorrectly
+  - Exclusive full-time availability with a strict ban on dual employment
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This welcomes freshers into hands-on network and firewall work. The catch is the mandatory night shift ending at 4 AM India time and strict enforcement against taking on secondary jobs.
 caption_instagram: |
   Junior Network & Fortinet Firewall Engineer WFH at Qubrid AI
   
