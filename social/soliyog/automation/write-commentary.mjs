@@ -118,6 +118,7 @@ async function callGemini(prompt, key, attempt = 1) {
       contents: [{ parts: [{ text }] }],
       generationConfig: { temperature: 0.4, responseMimeType: 'application/json' },
     }),
+    signal: AbortSignal.timeout(60_000),
   });
   const j = await res.json();
   if (j.error) throw new Error(`Gemini ${j.error.status || res.status}: ${j.error.message || 'error'}`);
