@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-04-junior-network-fortinet-firewall-engineer-wfh
 date: 2026-09-04
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/307
@@ -20,6 +20,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 1 Oct
   
+  Soliyog's read: This welcomes freshers into hands-on network and firewall work. The catch is the mandatory night shift ending at 4 AM India time and strict enforcement against taking on secondary jobs.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Qubrid AI. Check their careers page before applying.
   
@@ -32,6 +34,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 1 Oct
   
+  Soliyog's read: This welcomes freshers into hands-on network and firewall work. The catch is the mandatory night shift ending at 4 AM India time and strict enforcement against taking on secondary jobs.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Qubrid AI. Check their careers page before applying.
   
@@ -43,6 +47,8 @@ caption_linkedin: |
   Type: Full-time · Remote
   Experience: Freshers welcome
   Apply by: 1 Oct
+  
+  Soliyog's read: This welcomes freshers into hands-on network and firewall work. The catch is the mandatory night shift ending at 4 AM India time and strict enforcement against taking on secondary jobs.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Qubrid AI. Check their careers page before applying.
