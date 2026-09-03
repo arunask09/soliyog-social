@@ -53,8 +53,10 @@ Write two things about the job below, grounded ONLY in this listing — no
 role-family stereotypes, no invented detail.
 
 1. role_tests: 3-4 short bullets (each under 14 words, no trailing period) on
-   what this role actually tests or involves: interview mode, stated
-   requirements, the day-to-day work.
+   what this role actually tests or involves: the technical skills and tools
+   named, the day-to-day work, the interview rounds. Lead with the substance of
+   the job. Ignore application mechanics, screening-question rules, and
+   equal-opportunity boilerplate unless they genuinely shape the work.
 2. soliyog_read: 1-2 calm sentences (under 45 words total) on why it is worth a
    look. Name the hard parts. If the stated experience means this is NOT a
    fresher role, say so plainly.
