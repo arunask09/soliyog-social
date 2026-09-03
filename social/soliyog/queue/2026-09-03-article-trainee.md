@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-03-article-trainee
 date: 2026-09-03
-status: draft
+status: held
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/158
