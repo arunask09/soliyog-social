@@ -13,7 +13,8 @@
  *   node prep-post.mjs --dry-run      # print what it would do; touch nothing
  *   node prep-post.mjs --slug <slug>  # prep this specific item (skips the date filter)
  *
- * Selection: oldest item with status === 'ready' and date <= tomorrow (IST).
+ * Selection: oldest `ready`-or-`draft` item with date <= tomorrow (IST). A draft
+ * gets one auto-commentary attempt; a stuck one is skipped, not left to block.
  * Non-dry output: writes $ISSUE_BODY_FILE (default ./_issue-body.md) and appends
  * slug / title / body_file / open_issue to $GITHUB_OUTPUT when set.
  */
@@ -32,32 +33,39 @@ const slugArg = process.argv.includes('--slug')
 const istMs = Date.now() + 5.5 * 3600 * 1000;
 const istTomorrow = new Date(istMs + 24 * 3600 * 1000).toISOString().slice(0, 10);
 
-const item = slugArg
-  ? listItems().find((x) => x.slug === slugArg)
+// Candidates: oldest first. A stuck draft must not block the ones behind it, so
+// this is a list we walk, not a single pick.
+const candidates = slugArg
+  ? listItems().filter((x) => x.slug === slugArg)
   : listItems()
       .filter((x) => (x.status === 'ready' || x.status === 'draft') && (x.date || '9999') <= istTomorrow)
-      .sort((a, b) => (a.date || '').localeCompare(b.date || ''))[0];
+      .sort((a, b) => (a.date || '').localeCompare(b.date || ''));
 
-if (!item) {
+if (!candidates.length) {
   console.log(slugArg ? `no queue item "${slugArg}"` : 'no `ready` or `draft` item due — nothing to prep');
   process.exit(slugArg ? 1 : 0);
 }
 
-const slug = item.slug;
-
-// Safety net: a draft that reached prep without commentary (its daily-post
-// auto-commentary attempt failed). Try once more here before giving up.
-if (readItem(slug).front.status === 'draft') {
-  if (dry) { console.log(`[dry-run] ${slug} is draft — would run write-commentary.mjs first`); process.exit(0); }
-  console.log(`${slug} is still draft — attempting auto-commentary`);
+// Pick the first candidate we can actually get to `ready`. A `draft` gets one
+// auto-commentary attempt (its daily-post attempt may have failed); if that
+// can't make it ready, move on rather than block the queue.
+let slug = null;
+for (const c of candidates) {
+  if (readItem(c.slug).front.status === 'ready') { slug = c.slug; break; }
+  if (dry) { console.log(`[dry-run] ${c.slug} is draft — would run write-commentary.mjs first`); continue; }
+  console.log(`${c.slug} is still draft — attempting auto-commentary`);
   try {
-    execFileSync('node', [resolve(HERE, 'write-commentary.mjs'), '--slug', slug], { stdio: 'inherit' });
+    execFileSync('node', [resolve(HERE, 'write-commentary.mjs'), '--slug', c.slug], { stdio: 'inherit' });
   } catch { /* non-fatal — status check below decides */ }
-  if (readItem(slug).front.status !== 'ready') {
-    console.log(`${slug} could not be made ready — leaving it for a human, nothing to prep`);
-    process.exit(0);
-  }
+  if (readItem(c.slug).front.status === 'ready') { slug = c.slug; break; }
+  console.log(`${c.slug} could not be made ready — skipping it`);
 }
+
+if (!slug) {
+  console.log('no candidate could be made ready — nothing to prep');
+  process.exit(0);
+}
+
 const { front } = readItem(slug);
 if (!front.source_url) { console.error(`queue/${slug}.md has no source_url`); process.exit(1); }
 const job = await fetchJob(front.source_url);
