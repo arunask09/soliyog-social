@@ -28,9 +28,15 @@ export async function fetchJob(idOrUrl) {
   if (!ld || ld['@type'] !== 'JobPosting' || !ld.title) throw new Error(`no JobPosting.title on ${url}`);
 
   const descriptionText = stripHtml(ld.description);
-  const descField = (label) =>
-    descriptionText.match(new RegExp(`${label}\\s*:?\\s*([\\s\\S]{2,60}?)\\s*(?=(?:${LABELS})\\s*:|$)`, 'i'))?.[1]
+  const descField = (label) => {
+    const v = descriptionText.match(new RegExp(`${label}\\s*:?\\s*([\\s\\S]{2,60}?)\\s*(?=(?:${LABELS})\\s*:|$)`, 'i'))?.[1]
       ?.trim().replace(/[.,;|]+$/, '').trim() || '';
+    // The soliyog.com listing's own description text is occasionally already truncated
+    // mid-word with a trailing "…" (seen on job 300's Experience field: "in usin…") —
+    // that's corrupted source data, not a real value. Never publish a garbled fragment;
+    // drop it like any other missing fact.
+    return /…/.test(v) ? '' : v;
+  };
 
   // location
   let loc = ld.jobLocation;
@@ -48,20 +54,32 @@ export async function fetchJob(idOrUrl) {
   else if (remote && !employmentType) employmentType = 'Remote';
 
   // experience
-  let experience = descField('Experience').replace(/\s*years?\b/i, ' yrs').replace(/\s+/g, ' ').trim();
-  if (/^0\s*yrs|^fresh/i.test(experience)) experience = 'Freshers welcome';
-  // Guard: a description that spells out "N years experience" must not be downgraded to
-  // "Freshers welcome" by a JSON-LD experienceRequirements.monthsOfExperience of 0.
-  if (!experience) {
-    const ym = descriptionText.match(
-      /(\d{1,2})\s*(?:\+|-|–|to|and)?\s*(\d{1,2})?\+?\s*years?['’]?\s+(?:[\w-]+\s+){0,3}?experience/i,
-    );
-    if (ym && +ym[1] > 0) experience = ym[2] && +ym[2] > +ym[1] ? `${ym[1]}–${ym[2]} yrs` : `${ym[1]}+ yrs`;
-  }
-  if (!experience) {
-    const months = ld.experienceRequirements?.monthsOfExperience;
-    if (typeof months === 'number') {
-      experience = months <= 0 ? 'Freshers welcome' : months <= 24 ? '0–2 yrs' : months <= 60 ? '2–5 yrs' : '5+ yrs';
+  // If the listing's own Experience field was itself cut off mid-word (the "…" case
+  // descField() already guards against), the field is present-but-corrupted, not absent —
+  // falling through to the monthsOfExperience default below would confidently assert
+  // "Freshers welcome" from unrelated metadata, which can flatly contradict a per-post
+  // soliyog_read note that says otherwise. Corrupted -> omit the fact, don't guess it.
+  const experienceFieldCorrupted = /…/.test(
+    descriptionText.match(new RegExp(`Experience\\s*:?\\s*([\\s\\S]{2,60}?)\\s*(?=(?:${LABELS})\\s*:|$)`, 'i'))?.[1] || '',
+  );
+  let experience = experienceFieldCorrupted
+    ? ''
+    : descField('Experience').replace(/\s*years?\b/i, ' yrs').replace(/\s+/g, ' ').trim();
+  if (!experienceFieldCorrupted) {
+    if (/^0\s*yrs|^fresh/i.test(experience)) experience = 'Freshers welcome';
+    // Guard: a description that spells out "N years experience" must not be downgraded to
+    // "Freshers welcome" by a JSON-LD experienceRequirements.monthsOfExperience of 0.
+    if (!experience) {
+      const ym = descriptionText.match(
+        /(\d{1,2})\s*(?:\+|-|–|to|and)?\s*(\d{1,2})?\+?\s*years?['’]?\s+(?:[\w-]+\s+){0,3}?experience/i,
+      );
+      if (ym && +ym[1] > 0) experience = ym[2] && +ym[2] > +ym[1] ? `${ym[1]}–${ym[2]} yrs` : `${ym[1]}+ yrs`;
+    }
+    if (!experience) {
+      const months = ld.experienceRequirements?.monthsOfExperience;
+      if (typeof months === 'number') {
+        experience = months <= 0 ? 'Freshers welcome' : months <= 24 ? '0–2 yrs' : months <= 60 ? '2–5 yrs' : '5+ yrs';
+      }
     }
   }
 
