@@ -57,7 +57,7 @@ caption_linkedin: |
   #juniornetworkfortinetfir #fresherjobs
 image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@8174847c234b59da586dd29cd1c332d6e9699e97/social/soliyog/queue/assets/2026-09-04-2026-09-04-junior-network-fortinet-firewall-engineer-wfh.jpg
 posted_at: 2026-09-04T22:18:17.247Z
-post_ids: {"facebook":"1289252704274108_122101307559464634","instagram":"18116915803947818","linkedin":"6a9b439f9ca05109bec8a9e0"}
+post_ids: {"facebook":"1289252704274108_122101269141464634","instagram":"18143943856483675","linkedin":"6a9b439f9ca05109bec8a9e0"}
 ---
 
 # Junior Network & Fortinet Firewall Engineer WFH — Qubrid AI
