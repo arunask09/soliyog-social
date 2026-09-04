@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-05-as400-support-engineer-trainee
 date: 2026-09-05
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/300
@@ -20,6 +20,8 @@ caption_instagram: |
   Experience: in usin…
   Apply by: 1 Oct
   
+  Soliyog's read: This requires 6 to 12 months of experience, so it is not for absolute freshers. It offers structured hybrid work in Pune, but the work centers entirely on reactive first-line support, monitoring alerts, and handling job failures.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Systems Plus. Check their careers page before applying.
   
@@ -32,6 +34,8 @@ caption_facebook: |
   Experience: in usin…
   Apply by: 1 Oct
   
+  Soliyog's read: This requires 6 to 12 months of experience, so it is not for absolute freshers. It offers structured hybrid work in Pune, but the work centers entirely on reactive first-line support, monitoring alerts, and handling job failures.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Systems Plus. Check their careers page before applying.
   
@@ -43,6 +47,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: in usin…
   Apply by: 1 Oct
+  
+  Soliyog's read: This requires 6 to 12 months of experience, so it is not for absolute freshers. It offers structured hybrid work in Pune, but the work centers entirely on reactive first-line support, monitoring alerts, and handling job failures.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Systems Plus. Check their careers page before applying.
