@@ -142,10 +142,14 @@ const api = async (path, body) => {
   return j;
 };
 
+const platforms = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin']);
+// Seed from any post_ids a prior partial failure already recorded, and skip those
+// platforms below — a hand-set retry (status back to approved) must not re-post
+// a platform that already succeeded. Declared outside the try so the catch block
+// can still persist whatever succeeded before a later platform's throw.
+const post_ids = front.post_ids ? JSON.parse(front.post_ids) : {};
 try {
-  const platforms = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin']);
-  const post_ids = {};
-  if (platforms.includes('facebook')) {
+  if (platforms.includes('facebook') && !post_ids.facebook) {
     const r = await api(`${FB_PAGE_ID}/photos`, { url: fbUrl, caption: capFB });
     post_ids.facebook = r.post_id || r.id;
     console.log('FB ok', post_ids.facebook);
@@ -161,7 +165,7 @@ try {
       }
     }
   }
-  if (platforms.includes('instagram')) {
+  if (platforms.includes('instagram') && !post_ids.instagram) {
     const c = await api(`${IG_USER_ID}/media`, { image_url: igUrl, caption: capIG });
     for (let i = 0; i < 20; i++) {
       const s = await (await fetch(`${G}/${c.id}?fields=status_code&access_token=${PAGE_TOKEN}`)).json();
@@ -172,7 +176,7 @@ try {
     post_ids.instagram = (await api(`${IG_USER_ID}/media_publish`, { creation_id: c.id })).id;
     console.log('IG ok', post_ids.instagram);
   }
-  if (platforms.includes('linkedin')) {
+  if (platforms.includes('linkedin') && !post_ids.linkedin) {
     if (!BUFFER_TOKEN || !BUFFER_LINKEDIN_CHANNEL_ID) throw new Error('linkedin: missing BUFFER_TOKEN / BUFFER_LINKEDIN_CHANNEL_ID');
     const query = `mutation CreatePost($input: CreatePostInput!) {
       createPost(input: $input) {
@@ -202,9 +206,11 @@ try {
   persist({ status: 'posted', posted_at: new Date().toISOString(), post_ids: JSON.stringify(post_ids) });
   console.log('done');
 } catch (e) {
-  // mark failed and commit it so CI doesn't retry the same broken item every cron run.
-  // to retry a transient failure, set status back to "approved" by hand.
-  try { persist({ status: 'failed' }); } catch (ce) { console.error('could not persist failed status:', ce.message); }
+  // mark failed and commit it so CI doesn't retry the same broken item every cron run —
+  // but keep whatever platforms already succeeded (post_ids is declared above the try's
+  // per-platform blocks, so it holds every id won so far even though the throw happened
+  // partway through). A hand-set retry re-reads this file and skips those platforms.
+  try { persist({ status: 'failed', post_ids: JSON.stringify(post_ids) }); } catch (ce) { console.error('could not persist failed status:', ce.message); }
   console.error('FAILED:', e.message);
   process.exit(1);
 }
