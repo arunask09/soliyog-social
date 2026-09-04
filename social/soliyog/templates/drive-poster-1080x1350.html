@@ -239,21 +239,32 @@
     // role: "Cloud Computing Engineer" -> Cloud Computing<br><span class="l2 hl">Engineer</span>
     // Runs after the company lockup so the space it leaves is known, then shrinks the
     // hero type until each logical line fits on one row (keeps every poster to 2 lines).
+    // Tries a 1-word tail first (the common "headline word" case), then widens to a
+    // 2- or 3-word tail when the title ends in a short suffix tag (e.g. "... WFH",
+    // "... Remote") that would otherwise dump every real word onto an unfittable line 1.
     if (d.role) {
       const w = String(d.role).trim().split(/\s+/);
       const roleEl = document.querySelector('.role');
-      roleEl.innerHTML = w.length > 1
-        ? '<span class="l1">' + w.slice(0, -1).join(' ') + '</span><br><span class="l2 hl">' + w[w.length - 1] + '</span>'
-        : '<span class="l2 hl">' + w[0] + '</span>';
       const hero = roleEl.parentElement;
       const gap = parseFloat(getComputedStyle(hero).columnGap || getComputedStyle(hero).gap) || 36;
-      const parts = roleEl.querySelectorAll('span');
-      for (let fs = 116; fs >= 60; fs -= 2) {
-        roleEl.style.fontSize = fs + 'px';
-        const avail = hero.clientWidth - (c ? c.offsetWidth : 0) - gap - 4;
-        let fits = true;
-        for (const p of parts) if (p.scrollWidth > avail) { fits = false; break; }
-        if (fits) break;
+      const avail = hero.clientWidth - (c ? c.offsetWidth : 0) - gap - 4;
+      if (w.length === 1) {
+        roleEl.innerHTML = '<span class="l2 hl">' + w[0] + '</span>';
+      } else {
+        const maxTail = Math.min(3, w.length - 1);
+        let placed = false;
+        for (let tail = 1; tail <= maxTail && !placed; tail++) {
+          roleEl.innerHTML = '<span class="l1">' + w.slice(0, -tail).join(' ') + '</span><br>'
+            + '<span class="l2 hl">' + w.slice(-tail).join(' ') + '</span>';
+          const parts = roleEl.querySelectorAll('span');
+          for (let fs = 116; fs >= 60; fs -= 2) {
+            roleEl.style.fontSize = fs + 'px';
+            let fits = true;
+            for (const p of parts) if (p.scrollWidth > avail) { fits = false; break; }
+            if (fits) { placed = true; break; }
+          }
+        }
+        // last resort: widest tail tried, smallest size — same fallback as before the fix
       }
     }
   })();
