@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with Qubrid AI. Check their careers page before applying.
   
   #juniornetworkfortinetfir #fresherjobs
-image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@82258b7b23084c2b817cf304668cd6fc38bacb96/social/soliyog/queue/assets/2026-09-04-2026-09-04-junior-network-fortinet-firewall-engineer-wfh.jpg
-posted_at: 2026-09-04T03:32:04.209Z
-post_ids: {"facebook":"1289252704274108_122100661137464634","instagram":"17878476987535171"}
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@315f4581c91e86779224894a0e1bdfb8e7d8ebc4/social/soliyog/queue/assets/2026-09-04-2026-09-04-junior-network-fortinet-firewall-engineer-wfh.jpg
+posted_at: 2026-09-04T21:11:43.760Z
+post_ids: {"facebook":"1289252704274108_122101269141464634","instagram":"18143943856483675"}
 ---
 
 # Junior Network & Fortinet Firewall Engineer WFH — Qubrid AI
