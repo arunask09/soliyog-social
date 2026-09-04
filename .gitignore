@@ -1,5 +1,6 @@
 # --- keep the public soliyog-social repo to just the soliyog pipeline ---
 .claude/
+.claude-ads/
 HANDOFF.md
 
 # leetdata content (private — not part of this repo)
