@@ -3,7 +3,7 @@ slug: 2026-09-05-as400-support-engineer-trainee
 date: 2026-09-05
 status: approved
 theme: light
-platforms: [instagram, facebook]
+platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/300
 role_tests: |
   - Monitoring AS400 jobs and system alerts for timely acknowledgment
@@ -47,7 +47,8 @@ caption_linkedin: |
   
   Soliyog's read: This requires 6 to 12 months of experience, so it is not for absolute freshers. It offers structured hybrid work in Pune, but the work centers entirely on reactive first-line support, monitoring alerts, and handling job failures.
   
-  Full listing and how to apply — link in the comments.
+  Full listing and how to apply:
+  https://www.soliyog.com/jobs/300
   Not affiliated with Systems Plus. Check their careers page before applying.
   
   #as400supportengineertrai #fresherjobs

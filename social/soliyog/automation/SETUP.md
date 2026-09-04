@@ -1,4 +1,4 @@
-# Soliyog daily FB + Instagram poster — setup
+# Soliyog daily FB + Instagram (+ LinkedIn) poster — setup
 
 One-time steps you (the human) do. After this, the pipeline runs itself.
 
@@ -45,6 +45,21 @@ Creator accounts can't use `instagram_content_publish`.
    `social/soliyog/**` + `.github/`.
 8. Repo → Settings → Actions → General → Workflow permissions → **Read and write**.
 
+## 2b. LinkedIn — via Buffer, not LinkedIn's own API
+
+LinkedIn's Community Management API (needed to post to a Company Page) requires the
+posting account to be a **legally registered entity** (LLC, private limited company,
+etc.) and a **1-4 week app review** — Soliyog isn't registered, so that path is closed.
+Buffer already holds its own approved LinkedIn connection; we ride on that instead.
+
+1. Connect the Soliyog LinkedIn Company Page to Buffer (already done) — its channel ID
+   is visible in the Buffer URL when you open that channel's schedule, e.g.
+   `publish.buffer.com/channels/<CHANNEL_ID>/schedule`.
+2. `publish.buffer.com/settings/api` → **Personal Access** tab → **+ New Key** → all
+   permissions → expiration **1 year** (the longest offered — unlike `META_TOKEN` this
+   one *does* expire, so put a reminder ~11 months out to regenerate it) → Generate →
+   copy as `BUFFER_TOKEN`.
+
 ## 4. Credentials
 
 `social/soliyog/automation/.env` (git-ignored — the assistant can't create it):
@@ -53,14 +68,19 @@ META_TOKEN=<never-expiring system-user token — regenerate, don't reuse a paste
 FB_PAGE_ID=1289252704274108
 IG_USER_ID=17841433325332630
 GH_REPO=<your-user>/soliyog-social
+BUFFER_TOKEN=<Buffer Personal Access Key — expires in <=1yr, regenerate before then>
+BUFFER_LINKEDIN_CHANNEL_ID=<Soliyog LinkedIn channel id from the Buffer schedule URL>
 BRANDFETCH_CLIENT_ID=       # optional, for employer logos
 CF_ACCOUNT_ID=             # optional, unused AI-image scripts
 CF_API_TOKEN=
 ```
-Add `META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO` as **GitHub Actions Secrets**.
+Add all six (`META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO`, `BUFFER_TOKEN`,
+`BUFFER_LINKEDIN_CHANNEL_ID`) as **GitHub Actions Secrets** — LinkedIn posts by default,
+so a missing Buffer secret fails the whole run unless the item opts out (see §5 daily use).
 
 Then run `npm ci` in `automation/` (installs `sharp`, used to make the IG JPEG) and
-`node automation/verify-setup.mjs` to check the token, scopes, Page, IG link, and repo.
+`node automation/verify-setup.mjs` to check the token, scopes, Page, IG link, repo, and
+(if `BUFFER_TOKEN` is set) the Buffer LinkedIn channel.
 
 ## 5. GitHub Actions
 
@@ -93,7 +113,8 @@ issue before it goes.
 ### Secrets
 
 `META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO`, `DISPATCH_PAT` (precision-trigger),
-and **`GEMINI_API_KEY`** (auto-commentary):
+**`GEMINI_API_KEY`** (auto-commentary), and `BUFFER_TOKEN` + `BUFFER_LINKEDIN_CHANNEL_ID`
+(LinkedIn posts by default — without these, posting fails unless an item opts out):
 
 ```
 gh secret set GEMINI_API_KEY -R arunask09/soliyog-social   # paste the key from ~/.claude/settings.json
@@ -142,3 +163,8 @@ only to bypass the review loop.)
 - Force one now: `node automation/post.mjs --slug <slug>`
 - Add an employer domain when a logo is missing: edit `automation/companies.json`, then
   `node automation/fetch-logo.mjs "<Company>"`
+- LinkedIn posts by default alongside FB/IG (`platforms: [instagram, facebook, linkedin]`
+  in every new queue item, via `new-post.mjs`). `caption_linkedin` is already generated
+  by `build-caption.mjs` alongside the other two. Needs `BUFFER_TOKEN` +
+  `BUFFER_LINKEDIN_CHANNEL_ID` set (see §2b) — opt a specific item out with
+  `platforms: [instagram, facebook]`.

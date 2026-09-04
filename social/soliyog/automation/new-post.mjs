@@ -31,7 +31,7 @@ slug: ${slug}
 date: ${date}
 status: draft
 theme: ${theme}
-platforms: [instagram, facebook]
+platforms: [instagram, facebook, linkedin]
 source_url: ${job.url}
 role_tests: |
   # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,

@@ -63,7 +63,9 @@ const out = {
   // FB down-ranks posts with an outbound link in the body — post.mjs drops the
   // real link into the first comment instead.
   caption_facebook: body('Full listing and how to apply — link in the comments.'),
-  caption_linkedin: body('Full listing and how to apply — link in the comments.'),
+  // LinkedIn (posted via Buffer) has no first-comment step, and doesn't down-rank
+  // outbound links the way FB does — so the real link goes straight in the body.
+  caption_linkedin: body(`Full listing and how to apply:\n${src}`),
 };
 
 if (write) {

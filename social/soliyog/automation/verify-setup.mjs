@@ -7,6 +7,7 @@
  * Reads automation/.env (META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO) and checks:
  * token type / expiry / scopes, the Page resolves, an IG account is linked to the Page,
  * IG_USER_ID matches it, the 24h IG publish quota, and GH_REPO is set + public.
+ * Also checks BUFFER_TOKEN / BUFFER_LINKEDIN_CHANNEL_ID if set (LinkedIn posts via Buffer).
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
@@ -62,6 +63,37 @@ else {
   const r = await fetch(`https://api.github.com/repos/${GH_REPO}`);
   if (!r.ok) bad(`GH_REPO ${GH_REPO}: GitHub says ${r.status}`);
   else if ((await r.json()).private) bad(`${GH_REPO} is private — jsDelivr/raw can't serve it, IG posts will fail`);
+}
+
+const { BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID } = process.env;
+console.log('\nBUFFER_TOKEN  :', BUFFER_TOKEN ? '(set)' : '(unset — LinkedIn posts will fail if opted in)');
+if (BUFFER_TOKEN) {
+  const bufq = async (query, variables) => {
+    const r = await fetch('https://api.buffer.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${BUFFER_TOKEN}` },
+      body: JSON.stringify({ query, variables }),
+    });
+    return r.json();
+  };
+  const orgRes = await bufq('query { account { organizations { id name } } }');
+  if (orgRes.errors?.length) bad(`BUFFER_TOKEN: ${orgRes.errors[0].message}`);
+  else if (!BUFFER_LINKEDIN_CHANNEL_ID) bad('BUFFER_LINKEDIN_CHANNEL_ID not set');
+  else {
+    const orgs = orgRes.data?.account?.organizations || [];
+    const channels = [];
+    for (const o of orgs) {
+      const cr = await bufq(
+        'query($input: ChannelsInput!) { channels(input: $input) { id service name displayName } }',
+        { input: { organizationId: o.id } },
+      );
+      channels.push(...(cr.data?.channels || []));
+    }
+    const ch = channels.find((c) => c.id === BUFFER_LINKEDIN_CHANNEL_ID);
+    if (!ch) bad(`BUFFER_LINKEDIN_CHANNEL_ID (${BUFFER_LINKEDIN_CHANNEL_ID}) not found among this token's channels`);
+    else if (ch.service !== 'linkedin') bad(`BUFFER_LINKEDIN_CHANNEL_ID (${BUFFER_LINKEDIN_CHANNEL_ID}) is a ${ch.service} channel, not linkedin`);
+    else console.log('linkedin channel:', ch.displayName || ch.name, `(${BUFFER_LINKEDIN_CHANNEL_ID})`, '✓');
+  }
 }
 
 console.log(ok ? '\n✓ ready to post' : '\n✗ fix the above before posting');

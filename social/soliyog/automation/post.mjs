@@ -1,17 +1,24 @@
 #!/usr/bin/env node
 /*
- * Publish one approved queue item to Facebook + Instagram via the Meta Graph API.
+ * Publish one approved queue item to Facebook + Instagram (Meta Graph API) and
+ * LinkedIn — posted through Buffer (api.buffer.com), since Soliyog isn't a registered
+ * entity and can't get LinkedIn's own Community Management API approved. Buffer already
+ * holds the OAuth connection to the Soliyog LinkedIn Page; we just call its GraphQL
+ * createPost mutation. All three platforms are on by default (`front.platforms`); set
+ * it explicitly on a queue item to opt one out, e.g. `platforms: [instagram, facebook]`.
  *
  *   node post.mjs                 # next approved item with date <= today
  *   node post.mjs --slug <slug>   # a specific item
  *   node post.mjs --dry-run       # print payloads, post nothing
  *
- * Env (from automation/.env or real env): META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO
+ * Env (from automation/.env or real env): META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO,
+ * BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID (needed unless an item opts out of linkedin)
  * (GH_REPO = "user/repo" of the PUBLIC repo this folder is pushed to — for the image URL).
  *
  * On success it commits the queue file (status: posted) and the rendered images back to
  * the repo and pushes — CI checks out fresh each run, so an uncommitted status would
- * re-post the same item on the next cron. FB gets the 2x PNG, IG gets the 1080x1350 JPEG.
+ * re-post the same item on the next cron. FB gets the 2x PNG, IG + LinkedIn get the
+ * 1080x1350 JPEG.
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -22,7 +29,7 @@ const envp = resolve(HERE, '.env');
 if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
   const m = l.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/); if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
 }
-const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO } = process.env;
+const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID } = process.env;
 const args = process.argv.slice(2);
 const dry = args.includes('--dry-run');
 const slugArg = args[args.indexOf('--slug') + 1];
@@ -90,11 +97,20 @@ if (dry) {
 
 const capFB = front.caption_facebook || front.caption_instagram || '';
 const capIG = front.caption_instagram || front.caption_facebook || '';
+const capLI = front.caption_linkedin || capFB;
 console.log(`FB image: ${fbUrl}\nIG image: ${igUrl}`);
 if (dry) {
   console.log('\n--- FB /photos ---\n', { url: fbUrl, caption: capFB });
   if (front.source_url) console.log('\n--- FB first comment ---\n', { message: `Full listing and how to apply:\n${front.source_url}` });
   console.log('\n--- IG /media ---\n', { image_url: igUrl, caption: capIG });
+  const platformsDry = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin']);
+  if (platformsDry.includes('linkedin')) {
+    console.log('\n--- LinkedIn (Buffer createPost) ---\n', {
+      channelId: BUFFER_LINKEDIN_CHANNEL_ID || '(BUFFER_LINKEDIN_CHANNEL_ID not set)',
+      image_url: igUrl,
+      caption: capLI,
+    });
+  }
   process.exit(0);
 }
 
@@ -127,7 +143,7 @@ const api = async (path, body) => {
 };
 
 try {
-  const platforms = [].concat(front.platforms || ['instagram', 'facebook']);
+  const platforms = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin']);
   const post_ids = {};
   if (platforms.includes('facebook')) {
     const r = await api(`${FB_PAGE_ID}/photos`, { url: fbUrl, caption: capFB });
@@ -155,6 +171,33 @@ try {
     }
     post_ids.instagram = (await api(`${IG_USER_ID}/media_publish`, { creation_id: c.id })).id;
     console.log('IG ok', post_ids.instagram);
+  }
+  if (platforms.includes('linkedin')) {
+    if (!BUFFER_TOKEN || !BUFFER_LINKEDIN_CHANNEL_ID) throw new Error('linkedin: missing BUFFER_TOKEN / BUFFER_LINKEDIN_CHANNEL_ID');
+    const query = `mutation CreatePost($input: CreatePostInput!) {
+      createPost(input: $input) {
+        ... on PostActionSuccess { post { id } }
+        ... on MutationError { message }
+      }
+    }`;
+    const variables = { input: {
+      text: capLI,
+      channelId: BUFFER_LINKEDIN_CHANNEL_ID,
+      schedulingType: 'automatic',
+      mode: 'shareNow',
+      needsApproval: false,
+      assets: [{ image: { url: igUrl, metadata: { altText: capLI.split('\n')[0].slice(0, 200) } } }],
+    } };
+    const br = await fetch('https://api.buffer.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${BUFFER_TOKEN}` },
+      body: JSON.stringify({ query, variables }),
+    });
+    const bj = await br.json();
+    const result = bj.data?.createPost;
+    if (bj.errors?.length || result?.message) throw new Error(`linkedin (Buffer): ${bj.errors?.[0]?.message || result.message}`);
+    post_ids.linkedin = result.post.id;
+    console.log('LinkedIn (Buffer) ok', post_ids.linkedin);
   }
   persist({ status: 'posted', posted_at: new Date().toISOString(), post_ids: JSON.stringify(post_ids) });
   console.log('done');

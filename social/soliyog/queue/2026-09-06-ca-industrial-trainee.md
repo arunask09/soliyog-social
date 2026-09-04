@@ -3,7 +3,7 @@ slug: 2026-09-06-ca-industrial-trainee
 date: 2026-09-06
 status: ready
 theme: dark
-platforms: [instagram, facebook]
+platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/343
 role_tests: |
   - Handling core accounting operations and general finance tasks
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 3 Oct
   
+  Soliyog's read: This role is open to freshers seeking CA industrial training in Delhi. The main challenge will be balancing heavy core accounting operations with the added push to actively automate manual workflows.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Joveo. Check their careers page before applying.
   
@@ -30,6 +32,8 @@ caption_facebook: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 3 Oct
+  
+  Soliyog's read: This role is open to freshers seeking CA industrial training in Delhi. The main challenge will be balancing heavy core accounting operations with the added push to actively automate manual workflows.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Joveo. Check their careers page before applying.
@@ -43,7 +47,10 @@ caption_linkedin: |
   Experience: Freshers welcome
   Apply by: 3 Oct
   
-  Full listing and how to apply — link in the comments.
+  Soliyog's read: This role is open to freshers seeking CA industrial training in Delhi. The main challenge will be balancing heavy core accounting operations with the added push to actively automate manual workflows.
+  
+  Full listing and how to apply:
+  https://www.soliyog.com/jobs/343
   Not affiliated with Joveo. Check their careers page before applying.
   
   #caindustrialtrainee #fresherjobs
