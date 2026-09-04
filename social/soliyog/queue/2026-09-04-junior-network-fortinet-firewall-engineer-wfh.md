@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-04-junior-network-fortinet-firewall-engineer-wfh
 date: 2026-09-04
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook]
 source_url: https://www.soliyog.com/jobs/307
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with Qubrid AI. Check their careers page before applying.
   
   #juniornetworkfortinetfir #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@82258b7b23084c2b817cf304668cd6fc38bacb96/social/soliyog/queue/assets/2026-09-04-2026-09-04-junior-network-fortinet-firewall-engineer-wfh.jpg
+posted_at: 2026-09-04T03:32:04.209Z
+post_ids: {"facebook":"1289252704274108_122100661137464634","instagram":"17878476987535171"}
 ---
 
 # Junior Network & Fortinet Firewall Engineer WFH — Qubrid AI
