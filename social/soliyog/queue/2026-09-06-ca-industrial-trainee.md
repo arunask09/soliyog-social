@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-06-ca-industrial-trainee
 date: 2026-09-06
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/343
