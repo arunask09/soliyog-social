@@ -35,6 +35,8 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           GH_REPO: ${{ secrets.GH_REPO }}
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+          BUFFER_LINKEDIN_CHANNEL_ID: ${{ secrets.BUFFER_LINKEDIN_CHANNEL_ID }}
           CHROME: ${{ steps.chrome.outputs.chrome-path }}
         run: |
           git config user.name  "soliyog-bot"
