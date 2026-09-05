@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-05-as400-support-engineer-trainee
 date: 2026-09-05
-status: failed
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/300
@@ -52,9 +52,9 @@ caption_linkedin: |
   Not affiliated with Systems Plus. Check their careers page before applying.
   
   #as400supportengineertrai #fresherjobs
-image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@6dc98b33185fdfe2d9840781563252dee8c9403f/social/soliyog/queue/assets/2026-09-05-2026-09-05-as400-support-engineer-trainee.jpg
-posted_at:
-post_ids: {"facebook":"1289252704274108_122101447587464634","instagram":"17980752585069679"}
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@178c51b3421c676311241874ee5d1c6e26fd4426/social/soliyog/queue/assets/2026-09-05-2026-09-05-as400-support-engineer-trainee.jpg
+posted_at: 2026-09-05T09:47:36.936Z
+post_ids: {"facebook":"1289252704274108_122101447587464634","instagram":"17980752585069679","linkedin":"6a9be52e8aaccea6d5efc6c0"}
 ---
 
 # AS400 Support Engineer Trainee — Systems Plus
