@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-07-junior-accountant
 date: 2026-09-07
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/361
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 2 Oct
   
+  Soliyog's read: This is a genuine entry-level role for freshers in an expanding D2C startup. Early-stage accounting in growing retail can be fast-paced and chaotic, but it offers immediate hands-on work.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Dressfolk. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 2 Oct
   
+  Soliyog's read: This is a genuine entry-level role for freshers in an expanding D2C startup. Early-stage accounting in growing retail can be fast-paced and chaotic, but it offers immediate hands-on work.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Dressfolk. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 2 Oct
+  
+  Soliyog's read: This is a genuine entry-level role for freshers in an expanding D2C startup. Early-stage accounting in growing retail can be fast-paced and chaotic, but it offers immediate hands-on work.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/361
