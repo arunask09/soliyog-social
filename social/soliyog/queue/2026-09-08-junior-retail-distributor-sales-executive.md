@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-08-junior-retail-distributor-sales-executive
 date: 2026-09-08
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/396
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 6 Oct
   
+  Soliyog's read: It welcomes freshers looking to build foundational B2B sales experience. The daily reality involves active cold calling and potential rejection, so you need resilience.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Wellversed. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 6 Oct
   
+  Soliyog's read: It welcomes freshers looking to build foundational B2B sales experience. The daily reality involves active cold calling and potential rejection, so you need resilience.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Wellversed. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 6 Oct
+  
+  Soliyog's read: It welcomes freshers looking to build foundational B2B sales experience. The daily reality involves active cold calling and potential rejection, so you need resilience.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/396
