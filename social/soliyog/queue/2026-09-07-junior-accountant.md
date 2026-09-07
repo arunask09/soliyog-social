@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-07-junior-accountant
 date: 2026-09-07
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/361
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with Dressfolk. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@356a4bda4c26028a02becdfcd9207eb6a6a1210d/social/soliyog/queue/assets/2026-09-07-2026-09-07-junior-accountant.jpg
+posted_at: 2026-09-07T03:31:31.427Z
+post_ids: {"facebook":"1289252704274108_122103397923464634","instagram":"18100176431199745","linkedin":"6a9e3009fc389e8eb0922d6d"}
 ---
 
 # Junior Accountant — Dressfolk
