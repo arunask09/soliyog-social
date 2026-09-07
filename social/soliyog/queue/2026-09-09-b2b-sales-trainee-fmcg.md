@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-09-b2b-sales-trainee-fmcg
 date: 2026-09-09
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/395
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Active cold calling to introduce products and generate B2B leads
+  - Building and maintaining relationships with B2B clients and vendors
+  - Expanding market presence through lead follow-up and conversion
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a true entry-level role open to freshers looking to build core sales experience. The hard part will be cold calling potential B2B clients consistently to generate leads and convert them.
 caption_instagram: |
   B2B Sales Trainee - FMCG at Wellversed
   
