@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-10-article-trainee
 date: 2026-09-10
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/393
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Handling bank audits, statutory audits, and concurrent audits
+  - Managing taxation and GST work for diverse clientele
+  - Working across corporate, non-corporate, and co-operative entities
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This articleship offers broad exposure to taxation, GST, and multiple audit types across three locations. Covering a wide range of clients will mean a steep learning curve, but it gives freshers solid practical experience.
 caption_instagram: |
   Article Trainee at N M S D & Associates
   
