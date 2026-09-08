@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-09-b2b-sales-trainee-fmcg
 date: 2026-09-09
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/395
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 6 Oct
   
+  Soliyog's read: This is a true entry-level role open to freshers looking to build core sales experience. The hard part will be cold calling potential B2B clients consistently to generate leads and convert them.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Wellversed. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 6 Oct
   
+  Soliyog's read: This is a true entry-level role open to freshers looking to build core sales experience. The hard part will be cold calling potential B2B clients consistently to generate leads and convert them.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Wellversed. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 6 Oct
+  
+  Soliyog's read: This is a true entry-level role open to freshers looking to build core sales experience. The hard part will be cold calling potential B2B clients consistently to generate leads and convert them.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/395
