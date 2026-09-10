@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-10-article-trainee
 date: 2026-09-10
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/393
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with N M S D & Associates. Check their careers page before applying.
   
   #articletrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@43733dfd0501ffaec7838659273f580e4e6a573d/social/soliyog/queue/assets/2026-09-10-2026-09-10-article-trainee.jpg
+posted_at: 2026-09-10T03:31:37.139Z
+post_ids: {"facebook":"1289252704274108_122106527067464634","instagram":"18103372523459448","linkedin":"6aa2248e5761fd1f97d121df"}
 ---
 
 # Article Trainee — N M S D & Associates
