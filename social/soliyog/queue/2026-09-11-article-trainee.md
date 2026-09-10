@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-11-article-trainee
 date: 2026-09-11
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/556
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 9 Oct
   
+  Soliyog's read: This is a standard two-year CA articleship suited for freshers under the new ICAI scheme. The heavy mix of GST filing, tax compliance, and audit rotations means long hours of detail-oriented work.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Dahotre and Dahotre - Chartered Accountants. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 9 Oct
   
+  Soliyog's read: This is a standard two-year CA articleship suited for freshers under the new ICAI scheme. The heavy mix of GST filing, tax compliance, and audit rotations means long hours of detail-oriented work.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Dahotre and Dahotre - Chartered Accountants. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 9 Oct
+  
+  Soliyog's read: This is a standard two-year CA articleship suited for freshers under the new ICAI scheme. The heavy mix of GST filing, tax compliance, and audit rotations means long hours of detail-oriented work.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/556
