@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-11-article-trainee
 date: 2026-09-11
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/556
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with Dahotre and Dahotre - Chartered Accountants. Check their careers page before applying.
   
   #articletrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@c7acf6768b159a5ac0707a69415e9c52a4f5f83d/social/soliyog/queue/assets/2026-09-11-2026-09-11-article-trainee.jpg
+posted_at: 2026-09-11T03:31:42.292Z
+post_ids: {"facebook":"1289252704274108_122107610865464634","instagram":"18166253296471536","linkedin":"6aa3761371ba1c02ccf1c8d6"}
 ---
 
 # Article Trainee — Dahotre and Dahotre - Chartered Accountants
