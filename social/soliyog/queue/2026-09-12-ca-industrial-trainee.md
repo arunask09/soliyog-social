@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-12-ca-industrial-trainee
 date: 2026-09-12
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/555
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Managing core accounting operations within the finance team
+  - Finding practical ways to automate manual workflows
+  - Applying solid general finance knowledge to corporate tasks
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a solid option for freshers seeking CA industrial training in Delhi. Expect a steep learning curve in balancing routine accounting duties with process automation.
 caption_instagram: |
   CA Industrial Trainee at Joveo
   
