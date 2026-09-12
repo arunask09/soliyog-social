@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-13-sap-basis-junior-consultant
 date: 2026-09-13
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/593
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Daily monitoring and maintenance of SAP ECC and S/4HANA systems
+  - Managing user administration, system refreshes, and transport requests
+  - Assisting with system backups, recovery, and performance tuning
+  - Supporting senior consultants with patching, upgrades, and installations
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a true entry-level SAP Basis role in Pune for IT graduates. You will handle routine maintenance and first-level support alongside senior consultants, though daily SAP administration tasks can be repetitive.
 caption_instagram: |
   SAP Basis Junior Consultant at Automatic Infotech
   
