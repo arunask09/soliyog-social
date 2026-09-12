@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-13-sap-basis-junior-consultant
 date: 2026-09-13
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/593
@@ -20,6 +20,8 @@ caption_instagram: |
   Experience: 0–1 yrs Job Type: Full-time Joining: Immediate
   Apply by: 11 Oct
   
+  Soliyog's read: This is a true entry-level SAP Basis role in Pune for IT graduates. You will handle routine maintenance and first-level support alongside senior consultants, though daily SAP administration tasks can be repetitive.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Automatic Infotech. Check their careers page before applying.
   
@@ -32,6 +34,8 @@ caption_facebook: |
   Experience: 0–1 yrs Job Type: Full-time Joining: Immediate
   Apply by: 11 Oct
   
+  Soliyog's read: This is a true entry-level SAP Basis role in Pune for IT graduates. You will handle routine maintenance and first-level support alongside senior consultants, though daily SAP administration tasks can be repetitive.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Automatic Infotech. Check their careers page before applying.
   
@@ -43,6 +47,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: 0–1 yrs Job Type: Full-time Joining: Immediate
   Apply by: 11 Oct
+  
+  Soliyog's read: This is a true entry-level SAP Basis role in Pune for IT graduates. You will handle routine maintenance and first-level support alongside senior consultants, though daily SAP administration tasks can be repetitive.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/593
