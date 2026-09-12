@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-12-ca-industrial-trainee
 date: 2026-09-12
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/555
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with Joveo. Check their careers page before applying.
   
   #caindustrialtrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@eba14c5889c3eecace7c8570bbb10205b387149b/social/soliyog/queue/assets/2026-09-12-2026-09-12-ca-industrial-trainee.jpg
+posted_at: 2026-09-12T03:31:28.022Z
+post_ids: {"facebook":"1289252704274108_122108644053464634","instagram":"18112849976277955","linkedin":"6aa4c785ccd84328917b7bce"}
 ---
 
 # CA Industrial Trainee — Joveo
