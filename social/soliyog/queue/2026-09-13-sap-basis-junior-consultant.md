@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-13-sap-basis-junior-consultant
 date: 2026-09-13
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/593
@@ -55,9 +55,9 @@ caption_linkedin: |
   Not affiliated with Automatic Infotech. Check their careers page before applying.
   
   #sapbasisjuniorconsultant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@a2d447a0303a18672352fcf4535f6ef830c99d57/social/soliyog/queue/assets/2026-09-13-2026-09-13-sap-basis-junior-consultant.jpg
+posted_at: 2026-09-13T03:31:34.057Z
+post_ids: {"facebook":"1289252704274108_122109689865464634","instagram":"18097928741621793","linkedin":"6aa6190b66679b076f1deaa2"}
 ---
 
 # SAP Basis Junior Consultant — Automatic Infotech
