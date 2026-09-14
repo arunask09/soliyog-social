@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-15-software-engineer-fresher-playpower-labs
 date: 2026-09-15
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/619
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 13 Oct
   
+  Soliyog's read: This is a genuine fresher role building software for client EdTech platforms. The challenge lies in tackling hard product and engineering problems at scale, but you will be shipping real products from the start.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Playpower Labs. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 13 Oct
   
+  Soliyog's read: This is a genuine fresher role building software for client EdTech platforms. The challenge lies in tackling hard product and engineering problems at scale, but you will be shipping real products from the start.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Playpower Labs. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 13 Oct
+  
+  Soliyog's read: This is a genuine fresher role building software for client EdTech platforms. The challenge lies in tackling hard product and engineering problems at scale, but you will be shipping real products from the start.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/619
