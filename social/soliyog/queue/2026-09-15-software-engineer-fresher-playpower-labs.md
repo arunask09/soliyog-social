@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-15-software-engineer-fresher-playpower-labs
 date: 2026-09-15
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/619
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with Playpower Labs. Check their careers page before applying.
   
   #softwareengineerfresherp #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@d5e90f18891da17f459bafc2e86d58182e2f1b59/social/soliyog/queue/assets/2026-09-15-2026-09-15-software-engineer-fresher-playpower-labs.jpg
+posted_at: 2026-09-15T03:31:27.498Z
+post_ids: {"facebook":"1289252704274108_122110868919464634","instagram":"18116888482765823","linkedin":"6aa8bc057c6c16e04a177f00"}
 ---
 
 # Software Engineer (Fresher) - PlayPower Labs — Playpower Labs
