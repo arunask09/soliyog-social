@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-16-junior-backend-developer
 date: 2026-09-16
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/610
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: 1–2 yrs
   Apply by: 13 Oct
   
+  Soliyog's read: This role offers solid enterprise AI exposure in Mohali, but requiring 1–2 years of experience means it is not for complete freshers. You must already be comfortable writing production Node.js and TypeScript code.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with iThink Digital. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: 1–2 yrs
   Apply by: 13 Oct
   
+  Soliyog's read: This role offers solid enterprise AI exposure in Mohali, but requiring 1–2 years of experience means it is not for complete freshers. You must already be comfortable writing production Node.js and TypeScript code.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with iThink Digital. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: 1–2 yrs
   Apply by: 13 Oct
+  
+  Soliyog's read: This role offers solid enterprise AI exposure in Mohali, but requiring 1–2 years of experience means it is not for complete freshers. You must already be comfortable writing production Node.js and TypeScript code.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/610
