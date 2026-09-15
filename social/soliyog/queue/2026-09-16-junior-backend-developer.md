@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-16-junior-backend-developer
 date: 2026-09-16
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/610
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Hands-on backend development using Node.js and TypeScript
+  - Building enterprise-grade HR AI and analytics features
+  - Delivering platform work for a large manufacturing conglomerate
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This role offers solid enterprise AI exposure in Mohali, but requiring 1–2 years of experience means it is not for complete freshers. You must already be comfortable writing production Node.js and TypeScript code.
 caption_instagram: |
   Junior Backend Developer at iThink Digital
   
