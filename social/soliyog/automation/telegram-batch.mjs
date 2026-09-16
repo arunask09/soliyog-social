@@ -41,7 +41,7 @@ if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
 }
 const { TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID } = process.env;
 
-const MAX_PER_BATCH = 5;
+const MAX_PER_BATCH = 3;
 const SEEN_FILE = resolve(HERE, 'telegram-batch-seen.json');
 const dry = process.argv.includes('--dry-run');
 
