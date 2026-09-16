@@ -82,10 +82,13 @@ export function pickCandidate(rows, seen, { fallback = false } = {}) {
   return null;
 }
 
-// Up to n unseen fresher/junior India-or-remote listings, newest (page order) first —
-// the batch-posting equivalent of pickCandidate's single pick.
-export function pickCandidates(rows, seen, n) {
-  return rows.filter((r) => r.id && !seen.has(r.id)).filter(isFresherRole).slice(0, n);
+// Up to n unseen listings, newest (page order) first — the batch-posting equivalent of
+// pickCandidate's single pick. { fresherOnly: true } (default) applies the same
+// fresher/junior/India-or-remote bar as the curated pipeline; false takes any listing
+// with at least a title + company, seniority/location unfiltered.
+export function pickCandidates(rows, seen, n, { fresherOnly = true } = {}) {
+  const unseen = rows.filter((r) => r.id && !seen.has(r.id) && r.title && r.company);
+  return (fresherOnly ? unseen.filter(isFresherRole) : unseen).slice(0, n);
 }
 
 // Day after the latest YYYY-MM-DD in the list; `today` when the list is empty.

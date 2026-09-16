@@ -83,8 +83,10 @@ credentials needed. `telegram-batch.mjs` posts several bare-facts listings (role
 qualification, location, salary, apply link, no commentary) in one message, 3x/day
 (`.github/workflows/telegram-batch.yml`, 08:00/13:00/18:00 IST), fully autonomously —
 **no human review step**, since there's no commentary to review, just facts already
-public on soliyog.com. It reuses `next-post.mjs`'s scraper and fresher/junior/
-India-or-remote filter, and keeps its own dedup file
+public on soliyog.com. It reuses `next-post.mjs`'s scraper but, unlike the curated
+pipeline, takes **any current listing** — not just fresher/junior/India-or-remote roles
+— since that filter left just 1 of 72 current listings eligible, nowhere near enough
+for real 3x/day volume. It keeps its own dedup file
 (`automation/telegram-batch-seen.json`, same shape as `seen-jobs.json`) that never
 consults the curated pipeline's state — a listing already featured there (or sitting in
 the queue) is still fair game for the batch feed too, since it's a different channel and
