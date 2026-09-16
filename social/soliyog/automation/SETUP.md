@@ -85,9 +85,11 @@ qualification, location, salary, apply link, no commentary) in one message, 3x/d
 **no human review step**, since there's no commentary to review, just facts already
 public on soliyog.com. It reuses `next-post.mjs`'s scraper and fresher/junior/
 India-or-remote filter, and keeps its own dedup file
-(`automation/telegram-batch-seen.json`, same shape as `seen-jobs.json`) so it can never
-interfere with the curated pipeline's state — a listing already claimed by the curated
-pipeline is still skipped here too, so nothing gets posted to Telegram twice.
+(`automation/telegram-batch-seen.json`, same shape as `seen-jobs.json`) that never
+consults the curated pipeline's state — a listing already featured there (or sitting in
+the queue) is still fair game for the batch feed too, since it's a different channel and
+audience. The dedup file only stops this feed from re-posting a listing it has itself
+already sent.
 
 ## 4. Credentials
 

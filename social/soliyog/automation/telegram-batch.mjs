@@ -9,10 +9,11 @@
  * relevance bar as the curated pipeline) via pickCandidates(), and lib-job.mjs's
  * fetchJob() for the per-listing salary/education/url the card scrape doesn't carry.
  *
- * Dedup is its own file (telegram-batch-seen.json), separate from seen-jobs.json,
- * so this can never interfere with next-post.mjs's state — but a listing already
- * picked by the curated pipeline (in seen-jobs.json, or already in the queue) is
- * still excluded here too, via seenIds(), so the same job is never posted twice.
+ * Dedup is its own file (telegram-batch-seen.json), separate from seen-jobs.json —
+ * this never consults the curated pipeline's state, so a listing already featured
+ * there (or sitting in the queue) is still fair game here too. Different channel,
+ * different audience — the same open role is worth mentioning in both. The only
+ * thing this avoids re-posting is a listing THIS feed has already sent.
  *
  *   node telegram-batch.mjs             # scrape + post + commit + push
  *   node telegram-batch.mjs --dry-run   # print the composed message; touch nothing
@@ -28,8 +29,8 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { HERE, listItems } from './lib.mjs';
-import { scrapeAll, seenIds, pickCandidates } from './next-post.mjs';
+import { HERE } from './lib.mjs';
+import { scrapeAll, pickCandidates } from './next-post.mjs';
 import { fetchJob } from './lib-job.mjs';
 
 const envp = resolve(HERE, '.env');
@@ -65,10 +66,8 @@ function formatListing(job) {
 }
 
 async function main() {
-  const items = listItems();
-  const seenJobs = readSeen(resolve(HERE, 'seen-jobs.json'));
   const batchSeen = readSeen(SEEN_FILE);
-  const seen = seenIds(items, [...seenJobs, ...batchSeen]);
+  const seen = new Set(batchSeen);
 
   let rows;
   try {
