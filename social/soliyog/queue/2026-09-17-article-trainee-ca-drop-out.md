@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-17-article-trainee-ca-drop-out
 date: 2026-09-17
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/638
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Work across direct taxation, GST, and accounting outsourcing
+  - Exposure to valuations, M&A due diligence, and transfer pricing
+  - Handling tasks in payroll management and project finance advisory
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  It gives CA dropouts and freshers broad exposure across taxation, M&A, and accounting advisory. Managing work across several specialized client services will be demanding, but it builds real practical finance experience.
 caption_instagram: |
   Article Trainee / CA Drop Out at Singh Pritam & Co
   
