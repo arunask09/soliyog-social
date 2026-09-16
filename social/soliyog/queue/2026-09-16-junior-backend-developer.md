@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-16-junior-backend-developer
 date: 2026-09-16
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/610
@@ -54,9 +54,9 @@ caption_linkedin: |
   Not affiliated with iThink Digital. Check their careers page before applying.
   
   #juniorbackenddeveloper #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@02d8d845eed6bc10aa47b1ea5a2e15825752201e/social/soliyog/queue/assets/2026-09-16-2026-09-16-junior-backend-developer.jpg
+posted_at: 2026-09-16T03:31:15.434Z
+post_ids: {"facebook":"1289252704274108_122111390433464634","instagram":"17945112426067179","linkedin":"6aaa0d79bcef7237b5ab33a2"}
 ---
 
 # Junior Backend Developer — iThink Digital
