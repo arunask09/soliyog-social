@@ -5,9 +5,11 @@
  * review: there's no commentary to review here, just facts already public on
  * soliyog.com, so this runs fully autonomously off its own cron.
  *
- * Reuses next-post.mjs's scraping + fresher/junior/India-or-remote filter (same
- * relevance bar as the curated pipeline) via pickCandidates(), and lib-job.mjs's
- * fetchJob() for the per-listing salary/education/url the card scrape doesn't carry.
+ * Reuses next-post.mjs's scraping via pickCandidates(), but with { fresherOnly: false }
+ * — unlike the curated pipeline, this takes ANY current listing, not just fresher/
+ * junior/India-or-remote roles, to get real volume (the fresher-only bar left just
+ * 1 of 72 current listings eligible). Uses lib-job.mjs's fetchJob() for the per-listing
+ * salary/education/url the card scrape doesn't carry.
  *
  * Dedup is its own file (telegram-batch-seen.json), separate from seen-jobs.json —
  * this never consults the curated pipeline's state, so a listing already featured
@@ -57,12 +59,14 @@ function formatListing(job) {
     `🌟${job.company} is Hiring`,
     `👩‍💼Role: ${job.title}`,
     job.education ? `🎓Qualification: ${job.education}` : null,
+    job.experience ? `💼 Experience: ${job.experience}` : null,
     job.location ? `📍Location: ${job.location}` : null,
     job.salary ? `💰Salary: ${job.salary}` : null,
-    `👉Apply: ${job.url}`,
+    '',
+    `👉 Apply Link 🔗${job.url}`,
     `(Not affiliated with ${job.company.replace(/\.+$/, '')} — verify on their careers page)`,
   ];
-  return lines.filter(Boolean).join('\n');
+  return lines.filter((l) => l !== null).join('\n');
 }
 
 async function main() {
@@ -77,9 +81,9 @@ async function main() {
     return;
   }
 
-  const candidates = pickCandidates(rows, seen, MAX_PER_BATCH);
+  const candidates = pickCandidates(rows, seen, MAX_PER_BATCH, { fresherOnly: false });
   if (!candidates.length) {
-    console.log('no new fresher/junior India-or-remote listings — nothing to post');
+    console.log('no unposted listings found — nothing to post');
     return;
   }
 
