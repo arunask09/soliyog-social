@@ -7,7 +7,9 @@
  * Reads automation/.env (META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO) and checks:
  * token type / expiry / scopes, the Page resolves, an IG account is linked to the Page,
  * IG_USER_ID matches it, the 24h IG publish quota, and GH_REPO is set + public.
- * Also checks BUFFER_TOKEN / BUFFER_LINKEDIN_CHANNEL_ID if set (LinkedIn posts via Buffer).
+ * Also checks BUFFER_TOKEN / BUFFER_LINKEDIN_CHANNEL_ID if set (LinkedIn posts via Buffer),
+ * and TELEGRAM_BOT_TOKEN / TELEGRAM_CHANNEL_ID if set (Telegram posts via Bot API — both
+ * are optional; unset just means Telegram is skipped, not a failure).
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
@@ -93,6 +95,33 @@ if (BUFFER_TOKEN) {
     if (!ch) bad(`BUFFER_LINKEDIN_CHANNEL_ID (${BUFFER_LINKEDIN_CHANNEL_ID}) not found among this token's channels`);
     else if (ch.service !== 'linkedin') bad(`BUFFER_LINKEDIN_CHANNEL_ID (${BUFFER_LINKEDIN_CHANNEL_ID}) is a ${ch.service} channel, not linkedin`);
     else console.log('linkedin channel:', ch.displayName || ch.name, `(${BUFFER_LINKEDIN_CHANNEL_ID})`, '✓');
+  }
+}
+
+const { TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID } = process.env;
+console.log('\nTELEGRAM_BOT_TOKEN:', TELEGRAM_BOT_TOKEN ? '(set)' : '(unset — Telegram posts will fail if opted in)');
+if (TELEGRAM_BOT_TOKEN) {
+  const tg = async (method, params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return (await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/${method}${qs ? '?' + qs : ''}`)).json();
+  };
+  const me = await tg('getMe');
+  if (!me.ok) bad(`TELEGRAM_BOT_TOKEN: ${me.description || 'getMe failed'}`);
+  else {
+    console.log('telegram bot  :', `@${me.result.username} (${me.result.id})`);
+    if (!TELEGRAM_CHANNEL_ID) bad('TELEGRAM_CHANNEL_ID not set');
+    else {
+      const chat = await tg('getChat', { chat_id: TELEGRAM_CHANNEL_ID });
+      if (!chat.ok) bad(`TELEGRAM_CHANNEL_ID (${TELEGRAM_CHANNEL_ID}): ${chat.description || 'getChat failed'}`);
+      else {
+        console.log('telegram chat :', chat.result.title || chat.result.username, `(${TELEGRAM_CHANNEL_ID})`);
+        const member = await tg('getChatMember', { chat_id: TELEGRAM_CHANNEL_ID, user_id: me.result.id });
+        if (!member.ok) bad(`TELEGRAM_CHANNEL_ID (${TELEGRAM_CHANNEL_ID}): ${member.description || 'getChatMember failed'}`);
+        else if (!['administrator', 'creator'].includes(member.result.status))
+          bad(`bot is not an admin of ${TELEGRAM_CHANNEL_ID} (status: ${member.result.status}) — add it as an admin with post permission`);
+        else console.log('telegram admin: ✓');
+      }
+    }
   }
 }
 

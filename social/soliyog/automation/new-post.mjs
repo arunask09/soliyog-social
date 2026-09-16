@@ -31,7 +31,7 @@ slug: ${slug}
 date: ${date}
 status: draft
 theme: ${theme}
-platforms: [instagram, facebook, linkedin]
+platforms: [instagram, facebook, linkedin, telegram]
 source_url: ${job.url}
 role_tests: |
   # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
@@ -43,6 +43,7 @@ soliyog_read: |
 caption_instagram:
 caption_facebook:
 caption_linkedin:
+caption_telegram:
 image_url:
 posted_at:
 post_ids:

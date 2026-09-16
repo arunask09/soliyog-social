@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /*
- * Build the FB / IG / LinkedIn captions for a queued post, in Soliyog voice
+ * Build the FB / IG / LinkedIn / Telegram captions for a queued post, in Soliyog voice
  * (brand-guidelines.md: calm, factual, <=1 emoji, no fake urgency, 2 hashtags).
  * Facts come only from the soliyog.com listing (via lib-job.mjs). The one
  * "Soliyog's read" line is the per-post soliyog_read note (authored from the
  * listing in queue/<slug>.md front-matter), or omitted when there's none.
  *
- *   node build-caption.mjs <job url or id>      # prints the three captions (no read line)
+ *   node build-caption.mjs <job url or id>      # prints the four captions (no read line)
  *   node build-caption.mjs <slug> --write       # writes them into queue/<slug>.md
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -45,18 +45,26 @@ const facts = [
   ['Apply by', job.applyBy],
 ].filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`).join('\n');
 
-const body = (linkLine) => [
+const body = (linkLine, { includeRead = true } = {}) => [
   `${job.title} at ${job.company}`,
   '',
   facts,
   '',
-  read ? `Soliyog's read: ${read}` : null,
-  read ? '' : null,
+  includeRead && read ? `Soliyog's read: ${read}` : null,
+  includeRead && read ? '' : null,
   linkLine,
   `Not affiliated with ${job.company.replace(/\.+$/, '')}. Check their careers page before applying.`,
   '',
   `#${roleTag} #fresherjobs`,
 ].filter((l) => l !== null).join('\n').replace(/\n{3,}/g, '\n\n').trim();
+
+// Telegram photo captions are capped at 1024 chars (much tighter than the 4096-char
+// text-message limit). Drop the optional "read" line first — cheapest content to lose,
+// already optional elsewhere — then hard-truncate as a last resort.
+const telegramLink = `Full listing and how to apply:\n${src}`;
+let capTelegram = body(telegramLink);
+if (capTelegram.length > 1024) capTelegram = body(telegramLink, { includeRead: false });
+if (capTelegram.length > 1024) capTelegram = capTelegram.slice(0, 1021) + '...';
 
 const out = {
   caption_instagram: body('Full listing and how to apply — link in bio.'),
@@ -65,7 +73,10 @@ const out = {
   caption_facebook: body('Full listing and how to apply — link in the comments.'),
   // LinkedIn (posted via Buffer) has no first-comment step, and doesn't down-rank
   // outbound links the way FB does — so the real link goes straight in the body.
-  caption_linkedin: body(`Full listing and how to apply:\n${src}`),
+  caption_linkedin: body(telegramLink),
+  // Telegram (Bot API sendPhoto) also puts the real link straight in the body, but
+  // its photo-caption limit (1024 chars) is much tighter than the other platforms'.
+  caption_telegram: capTelegram,
 };
 
 if (write) {
@@ -78,7 +89,7 @@ if (write) {
       : md.replace(/^---\s*$/m, `${block}\n---`);
   }
   writeFileSync(qf, md);
-  console.log(`wrote 3 captions -> queue/${arg}.md`);
+  console.log(`wrote ${Object.keys(out).length} captions -> queue/${arg}.md`);
 } else {
   for (const [k, v] of Object.entries(out)) console.log(`\n===== ${k} =====\n${v}`);
 }

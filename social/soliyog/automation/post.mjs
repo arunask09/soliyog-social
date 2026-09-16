@@ -1,18 +1,24 @@
 #!/usr/bin/env node
 /*
- * Publish one approved queue item to Facebook + Instagram (Meta Graph API) and
- * LinkedIn — posted through Buffer (api.buffer.com), since Soliyog isn't a registered
- * entity and can't get LinkedIn's own Community Management API approved. Buffer already
- * holds the OAuth connection to the Soliyog LinkedIn Page; we just call its GraphQL
- * createPost mutation. All three platforms are on by default (`front.platforms`); set
- * it explicitly on a queue item to opt one out, e.g. `platforms: [instagram, facebook]`.
+ * Publish one approved queue item to Facebook + Instagram (Meta Graph API), LinkedIn —
+ * posted through Buffer (api.buffer.com), since Soliyog isn't a registered entity and
+ * can't get LinkedIn's own Community Management API approved — and Telegram (Bot API).
+ * Buffer already holds the OAuth connection to the Soliyog LinkedIn Page; we just call
+ * its GraphQL createPost mutation. All four platforms are on by default
+ * (`front.platforms`); set it explicitly on a queue item to opt one out, e.g.
+ * `platforms: [instagram, facebook]`.
+ *
+ * Telegram is the one soft-optional platform: unlike LinkedIn, a missing
+ * TELEGRAM_BOT_TOKEN / TELEGRAM_CHANNEL_ID does not fail the run — it's skipped with a
+ * warning, since it became a default platform before the bot/channel existed.
  *
  *   node post.mjs                 # next approved item with date <= today
  *   node post.mjs --slug <slug>   # a specific item
  *   node post.mjs --dry-run       # print payloads, post nothing
  *
  * Env (from automation/.env or real env): META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO,
- * BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID (needed unless an item opts out of linkedin)
+ * BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID (needed unless an item opts out of linkedin),
+ * TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID (optional — telegram soft-skips without them)
  * (GH_REPO = "user/repo" of the PUBLIC repo this folder is pushed to — for the image URL).
  *
  * On success it commits the queue file (status: posted) and the rendered images back to
@@ -29,7 +35,7 @@ const envp = resolve(HERE, '.env');
 if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
   const m = l.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/); if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
 }
-const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID } = process.env;
+const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID } = process.env;
 const args = process.argv.slice(2);
 const dry = args.includes('--dry-run');
 const slugArg = args[args.indexOf('--slug') + 1];
@@ -98,17 +104,25 @@ if (dry) {
 const capFB = front.caption_facebook || front.caption_instagram || '';
 const capIG = front.caption_instagram || front.caption_facebook || '';
 const capLI = front.caption_linkedin || capFB;
+const capTG = front.caption_telegram || capLI;
 console.log(`FB image: ${fbUrl}\nIG image: ${igUrl}`);
 if (dry) {
   console.log('\n--- FB /photos ---\n', { url: fbUrl, caption: capFB });
   if (front.source_url) console.log('\n--- FB first comment ---\n', { message: `Full listing and how to apply:\n${front.source_url}` });
   console.log('\n--- IG /media ---\n', { image_url: igUrl, caption: capIG });
-  const platformsDry = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin']);
+  const platformsDry = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin', 'telegram']);
   if (platformsDry.includes('linkedin')) {
     console.log('\n--- LinkedIn (Buffer createPost) ---\n', {
       channelId: BUFFER_LINKEDIN_CHANNEL_ID || '(BUFFER_LINKEDIN_CHANNEL_ID not set)',
       image_url: igUrl,
       caption: capLI,
+    });
+  }
+  if (platformsDry.includes('telegram')) {
+    console.log('\n--- Telegram (sendPhoto) ---\n', {
+      chat_id: TELEGRAM_CHANNEL_ID || '(TELEGRAM_CHANNEL_ID not set)',
+      photo: igUrl,
+      caption: capTG,
     });
   }
   process.exit(0);
@@ -142,7 +156,7 @@ const api = async (path, body) => {
   return j;
 };
 
-const platforms = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin']);
+const platforms = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin', 'telegram']);
 // Seed from any post_ids a prior partial failure already recorded, and skip those
 // platforms below — a hand-set retry (status back to approved) must not re-post
 // a platform that already succeeded. Declared outside the try so the catch block
@@ -202,6 +216,23 @@ try {
     if (bj.errors?.length || result?.message) throw new Error(`linkedin (Buffer): ${bj.errors?.[0]?.message || result.message}`);
     post_ids.linkedin = result.post.id;
     console.log('LinkedIn (Buffer) ok', post_ids.linkedin);
+  }
+  if (platforms.includes('telegram') && !post_ids.telegram) {
+    // Soft-optional: telegram is a default platform from before the bot/channel existed,
+    // so a missing token/channel must not fail FB/IG/LinkedIn too — warn and move on.
+    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHANNEL_ID) {
+      console.warn('telegram: skipped (TELEGRAM_BOT_TOKEN / TELEGRAM_CHANNEL_ID not set)');
+    } else {
+      const tr = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: TELEGRAM_CHANNEL_ID, photo: igUrl, caption: capTG }),
+      });
+      const tj = await tr.json();
+      if (!tj.ok) throw new Error(`telegram: ${tj.description || 'sendPhoto failed'}`);
+      post_ids.telegram = String(tj.result.message_id);
+      console.log('Telegram ok', post_ids.telegram);
+    }
   }
   persist({ status: 'posted', posted_at: new Date().toISOString(), post_ids: JSON.stringify(post_ids) });
   console.log('done');

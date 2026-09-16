@@ -22,11 +22,11 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { HERE, listItems } from './lib.mjs';
 
-const LISTING = 'https://www.soliyog.com/jobs';
+export const LISTING = 'https://www.soliyog.com/jobs';
 const SEEN_FILE = resolve(HERE, 'seen-jobs.json');
 const PENDING = new Set(['draft', 'ready', 'approved']);
 const BUFFER_CAP = 3;
-const PAGES = 3;
+export const PAGES = 3;
 
 const FRESHER_TITLE = /\b(junior|jr|trainee|graduate|apprentice|intern|internship|fresher|entry[\s-]?level)\b/i;
 const SENIOR_EXP = /\b(?:[3-9]|[1-9]\d)\s*\+?\s*years?\b/i;
@@ -63,19 +63,29 @@ export function parseListings(html) {
   return rows;
 }
 
+// A fresher/junior title, not senior experience, and India-or-remote (or unstated) location.
+function isFresherRole(r) {
+  return Boolean(r.title && r.company &&
+    FRESHER_TITLE.test(r.title) &&
+    !SENIOR_EXP.test(r.experience) &&
+    (!r.location || INDIA_LOC.test(r.location) || REMOTE_LOC.test(r.location)));
+}
+
 // Newest listing (page order) that is a fresher/junior India-or-remote role and
 // not already seen. With { fallback: true }, if nothing matches, return the
 // newest unseen row that at least has a title + company.
 export function pickCandidate(rows, seen, { fallback = false } = {}) {
   const unseen = rows.filter((r) => r.id && !seen.has(r.id));
-  const fresher = unseen.find((r) =>
-    r.title && r.company &&
-    FRESHER_TITLE.test(r.title) &&
-    !SENIOR_EXP.test(r.experience) &&
-    (!r.location || INDIA_LOC.test(r.location) || REMOTE_LOC.test(r.location)));
+  const fresher = unseen.find(isFresherRole);
   if (fresher) return fresher;
   if (fallback) return unseen.find((r) => r.title && r.company) || null;
   return null;
+}
+
+// Up to n unseen fresher/junior India-or-remote listings, newest (page order) first —
+// the batch-posting equivalent of pickCandidate's single pick.
+export function pickCandidates(rows, seen, n) {
+  return rows.filter((r) => r.id && !seen.has(r.id)).filter(isFresherRole).slice(0, n);
 }
 
 // Day after the latest YYYY-MM-DD in the list; `today` when the list is empty.
@@ -117,7 +127,7 @@ async function fetchText(url) {
   return res.text();
 }
 
-async function scrapeAll() {
+export async function scrapeAll() {
   const rows = [];
   const seen = new Set();
   for (let p = 1; p <= PAGES; p++) {
