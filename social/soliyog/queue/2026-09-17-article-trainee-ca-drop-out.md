@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-17-article-trainee-ca-drop-out
 date: 2026-09-17
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin]
 source_url: https://www.soliyog.com/jobs/638
@@ -19,6 +19,8 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 15 Oct
   
+  Soliyog's read: It gives CA dropouts and freshers broad exposure across taxation, M&A, and accounting advisory. Managing work across several specialized client services will be demanding, but it builds real practical finance experience.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Singh Pritam & Co. Check their careers page before applying.
   
@@ -31,6 +33,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Apply by: 15 Oct
   
+  Soliyog's read: It gives CA dropouts and freshers broad exposure across taxation, M&A, and accounting advisory. Managing work across several specialized client services will be demanding, but it builds real practical finance experience.
+  
   Full listing and how to apply — link in the comments.
   Not affiliated with Singh Pritam & Co. Check their careers page before applying.
   
@@ -42,6 +46,8 @@ caption_linkedin: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 15 Oct
+  
+  Soliyog's read: It gives CA dropouts and freshers broad exposure across taxation, M&A, and accounting advisory. Managing work across several specialized client services will be demanding, but it builds real practical finance experience.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/638
