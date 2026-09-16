@@ -34,6 +34,7 @@ jobs:
         env:
           CHROME: ${{ steps.chrome.outputs.chrome-path }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_INVITE_LINK: ${{ secrets.TELEGRAM_INVITE_LINK }}
           ISSUE_BODY_FILE: ${{ runner.temp }}/issue-body.md
         run: |
           git config user.name  "soliyog-bot"

@@ -80,18 +80,27 @@ just skips it with a warning — it does not fail the FB/IG/LinkedIn part of the
 
 Reuses the exact same `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHANNEL_ID` from §2c — no new
 credentials needed. `telegram-batch.mjs` posts several bare-facts listings (role,
-qualification, location, salary, apply link, no commentary) in one message, 3x/day
-(`.github/workflows/telegram-batch.yml`, 08:00/13:00/18:00 IST), fully autonomously —
-**no human review step**, since there's no commentary to review, just facts already
-public on soliyog.com. It reuses `next-post.mjs`'s scraper but, unlike the curated
-pipeline, takes **any current listing** — not just fresher/junior/India-or-remote roles
-— since that filter left just 1 of 72 current listings eligible, nowhere near enough
-for real 3x/day volume. It keeps its own dedup file
-(`automation/telegram-batch-seen.json`, same shape as `seen-jobs.json`) that never
-consults the curated pipeline's state — a listing already featured there (or sitting in
-the queue) is still fair game for the batch feed too, since it's a different channel and
-audience. The dedup file only stops this feed from re-posting a listing it has itself
-already sent.
+qualification, location, salary, apply link, no commentary) in one message, 1x/day
+(`.github/workflows/telegram-batch.yml`, 08:00 IST — cut from 3x/day in September 2026
+after the combined curated+batch volume approached ~16 messages/day, well past
+Telegram's ~14/week organic mute-risk ceiling), fully autonomously — **no human review
+step**, since there's no commentary to review, just facts already public on soliyog.com.
+It reuses `next-post.mjs`'s scraper but, unlike the curated pipeline, takes **any
+current listing** — not just fresher/junior/India-or-remote roles — since that filter
+left just 1 of 72 current listings eligible, nowhere near enough for real daily volume.
+It keeps its own dedup file (`automation/telegram-batch-seen.json`, same shape as
+`seen-jobs.json`) that never consults the curated pipeline's state — a listing already
+featured there (or sitting in the queue) is still fair game for the batch feed too,
+since it's a different channel and audience. The dedup file only stops this feed from
+re-posting a listing it has itself already sent.
+
+## 2e. Cross-promoting the Telegram channel from FB/IG/LinkedIn
+
+Set `TELEGRAM_INVITE_LINK` (the channel's public `t.me/<handle>` join link — distinct
+from the Bot-API `TELEGRAM_CHANNEL_ID` above, which may be a numeric chat id) and every
+new post's Instagram/LinkedIn captions (`build-caption.mjs`) and the Facebook first
+comment (`post.mjs`) will carry a "join our Telegram" line. Leave it unset to omit the
+CTA entirely — nothing breaks either way.
 
 ## 4. Credentials
 
@@ -105,6 +114,7 @@ BUFFER_TOKEN=<Buffer Personal Access Key — expires in <=1yr, regenerate before
 BUFFER_LINKEDIN_CHANNEL_ID=<Soliyog LinkedIn channel id from the Buffer schedule URL>
 TELEGRAM_BOT_TOKEN=        # optional — from @BotFather, see §2c. Unset = telegram skips.
 TELEGRAM_CHANNEL_ID=       # optional — @channelusername or numeric -100... chat id
+TELEGRAM_INVITE_LINK=      # optional — public t.me/<handle> join link, see §2e. Unset = no cross-promotion CTA.
 BRANDFETCH_CLIENT_ID=       # optional, for employer logos
 CF_ACCOUNT_ID=             # optional, unused AI-image scripts
 CF_API_TOKEN=
@@ -114,7 +124,9 @@ Add all six (`META_TOKEN`, `FB_PAGE_ID`, `IG_USER_ID`, `GH_REPO`, `BUFFER_TOKEN`
 so a missing Buffer secret fails the whole run unless the item opts out (see §5 daily use).
 `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHANNEL_ID` are also GitHub Actions Secrets once you have
 them, but — unlike the six above — leaving them unset does **not** fail the run; Telegram
-just stays off until they're added.
+just stays off until they're added. `TELEGRAM_INVITE_LINK` is the same: add it as a
+GitHub Actions Secret (`daily-post.yml` and `prep-post.yml` both read it) whenever you
+have the channel's public join link — until then, the cross-promotion CTA is just omitted.
 
 Then run `npm ci` in `automation/` (installs `sharp`, used to make the IG JPEG) and
 `node automation/verify-setup.mjs` to check the token, scopes, Page, IG link, repo, and
@@ -154,7 +166,8 @@ issue before it goes.
 **`GEMINI_API_KEY`** (auto-commentary), `BUFFER_TOKEN` + `BUFFER_LINKEDIN_CHANNEL_ID`
 (LinkedIn posts by default — without these, posting fails unless an item opts out), and
 optionally `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHANNEL_ID` (Telegram also posts by default,
-but soft-skips with a warning instead of failing if these are unset):
+but soft-skips with a warning instead of failing if these are unset), and optionally
+`TELEGRAM_INVITE_LINK` (see §2e — cross-promotion CTA, omitted if unset):
 
 ```
 gh secret set GEMINI_API_KEY -R arunask09/soliyog-social   # paste the key from ~/.claude/settings.json

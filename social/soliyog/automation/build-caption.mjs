@@ -8,6 +8,10 @@
  *
  *   node build-caption.mjs <job url or id>      # prints the four captions (no read line)
  *   node build-caption.mjs <slug> --write       # writes them into queue/<slug>.md
+ *
+ * Env (from automation/.env or real env, optional): TELEGRAM_INVITE_LINK — when set,
+ * adds a "join our Telegram" cross-promotion line to the Instagram/LinkedIn captions.
+ * Omitted entirely when unset.
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -16,6 +20,12 @@ import { fetchJob } from './lib-job.mjs';
 import { parseFront } from './lib.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
+
+const envp = resolve(here, '.env');
+if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
+  const m = l.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/); if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+}
+const { TELEGRAM_INVITE_LINK } = process.env;
 
 const arg = process.argv[2];
 const write = process.argv.includes('--write');
@@ -66,16 +76,25 @@ let capTelegram = body(telegramLink);
 if (capTelegram.length > 1024) capTelegram = body(telegramLink, { includeRead: false });
 if (capTelegram.length > 1024) capTelegram = capTelegram.slice(0, 1021) + '...';
 
+// Cross-promotion: point FB/IG/LinkedIn readers at the Telegram channel. Omitted
+// entirely when TELEGRAM_INVITE_LINK isn't set, so this ships safely before the
+// human supplies the real link. Instagram doesn't render in-body links as
+// clickable, so it gets a text-only nudge instead of the raw URL.
+const telegramCta = (withLink) => !TELEGRAM_INVITE_LINK ? null
+  : withLink ? `Join our Telegram for daily fresher job alerts: ${TELEGRAM_INVITE_LINK}`
+  : 'Join our Telegram for daily fresher job alerts — link in bio.';
+
 const out = {
-  caption_instagram: body('Full listing and how to apply — link in bio.'),
+  caption_instagram: [body('Full listing and how to apply — link in bio.'), telegramCta(false)].filter(Boolean).join('\n\n'),
   // FB down-ranks posts with an outbound link in the body — post.mjs drops the
   // real link into the first comment instead.
   caption_facebook: body('Full listing and how to apply — link in the comments.'),
   // LinkedIn (posted via Buffer) has no first-comment step, and doesn't down-rank
   // outbound links the way FB does — so the real link goes straight in the body.
-  caption_linkedin: body(telegramLink),
+  caption_linkedin: [body(telegramLink), telegramCta(true)].filter(Boolean).join('\n\n'),
   // Telegram (Bot API sendPhoto) also puts the real link straight in the body, but
   // its photo-caption limit (1024 chars) is much tighter than the other platforms'.
+  // No CTA here — this audience is already on the channel.
   caption_telegram: capTelegram,
 };
 

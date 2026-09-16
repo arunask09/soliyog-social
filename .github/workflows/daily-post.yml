@@ -39,6 +39,7 @@ jobs:
           BUFFER_LINKEDIN_CHANNEL_ID: ${{ secrets.BUFFER_LINKEDIN_CHANNEL_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          TELEGRAM_INVITE_LINK: ${{ secrets.TELEGRAM_INVITE_LINK }}
           CHROME: ${{ steps.chrome.outputs.chrome-path }}
         run: |
           git config user.name  "soliyog-bot"

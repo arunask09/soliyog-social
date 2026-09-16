@@ -18,7 +18,9 @@
  *
  * Env (from automation/.env or real env): META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO,
  * BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID (needed unless an item opts out of linkedin),
- * TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID (optional — telegram soft-skips without them)
+ * TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID (optional — telegram soft-skips without them),
+ * TELEGRAM_INVITE_LINK (optional — public t.me/<handle> join link; when set, adds a
+ * "join our Telegram" line to the FB first comment cross-promoting the channel)
  * (GH_REPO = "user/repo" of the PUBLIC repo this folder is pushed to — for the image URL).
  *
  * On success it commits the queue file (status: posted) and the rendered images back to
@@ -35,7 +37,16 @@ const envp = resolve(HERE, '.env');
 if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
   const m = l.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/); if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
 }
-const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID } = process.env;
+const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, TELEGRAM_INVITE_LINK } = process.env;
+
+// Cross-promotion into the FB first comment, alongside the real job link — omitted
+// when TELEGRAM_INVITE_LINK isn't set. See build-caption.mjs for the IG/LinkedIn
+// equivalents (Facebook has no in-body link, so this has to ride the same
+// first-comment mechanism as the job link itself).
+const fbFirstComment = (sourceUrl) => [
+  `Full listing and how to apply:\n${sourceUrl}`,
+  TELEGRAM_INVITE_LINK ? `Join our Telegram for daily fresher job alerts: ${TELEGRAM_INVITE_LINK}` : null,
+].filter(Boolean).join('\n\n');
 const args = process.argv.slice(2);
 const dry = args.includes('--dry-run');
 const slugArg = args[args.indexOf('--slug') + 1];
@@ -108,7 +119,7 @@ const capTG = front.caption_telegram || capLI;
 console.log(`FB image: ${fbUrl}\nIG image: ${igUrl}`);
 if (dry) {
   console.log('\n--- FB /photos ---\n', { url: fbUrl, caption: capFB });
-  if (front.source_url) console.log('\n--- FB first comment ---\n', { message: `Full listing and how to apply:\n${front.source_url}` });
+  if (front.source_url) console.log('\n--- FB first comment ---\n', { message: fbFirstComment(front.source_url) });
   console.log('\n--- IG /media ---\n', { image_url: igUrl, caption: capIG });
   const platformsDry = [].concat(front.platforms || ['instagram', 'facebook', 'linkedin', 'telegram']);
   if (platformsDry.includes('linkedin')) {
@@ -172,7 +183,7 @@ try {
     // post is already live, and this needs the pages_manage_engagement scope.
     if (front.source_url && post_ids.facebook) {
       try {
-        const c = await api(`${post_ids.facebook}/comments`, { message: `Full listing and how to apply:\n${front.source_url}` });
+        const c = await api(`${post_ids.facebook}/comments`, { message: fbFirstComment(front.source_url) });
         console.log('FB first comment ok', c.id);
       } catch (e) {
         console.warn('FB first comment skipped (post is live):', e.message);
