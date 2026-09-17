@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-18-client-relationship-associate
 date: 2026-09-18
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/662
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Guiding clients through U.S. tax return filings and ITIN processing
+  - Handling IRS compliance requirements with high precision
+  - Learning and applying evolving U.S. tax regulations daily
+  - Delivering personalized financial solutions for individual and business clients
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This open-to-freshers role gives you direct exposure to U.S. tax regulations and IRS compliance. The hard part is mastering detailed tax rules quickly, as precision is critical when handling client filings.
 caption_instagram: |
   Client Relationship Associate at Quess Tax Filing
   
