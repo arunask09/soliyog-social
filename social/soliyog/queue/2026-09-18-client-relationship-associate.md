@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-18-client-relationship-associate
 date: 2026-09-18
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/662
@@ -74,9 +74,9 @@ caption_telegram: |
   Not affiliated with Quess Tax Filing. Check their careers page before applying.
   
   #clientrelationshipassoci #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@e09819041816395b6aac2c373ec2b4beecf4c2f4/social/soliyog/queue/assets/2026-09-18-2026-09-18-client-relationship-associate.jpg
+posted_at: 2026-09-18T03:31:33.768Z
+post_ids: {"facebook":"1289252704274108_122112389319464634","instagram":"17901559887568935","linkedin":"6aacb0858448254db202e2bc","telegram":"10"}
 ---
 
 # Client Relationship Associate — Quess Tax Filing
