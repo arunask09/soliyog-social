@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-19-junior-accountant
 date: 2026-09-19
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/684
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - General accounting, bookkeeping, and petty cash management
+  - Preparing invoices and tracking outstanding client dues
+  - Handling vendor bills, payments, and invoice records
+  - Processing daily banking transactions for the office
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a solid entry role for freshers to build real bookkeeping experience. Tracking client dues, vendor bills, and petty cash will require constant accuracy and routine admin work.
 caption_instagram: |
   Junior Accountant at Basics Architects
   
