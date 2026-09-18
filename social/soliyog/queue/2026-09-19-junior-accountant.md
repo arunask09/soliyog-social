@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-19-junior-accountant
 date: 2026-09-19
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/684
@@ -21,10 +21,14 @@ caption_instagram: |
   Salary: ₹18,000
   Apply by: 17 Oct
   
+  Soliyog's read: This is a solid entry role for freshers to build real bookkeeping experience. Tracking client dues, vendor bills, and petty cash will require constant accuracy and routine admin work.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Basics Architects. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Accountant at Basics Architects
   
@@ -33,6 +37,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Salary: ₹18,000
   Apply by: 17 Oct
+  
+  Soliyog's read: This is a solid entry role for freshers to build real bookkeeping experience. Tracking client dues, vendor bills, and petty cash will require constant accuracy and routine admin work.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Basics Architects. Check their careers page before applying.
@@ -47,11 +53,15 @@ caption_linkedin: |
   Salary: ₹18,000
   Apply by: 17 Oct
   
+  Soliyog's read: This is a solid entry role for freshers to build real bookkeeping experience. Tracking client dues, vendor bills, and petty cash will require constant accuracy and routine admin work.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/684
   Not affiliated with Basics Architects. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Accountant at Basics Architects
   
@@ -60,6 +70,8 @@ caption_telegram: |
   Experience: Freshers welcome
   Salary: ₹18,000
   Apply by: 17 Oct
+  
+  Soliyog's read: This is a solid entry role for freshers to build real bookkeeping experience. Tracking client dues, vendor bills, and petty cash will require constant accuracy and routine admin work.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/684
