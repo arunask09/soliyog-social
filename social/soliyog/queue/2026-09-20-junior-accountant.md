@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-20-junior-accountant
 date: 2026-09-20
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/701
@@ -20,10 +20,14 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 18 Oct
   
+  Soliyog's read: This is explicitly open to freshers and offers structured processes with training support. The main drawback is a generic job description that omits specific software tools, so you will need to learn their exact workflow on the job.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with RGN Group. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Accountant at RGN Group
   
@@ -31,6 +35,8 @@ caption_facebook: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 18 Oct
+  
+  Soliyog's read: This is explicitly open to freshers and offers structured processes with training support. The main drawback is a generic job description that omits specific software tools, so you will need to learn their exact workflow on the job.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with RGN Group. Check their careers page before applying.
@@ -44,11 +50,15 @@ caption_linkedin: |
   Experience: Freshers welcome
   Apply by: 18 Oct
   
+  Soliyog's read: This is explicitly open to freshers and offers structured processes with training support. The main drawback is a generic job description that omits specific software tools, so you will need to learn their exact workflow on the job.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/701
   Not affiliated with RGN Group. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Accountant at RGN Group
   
@@ -56,6 +66,8 @@ caption_telegram: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 18 Oct
+  
+  Soliyog's read: This is explicitly open to freshers and offers structured processes with training support. The main drawback is a generic job description that omits specific software tools, so you will need to learn their exact workflow on the job.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/701
