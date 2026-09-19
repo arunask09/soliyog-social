@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-19-junior-accountant
 date: 2026-09-19
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/684
@@ -78,9 +78,9 @@ caption_telegram: |
   Not affiliated with Basics Architects. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@77461faf51e5e9bc62e62dbf5b1a5469295321fc/social/soliyog/queue/assets/2026-09-19-2026-09-19-junior-accountant.jpg
+posted_at: 2026-09-19T03:31:19.041Z
+post_ids: {"facebook":"1289252704274108_122112871791464634","instagram":"17936962869374607","linkedin":"6aae01fb65e5b8cd5b278767","telegram":"12"}
 ---
 
 # Junior Accountant — Basics Architects
