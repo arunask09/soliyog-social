@@ -1,17 +1,17 @@
 ---
 slug: 2026-09-20-junior-accountant
 date: 2026-09-20
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/701
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Delivering reliable financial stewardship services for diverse client industries
+  - Working within structured processes and collaborating across internal departments
+  - Contributing ideas toward continuous operational and process improvements
+  - Participating in structured training opportunities provided by the company
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is explicitly open to freshers and offers structured processes with training support. The main drawback is a generic job description that omits specific software tools, so you will need to learn their exact workflow on the job.
 caption_instagram: |
   Junior Accountant at RGN Group
   
