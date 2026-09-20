@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-20-junior-accountant
 date: 2026-09-20
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/701
@@ -74,9 +74,9 @@ caption_telegram: |
   Not affiliated with RGN Group. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@7949e5bb8ad361acd0615d697856adf19131473b/social/soliyog/queue/assets/2026-09-20-2026-09-20-junior-accountant.jpg
+posted_at: 2026-09-20T03:31:19.681Z
+post_ids: {"facebook":"1289252704274108_122113384869464634","instagram":"17986899249113791","linkedin":"6aaf537bb87fe813045835af","telegram":"14"}
 ---
 
 # Junior Accountant — RGN Group
