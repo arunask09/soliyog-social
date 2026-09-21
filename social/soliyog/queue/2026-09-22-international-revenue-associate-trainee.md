@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-22-international-revenue-associate-trainee
 date: 2026-09-22
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/722
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Managing remote sales and revenue operations for US hotel clients
+  - Working with Atica's unified tech-led software platform
+  - Trainee-level execution in an early-stage investor-backed startup
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is an entry-level trainee role genuinely open to freshers. The work requires adapting to US client expectations and startup pace, but it gives direct exposure to international hotel revenue management.
 caption_instagram: |
   International Revenue Associate - Trainee at Atica Global
   
