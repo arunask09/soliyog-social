@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-22-international-revenue-associate-trainee
 date: 2026-09-22
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/722
@@ -19,10 +19,14 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 20 Oct
   
+  Soliyog's read: This is an entry-level trainee role genuinely open to freshers. The work requires adapting to US client expectations and startup pace, but it gives direct exposure to international hotel revenue management.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Atica Global. Check their careers page before applying.
   
   #internationalrevenueasso #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   International Revenue Associate - Trainee at Atica Global
   
@@ -30,6 +34,8 @@ caption_facebook: |
   Type: Full-time · Remote
   Experience: Freshers welcome
   Apply by: 20 Oct
+  
+  Soliyog's read: This is an entry-level trainee role genuinely open to freshers. The work requires adapting to US client expectations and startup pace, but it gives direct exposure to international hotel revenue management.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Atica Global. Check their careers page before applying.
@@ -43,11 +49,15 @@ caption_linkedin: |
   Experience: Freshers welcome
   Apply by: 20 Oct
   
+  Soliyog's read: This is an entry-level trainee role genuinely open to freshers. The work requires adapting to US client expectations and startup pace, but it gives direct exposure to international hotel revenue management.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/722
   Not affiliated with Atica Global. Check their careers page before applying.
   
   #internationalrevenueasso #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   International Revenue Associate - Trainee at Atica Global
   
@@ -55,6 +65,8 @@ caption_telegram: |
   Type: Full-time · Remote
   Experience: Freshers welcome
   Apply by: 20 Oct
+  
+  Soliyog's read: This is an entry-level trainee role genuinely open to freshers. The work requires adapting to US client expectations and startup pace, but it gives direct exposure to international hotel revenue management.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/722
