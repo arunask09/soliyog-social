@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-21-b2b-sales-trainee-fmcg
 date: 2026-09-21
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/717
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with Wellversed. Check their careers page before applying.
   
   #b2bsalestraineefmcg #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@e2e85134065017f1ad659767d9a96fa9b585496a/social/soliyog/queue/assets/2026-09-21-2026-09-21-b2b-sales-trainee-fmcg.jpg
+posted_at: 2026-09-21T03:32:02.664Z
+post_ids: {"facebook":"1289252704274108_122113934013464634","instagram":"17932305828142346","linkedin":"6ab0a527d03859abc75e5d4a","telegram":"16"}
 ---
 
 # B2B Sales Trainee - FMCG — Wellversed
