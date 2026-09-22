@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-22-international-revenue-associate-trainee
 date: 2026-09-22
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/722
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with Atica Global. Check their careers page before applying.
   
   #internationalrevenueasso #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@c854ea34c9bd6756dd9fd9e795ae0c8fb9ddecd1/social/soliyog/queue/assets/2026-09-22-2026-09-22-international-revenue-associate-trainee.jpg
+posted_at: 2026-09-22T03:31:26.680Z
+post_ids: {"facebook":"1289252704274108_122114531649464634","instagram":"18088602503660025","linkedin":"6ab1f683e2882add8db1b355","telegram":"18"}
 ---
 
 # International Revenue Associate - Trainee — Atica Global
