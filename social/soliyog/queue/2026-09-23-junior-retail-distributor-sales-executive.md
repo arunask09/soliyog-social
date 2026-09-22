@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-23-junior-retail-distributor-sales-executive
 date: 2026-09-23
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/732
@@ -19,10 +19,14 @@ caption_instagram: |
   Experience: Freshers welcome
   Apply by: 19 Oct
   
+  Soliyog's read: Active cold calling B2B prospects will be tough, but freshers are welcome. If you want real-world sales and vendor management experience, this is a solid entry point.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Wellversed. Check their careers page before applying.
   
   #juniorretaildistributors #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Retail & Distributor Sales Executive at Wellversed
   
@@ -30,6 +34,8 @@ caption_facebook: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 19 Oct
+  
+  Soliyog's read: Active cold calling B2B prospects will be tough, but freshers are welcome. If you want real-world sales and vendor management experience, this is a solid entry point.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Wellversed. Check their careers page before applying.
@@ -43,11 +49,15 @@ caption_linkedin: |
   Experience: Freshers welcome
   Apply by: 19 Oct
   
+  Soliyog's read: Active cold calling B2B prospects will be tough, but freshers are welcome. If you want real-world sales and vendor management experience, this is a solid entry point.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/732
   Not affiliated with Wellversed. Check their careers page before applying.
   
   #juniorretaildistributors #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Retail & Distributor Sales Executive at Wellversed
   
@@ -55,6 +65,8 @@ caption_telegram: |
   Type: Full-time
   Experience: Freshers welcome
   Apply by: 19 Oct
+  
+  Soliyog's read: Active cold calling B2B prospects will be tough, but freshers are welcome. If you want real-world sales and vendor management experience, this is a solid entry point.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/732
