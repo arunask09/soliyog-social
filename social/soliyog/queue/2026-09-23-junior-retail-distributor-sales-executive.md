@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-23-junior-retail-distributor-sales-executive
 date: 2026-09-23
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/732
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Active cold calling to B2B prospects for lead generation
+  - Introducing products and services to convert prospective buyers
+  - Building and maintaining relationships with B2B clients and vendors
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  Active cold calling B2B prospects will be tough, but freshers are welcome. If you want real-world sales and vendor management experience, this is a solid entry point.
 caption_instagram: |
   Junior Retail & Distributor Sales Executive at Wellversed
   
