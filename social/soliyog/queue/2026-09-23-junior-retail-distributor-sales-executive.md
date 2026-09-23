@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-23-junior-retail-distributor-sales-executive
 date: 2026-09-23
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/732
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with Wellversed. Check their careers page before applying.
   
   #juniorretaildistributors #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@4ffa78ebf30ad2606713f304b24cd64999955e64/social/soliyog/queue/assets/2026-09-23-2026-09-23-junior-retail-distributor-sales-executive.jpg
+posted_at: 2026-09-23T03:31:29.149Z
+post_ids: {"facebook":"1289252704274108_122115107379464634","instagram":"18114358526072058","linkedin":"6ab34805557b1c68e6c2d77a","telegram":"20"}
 ---
 
 # Junior Retail & Distributor Sales Executive — Wellversed
