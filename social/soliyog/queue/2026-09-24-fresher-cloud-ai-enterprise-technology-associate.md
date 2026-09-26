@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-24-fresher-cloud-ai-enterprise-technology-associate
 date: 2026-09-24
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/750
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with TantranZm. Check their careers page before applying.
   
   #freshercloudaienterprise #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@01940d84e24ee5173a04e126c28d5b6a62d5f598/social/soliyog/queue/assets/2026-09-24-2026-09-24-fresher-cloud-ai-enterprise-technology-associate.jpg
+posted_at: 2026-09-26T08:47:04.528Z
+post_ids: {"facebook":"1289252704274108_122116966545464634","instagram":"18218821315350052","linkedin":"6ab7867df28173fa3f5f339b","telegram":"24"}
 ---
 
 # Fresher – Cloud, AI & Enterprise Technology Associate — TantranZm
