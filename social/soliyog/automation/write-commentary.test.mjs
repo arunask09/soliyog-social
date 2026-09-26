@@ -1,6 +1,21 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { isUnfilled, buildPrompt, parseAndValidate } from './write-commentary.mjs';
+import { isUnfilled, buildPrompt, parseAndValidate, isTransient } from './write-commentary.mjs';
+
+test('isTransient: overload, rate-limit and network errors are retryable', () => {
+  assert.ok(isTransient(new Error('Gemini UNAVAILABLE: This model is currently experiencing high demand.')));
+  assert.ok(isTransient(new Error('Gemini RESOURCE_EXHAUSTED: quota')));
+  assert.ok(isTransient(new Error('Gemini 503: error')));
+  assert.ok(isTransient(new Error('fetch failed')));
+  assert.ok(isTransient(new Error('The operation was aborted due to timeout')));
+});
+
+test('isTransient: bad-reply and auth errors are not retryable', () => {
+  assert.ok(!isTransient(new Error('not valid JSON')));
+  assert.ok(!isTransient(new Error('empty Gemini response')));
+  assert.ok(!isTransient(new Error('Gemini PERMISSION_DENIED: API key invalid')));
+  assert.ok(!isTransient(new Error('Gemini NOT_FOUND: models/x is not found')));
+});
 
 test('isUnfilled: scaffold placeholder (all # lines) is unfilled', () => {
   assert.equal(isUnfilled(`# "What this role tests" — 3-4 bullets, read from THIS listing only

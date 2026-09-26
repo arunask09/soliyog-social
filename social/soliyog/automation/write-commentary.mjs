@@ -22,7 +22,11 @@ import { HERE, readItem, setBlock, setFront } from './lib.mjs';
 import { fetchJob } from './lib-job.mjs';
 
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
-const API = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
+// Tried after MODEL keeps failing with transient errors (e.g. days of 503 "high demand").
+const FALLBACK_MODEL = process.env.GEMINI_FALLBACK_MODEL || 'gemini-flash-latest';
+const apiUrl = (model) => `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+const TRANSIENT_ATTEMPTS = 3;
+const BACKOFF_MS = Number(process.env.GEMINI_BACKOFF_MS ?? 30_000);
 
 const VOICE = `Soliyog is a careers platform for Indian freshers entering IT and finance jobs.
 Voice: straight-talking, practical, on the reader's side. Sell realism, not hype.
@@ -108,10 +112,16 @@ function emit(key, val) {
   if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${val}\n`);
 }
 
-async function callGemini(prompt, key, attempt = 1) {
-  const text = attempt === 1 ? prompt
+// Overload / rate-limit / network hiccups — worth waiting and retrying, unlike a bad reply.
+export function isTransient(err) {
+  return /UNAVAILABLE|RESOURCE_EXHAUSTED|DEADLINE_EXCEEDED|INTERNAL|\b(429|500|502|503|504)\b|timeout|aborted|fetch failed/i
+    .test(err?.message || '');
+}
+
+async function callGemini(prompt, key, { model, reformat }) {
+  const text = !reformat ? prompt
     : `${prompt}\n\nYour previous reply broke the length or format rules. Reply again, strictly: valid JSON only, 3-4 bullets each under 14 words, soliyog_read under 45 words.`;
-  const res = await fetch(API, {
+  const res = await fetch(apiUrl(model), {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
     body: JSON.stringify({
@@ -153,13 +163,22 @@ async function main() {
     const job = await fetchJob(front.source_url);
     const prompt = buildPrompt(job);
     let lastErr;
-    for (let attempt = 1; attempt <= 2 && !result; attempt++) {
-      try {
-        result = parseAndValidate(await callGemini(prompt, key, attempt));
-      } catch (e) {
-        lastErr = e;
-        console.log(`  attempt ${attempt}: ${e.message}`);
+    // Per model: back off and retry on transient errors; one stricter-prompt retry on a bad reply.
+    for (const model of [...new Set([MODEL, FALLBACK_MODEL])]) {
+      let reformat = false;
+      for (let attempt = 1; attempt <= TRANSIENT_ATTEMPTS && !result; attempt++) {
+        try {
+          result = parseAndValidate(await callGemini(prompt, key, { model, reformat }));
+        } catch (e) {
+          lastErr = e;
+          console.log(`  ${model} attempt ${attempt}: ${e.message}`);
+          if (isTransient(e)) {
+            if (attempt < TRANSIENT_ATTEMPTS) await new Promise((r) => setTimeout(r, BACKOFF_MS * attempt));
+          } else if (reformat) break;
+          else reformat = true;
+        }
       }
+      if (result) break;
     }
     if (!result) throw lastErr;
     console.log(`commentary for ${slug} (${job.title} @ ${job.company}):`);

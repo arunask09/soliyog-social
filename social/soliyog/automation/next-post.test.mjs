@@ -32,6 +32,15 @@ test('parseListings pulls id, title, company, experience, location from each car
   assert.equal(rows[1].title, 'Junior Analyst');
 });
 
+test('parseListings reads a title wrapped in a link inside the h3 (site markup since 2026-09-24)', () => {
+  const html = CARD(824, '<a class="relative z-20 hover:text-link" href="/jobs/824">Intermediate Backend Engineer, India</a>',
+    'GitLab', 'Not specified', 'Bangalore, India');
+  const rows = parseListings(html);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].title, 'Intermediate Backend Engineer, India');
+  assert.equal(rows[0].company, 'GitLab');
+});
+
 test('parseListings returns [] for markup with no job cards', () => {
   assert.deepEqual(parseListings('<html><body>no jobs here</body></html>'), []);
 });

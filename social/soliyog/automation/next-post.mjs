@@ -54,7 +54,8 @@ export function parseListings(html) {
       decode(chunk.match(new RegExp(`${label}</dt><dd>([^<]*)</dd>`, 'i'))?.[1] || '');
     rows.push({
       id,
-      title: decode(chunk.match(/<h3\b[^>]*>([^<]+)<\/h3>/i)?.[1] || ''),
+      // The h3 text may be wrapped in an <a> (site markup since 2026-09-24) — strip inner tags.
+      title: decode((chunk.match(/<h3\b[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '').replace(/<[^>]*>/g, '').trim()),
       company: decode(chunk.match(/<p\b[^>]*>([^<]+)<\/p>/i)?.[1] || ''),
       experience: field('Experience'),
       location: field('Location'),
