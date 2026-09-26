@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-24-fresher-cloud-ai-enterprise-technology-associate
 date: 2026-09-24
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/750
@@ -14,22 +14,26 @@ soliyog_read: |
 caption_instagram: |
   Fresher – Cloud, AI & Enterprise Technology Associate at TantranZm
   
-  Location: India
   Type: Full-time
   Experience: 0–1 yrs
   Apply by: 22 Oct
+  
+  Soliyog's read: This is a genuine entry-level role for freshers to build foundational technical skills. The challenge is the broad scope, as you could be placed across cloud, AI, data, or ERP depending on business needs.
   
   Full listing and how to apply — link in bio.
   Not affiliated with TantranZm. Check their careers page before applying.
   
   #freshercloudaienterprise #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Fresher – Cloud, AI & Enterprise Technology Associate at TantranZm
   
-  Location: India
   Type: Full-time
   Experience: 0–1 yrs
   Apply by: 22 Oct
+  
+  Soliyog's read: This is a genuine entry-level role for freshers to build foundational technical skills. The challenge is the broad scope, as you could be placed across cloud, AI, data, or ERP depending on business needs.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with TantranZm. Check their careers page before applying.
@@ -38,23 +42,27 @@ caption_facebook: |
 caption_linkedin: |
   Fresher – Cloud, AI & Enterprise Technology Associate at TantranZm
   
-  Location: India
   Type: Full-time
   Experience: 0–1 yrs
   Apply by: 22 Oct
+  
+  Soliyog's read: This is a genuine entry-level role for freshers to build foundational technical skills. The challenge is the broad scope, as you could be placed across cloud, AI, data, or ERP depending on business needs.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/750
   Not affiliated with TantranZm. Check their careers page before applying.
   
   #freshercloudaienterprise #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Fresher – Cloud, AI & Enterprise Technology Associate at TantranZm
   
-  Location: India
   Type: Full-time
   Experience: 0–1 yrs
   Apply by: 22 Oct
+  
+  Soliyog's read: This is a genuine entry-level role for freshers to build foundational technical skills. The challenge is the broad scope, as you could be placed across cloud, AI, data, or ERP depending on business needs.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/750
