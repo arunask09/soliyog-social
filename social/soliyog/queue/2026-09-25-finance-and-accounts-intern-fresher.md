@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-25-finance-and-accounts-intern-fresher
 date: 2026-09-25
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/831
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Full-time accounting work for an established Mumbai manufacturing business
+  - Finance operations spanning 500+ products across eight diverse industries
+  - Entry-level position explicitly open to freshers seeking corporate accounting experience
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  It offers freshers direct exposure to finance in an established manufacturing company. Managing accounting for over 500 products across multiple sectors will be challenging, but the practical foundation is solid.
 caption_instagram: |
   Finance and Accounts Intern (Fresher) at BDI Group
   
