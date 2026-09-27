@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-25-finance-and-accounts-intern-fresher
 date: 2026-09-25
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/831
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with BDI Group. Check their careers page before applying.
   
   #financeandaccountsintern #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@5d1cbfe5afc317ff2c56acfc469f7d1e6185372b/social/soliyog/queue/assets/2026-09-25-2026-09-25-finance-and-accounts-intern-fresher.jpg
+posted_at: 2026-09-27T03:31:26.440Z
+post_ids: {"facebook":"1289252704274108_122117426697464634","instagram":"18416295916153735","linkedin":"6ab88e039f89edbefe87b04a","telegram":"25"}
 ---
 
 # Finance and Accounts Intern (Fresher) — BDI Group
