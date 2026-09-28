@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-28-accounts-gst-trainee
 date: 2026-09-28
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/883
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Onified.ai. Check their careers page before applying.
   
   #accountsgsttrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@3f3dcf244ef6e8690aec2d8f4327fe0e9325dd80/social/soliyog/queue/assets/2026-09-28-2026-09-28-accounts-gst-trainee.jpg
+posted_at: 2026-09-28T10:04:47.962Z
+post_ids: {"facebook":"1289252704274108_122118102483464634","instagram":"18106247090264203","linkedin":"6aba3bb4cb4f6964962d5b58","telegram":"30"}
 ---
 
 # Accounts & GST Trainee — Onified.ai
