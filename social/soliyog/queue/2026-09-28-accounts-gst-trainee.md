@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-28-accounts-gst-trainee
 date: 2026-09-28
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/883
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Hands-on practice in core accounting and GST operations
+  - Managing day-to-day finance operations fully from the Gurugram office
+  - A 3 to 6 month full-time internship evaluated for permanent hiring
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a genuine fresher pathway for final-year B.Com students aiming for GST experience. The hard part is managing a 100% in-office Gurugram internship alongside studies, but solid performance can convert it into a full-time role.
 caption_instagram: |
   Accounts & GST Trainee at Onified.ai
   
