@@ -1,17 +1,16 @@
 ---
 slug: 2026-09-29-ca-article-trainee
 date: 2026-09-29
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/888
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Hands-on work in financial accounting and book finalisation
+  - Managing direct and indirect taxation requirements
+  - Executing audits, due diligence, and regulatory compliance filings
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This articleship offers solid practical exposure across tax, audit, and financial accounting. You will face a steep learning curve handling broad regulatory filings and client interactions simultaneously.
 caption_instagram: |
   CA Article Trainee at JSNGA & Co.
   
