@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-28-accounts-gst-trainee
 date: 2026-09-28
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/883
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 28 Oct
   
+  Soliyog's read: This is a genuine fresher pathway for final-year B.Com students aiming for GST experience. The hard part is managing a 100% in-office Gurugram internship alongside studies, but solid performance can convert it into a full-time role.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Onified.ai. Check their careers page before applying.
   
   #accountsgsttrainee #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Accounts & GST Trainee at Onified.ai
   
   Type: Full-time
   Apply by: 28 Oct
+  
+  Soliyog's read: This is a genuine fresher pathway for final-year B.Com students aiming for GST experience. The hard part is managing a 100% in-office Gurugram internship alongside studies, but solid performance can convert it into a full-time role.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Onified.ai. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 28 Oct
   
+  Soliyog's read: This is a genuine fresher pathway for final-year B.Com students aiming for GST experience. The hard part is managing a 100% in-office Gurugram internship alongside studies, but solid performance can convert it into a full-time role.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/883
   Not affiliated with Onified.ai. Check their careers page before applying.
   
   #accountsgsttrainee #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Accounts & GST Trainee at Onified.ai
   
   Type: Full-time
   Apply by: 28 Oct
+  
+  Soliyog's read: This is a genuine fresher pathway for final-year B.Com students aiming for GST experience. The hard part is managing a 100% in-office Gurugram internship alongside studies, but solid performance can convert it into a full-time role.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/883
