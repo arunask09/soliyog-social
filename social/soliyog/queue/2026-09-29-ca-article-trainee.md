@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-29-ca-article-trainee
 date: 2026-09-29
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/888
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with JSNGA & Co. Check their careers page before applying.
   
   #caarticletrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@97448debb956c46d6753b7232db7bcb42df091d7/social/soliyog/queue/assets/2026-09-29-2026-09-29-ca-article-trainee.jpg
+posted_at: 2026-09-29T03:31:24.360Z
+post_ids: {"facebook":"1289252704274108_122118604485464634","instagram":"18079368809355841","linkedin":"6abb3101b6b26148958d6e1e","telegram":"31"}
 ---
 
 # CA Article Trainee — JSNGA & Co.
