@@ -1,7 +1,7 @@
 ---
 slug: 2026-09-30-corporate-management-trainee
 date: 2026-09-30
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/885
@@ -66,9 +66,9 @@ caption_telegram: |
   Not affiliated with Atain. Check their careers page before applying.
   
   #corporatemanagementtrain #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@c38237f5d1c9c3e972a074e5da949b78f5142ab4/social/soliyog/queue/assets/2026-09-30-2026-09-30-corporate-management-trainee.jpg
+posted_at: 2026-10-01T10:22:47.289Z
+post_ids: {"facebook":"1289252704274108_122119780623464634","instagram":"17988537675067455","linkedin":"6abe346bf2fcbd2a087330cf","telegram":"35"}
 ---
 
 # Corporate Management Trainee — Atain
