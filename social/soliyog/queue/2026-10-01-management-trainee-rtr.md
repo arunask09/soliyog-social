@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-01-management-trainee-rtr
 date: 2026-10-01
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1008
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 30 Oct
   
+  Soliyog's read: This Management Trainee role offers exposure to core Record to Report accounting at scale. The hardest part will be managing routine corporate finance deliverables while adapting to Genpact's heavy operational push into AI-led workflows.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Genpact. Check their careers page before applying.
   
   #managementtraineertr #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Management Trainee RTR at Genpact
   
   Type: Full-time
   Apply by: 30 Oct
+  
+  Soliyog's read: This Management Trainee role offers exposure to core Record to Report accounting at scale. The hardest part will be managing routine corporate finance deliverables while adapting to Genpact's heavy operational push into AI-led workflows.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Genpact. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 30 Oct
   
+  Soliyog's read: This Management Trainee role offers exposure to core Record to Report accounting at scale. The hardest part will be managing routine corporate finance deliverables while adapting to Genpact's heavy operational push into AI-led workflows.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1008
   Not affiliated with Genpact. Check their careers page before applying.
   
   #managementtraineertr #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Management Trainee RTR at Genpact
   
   Type: Full-time
   Apply by: 30 Oct
+  
+  Soliyog's read: This Management Trainee role offers exposure to core Record to Report accounting at scale. The hardest part will be managing routine corporate finance deliverables while adapting to Genpact's heavy operational push into AI-led workflows.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1008
