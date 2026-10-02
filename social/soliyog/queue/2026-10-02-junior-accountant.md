@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-02-junior-accountant
 date: 2026-10-02
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1042
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Weekday AI. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@0fa92baa018bc77215944d46b3f404b0d6bc7c5f/social/soliyog/queue/assets/2026-10-02-2026-10-02-junior-accountant.jpg
+posted_at: 2026-10-02T09:59:13.371Z
+post_ids: {"facebook":"1289252704274108_122120231079464634","instagram":"18196910446376837","linkedin":"6abf8065b41a266eabf3cffd","telegram":"38"}
 ---
 
 # Junior Accountant — Weekday AI
