@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-01-management-trainee-rtr
 date: 2026-10-01
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1008
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Genpact. Check their careers page before applying.
   
   #managementtraineertr #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@14e5e22630020ac9f847ca552a81ac06e040984d/social/soliyog/queue/assets/2026-10-01-2026-10-01-management-trainee-rtr.jpg
+posted_at: 2026-10-02T03:31:26.562Z
+post_ids: {"facebook":"1289252704274108_122120094747464634","instagram":"18116064367794823","linkedin":"6abf258363de9e09a28aacef","telegram":"36"}
 ---
 
 # Management Trainee RTR — Genpact
