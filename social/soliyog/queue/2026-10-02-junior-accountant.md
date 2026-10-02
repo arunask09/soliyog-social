@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-02-junior-accountant
 date: 2026-10-02
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1042
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Hands-on experience using Tally for accounting data entry
+  - Managing bank reconciliations, banking activities, and financial records
+  - Processing payroll calculations, vendor payments, and vendor transactions
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  With a strict 1-year experience requirement, this is not a zero-experience fresher role. It suits someone with early Tally experience ready to handle the repetitive, high-accuracy demands of daily bank reconciliations, vendor payments, and payroll.
 caption_instagram: |
   Junior Accountant at Weekday AI
   
