@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-03-software-engineer-intern-frontend
 date: 2026-10-03
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1020
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 29 Oct
   
+  Soliyog's read: This internship provides direct experience building daily-use tools and handling APIs. The hard part is the strict gatekeeping: eligibility is restricted exclusively to final-year NIT and IIIT students.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Merkle Science. Check their careers page before applying.
   
   #softwareengineerinternfr #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Software Engineer - Intern (Frontend) at Merkle Science
   
   Type: Full-time
   Apply by: 29 Oct
+  
+  Soliyog's read: This internship provides direct experience building daily-use tools and handling APIs. The hard part is the strict gatekeeping: eligibility is restricted exclusively to final-year NIT and IIIT students.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Merkle Science. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 29 Oct
   
+  Soliyog's read: This internship provides direct experience building daily-use tools and handling APIs. The hard part is the strict gatekeeping: eligibility is restricted exclusively to final-year NIT and IIIT students.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1020
   Not affiliated with Merkle Science. Check their careers page before applying.
   
   #softwareengineerinternfr #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Software Engineer - Intern (Frontend) at Merkle Science
   
   Type: Full-time
   Apply by: 29 Oct
+  
+  Soliyog's read: This internship provides direct experience building daily-use tools and handling APIs. The hard part is the strict gatekeeping: eligibility is restricted exclusively to final-year NIT and IIIT students.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1020
