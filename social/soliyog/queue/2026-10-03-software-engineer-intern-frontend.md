@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-03-software-engineer-intern-frontend
 date: 2026-10-03
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1020
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Merkle Science. Check their careers page before applying.
   
   #softwareengineerinternfr #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@45397a94b59d5416b183ba5fc27b08996c03560c/social/soliyog/queue/assets/2026-10-03-2026-10-03-software-engineer-intern-frontend.jpg
+posted_at: 2026-10-03T03:31:23.574Z
+post_ids: {"facebook":"1289252704274108_122120584533464634","instagram":"18075852524548221","linkedin":"6ac0770016dec17c2650c91a","telegram":"39"}
 ---
 
 # Software Engineer - Intern (Frontend) — Merkle Science
