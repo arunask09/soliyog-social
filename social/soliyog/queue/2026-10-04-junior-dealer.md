@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-04-junior-dealer
 date: 2026-10-04
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1001
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time · Remote
   Apply by: 29 Oct
   
+  Soliyog's read: Despite the remote title, this job strictly requires moving to Limassol, Cyprus for hybrid work. Only consider it if you are legally and practically prepared to relocate abroad for an entry-level dealing role.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with eToro. Check their careers page before applying.
   
   #juniordealer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Dealer at eToro
   
   Location: Remote
   Type: Full-time · Remote
   Apply by: 29 Oct
+  
+  Soliyog's read: Despite the remote title, this job strictly requires moving to Limassol, Cyprus for hybrid work. Only consider it if you are legally and practically prepared to relocate abroad for an entry-level dealing role.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with eToro. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time · Remote
   Apply by: 29 Oct
   
+  Soliyog's read: Despite the remote title, this job strictly requires moving to Limassol, Cyprus for hybrid work. Only consider it if you are legally and practically prepared to relocate abroad for an entry-level dealing role.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1001
   Not affiliated with eToro. Check their careers page before applying.
   
   #juniordealer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Dealer at eToro
   
   Location: Remote
   Type: Full-time · Remote
   Apply by: 29 Oct
+  
+  Soliyog's read: Despite the remote title, this job strictly requires moving to Limassol, Cyprus for hybrid work. Only consider it if you are legally and practically prepared to relocate abroad for an entry-level dealing role.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1001
