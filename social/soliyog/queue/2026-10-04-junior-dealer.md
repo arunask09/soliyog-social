@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-04-junior-dealer
 date: 2026-10-04
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1001
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Junior dealer operations for an active trading and investing platform
+  - In-office and hybrid presence strictly located in Limassol, Cyprus
+  - Work supporting a regulated, Nasdaq-listed retail financial platform
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  Despite the remote title, this job strictly requires moving to Limassol, Cyprus for hybrid work. Only consider it if you are legally and practically prepared to relocate abroad for an entry-level dealing role.
 caption_instagram: |
   Junior Dealer at eToro
   
