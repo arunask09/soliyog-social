@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-05-trainee-global-markets-division
 date: 2026-10-05
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1069
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Trainee role supporting corporate and institutional clients with project financing
+  - Covers corporate and investment banking work in the Global Markets Division
+  - Involves collaborating within a multicultural team environment
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  It offers direct entry as a trainee into a major global investment bank's markets division. You will need to adapt quickly to a multicultural corporate environment and complex project financing work.
 caption_instagram: |
   Trainee - Global Markets Division at Crédit Agricole CIB
   
