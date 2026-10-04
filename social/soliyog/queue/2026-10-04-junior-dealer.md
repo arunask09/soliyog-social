@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-04-junior-dealer
 date: 2026-10-04
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1001
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with eToro. Check their careers page before applying.
   
   #juniordealer #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@4c9b337ffc9dd3cb2e8f1f102fe1c2b3ab82b595/social/soliyog/queue/assets/2026-10-04-2026-10-04-junior-dealer.jpg
+posted_at: 2026-10-04T03:31:16.068Z
+post_ids: {"facebook":"1289252704274108_122121020991464634","instagram":"18121871611874828","linkedin":"6ac1c878aa79e514b90a2426","telegram":"41"}
 ---
 
 # Junior Dealer — eToro
