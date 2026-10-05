@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-05-trainee-global-markets-division
 date: 2026-10-05
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1069
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Crédit Agricole CIB. Check their careers page before applying.
   
   #traineeglobalmarketsdivi #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@4c3f695d7e3705b1283d78bea7454e284b1346d4/social/soliyog/queue/assets/2026-10-05-2026-10-05-trainee-global-markets-division.jpg
+posted_at: 2026-10-05T03:31:32.239Z
+post_ids: {"facebook":"1289252704274108_122121528843464634","instagram":"18140143120620855","linkedin":"6ac31a08fe1389e4134dade9","telegram":"43"}
 ---
 
 # Trainee - Global Markets Division — Crédit Agricole CIB
