@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-06-in-intern-trainee
 date: 2026-10-06
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1062
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with PricewaterhouseCoopers. Check their careers page before applying.
   
   #ininterntrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@50948c8cc7101903451d4c2ff9f91f4d32eceb0d/social/soliyog/queue/assets/2026-10-06-2026-10-06-in-intern-trainee.jpg
+posted_at: 2026-10-06T03:31:27.035Z
+post_ids: {"facebook":"1289252704274108_122122015269464634","instagram":"17953901589256762","linkedin":"6ac46b83acc08dcd5ea0142b","telegram":"45"}
 ---
 
 # IN_Intern/Trainee — PricewaterhouseCoopers
