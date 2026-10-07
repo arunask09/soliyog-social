@@ -2,6 +2,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 export const HERE = dirname(fileURLToPath(import.meta.url));
 export const QUEUE = resolve(HERE, '../queue');
@@ -67,4 +68,19 @@ export function listItems() {
     const slug = f.replace(/\.md$/, '');
     return { slug, ...parseFront(readFileSync(resolve(QUEUE, f), 'utf8')) };
   });
+}
+
+// Run build-image.mjs. Returns { ok: true } or, when the poster's layout check failed
+// (exit 3: title overlapping the company, content off the canvas), { ok: false, issues }.
+// The images are written either way. Any other failure throws.
+export function buildImage(slug) {
+  try {
+    execFileSync('node', [resolve(HERE, 'build-image.mjs'), slug], { stdio: ['inherit', 'inherit', 'pipe'] });
+    return { ok: true, issues: [] };
+  } catch (e) {
+    const err = String(e.stderr || '');
+    process.stderr.write(err);
+    if (e.status !== 3) throw e;
+    return { ok: false, issues: err.split('\n').filter((l) => l.startsWith('LAYOUT: ')).map((l) => l.slice(8)) };
+  }
 }

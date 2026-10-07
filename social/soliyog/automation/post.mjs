@@ -31,7 +31,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { HERE, listItems, readItem, setFront } from './lib.mjs';
+import { HERE, listItems, readItem, setFront, buildImage } from './lib.mjs';
 import { fetchJob } from './lib-job.mjs';
 
 const envp = resolve(HERE, '.env');
@@ -98,8 +98,19 @@ const mdRel = `social/soliyog/queue/${slug}.md`;
 const pngRel = `social/soliyog/queue/assets/${front.date}-${slug}.png`;  // 2160x2700 -> Facebook
 const jpgRel = `social/soliyog/queue/assets/${front.date}-${slug}.jpg`;  // 1080x1350 -> Instagram (JPEG only)
 
-// 1. build both images
-execFileSync('node', [resolve(HERE, 'build-image.mjs'), slug], { stdio: 'inherit' });
+// 1. build both images. Last gate before publishing: a poster that fails the layout
+// check (job title overlapping the company, content off the canvas) is held, never posted.
+const layout = buildImage(slug);
+if (!layout.ok) {
+  console.error(`poster layout check failed — holding ${slug}, not posting:\n  ${layout.issues.join('\n  ')}`);
+  if (!dry) {
+    setFront(slug, 'status', 'held');
+    git('add', mdRel);
+    git('commit', '-m', `post: ${slug} -> held (poster layout check failed)`, '--', mdRel);
+    push();
+  }
+  process.exit(1);
+}
 
 // poll each candidate URL until one returns 200 (jsDelivr can lag a fresh commit; raw is the fallback)
 async function pickLiveUrl(urls) {

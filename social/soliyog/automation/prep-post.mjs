@@ -21,7 +21,7 @@
 import { writeFileSync, appendFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { HERE, listItems, readItem, setFront } from './lib.mjs';
+import { HERE, listItems, readItem, setFront, buildImage } from './lib.mjs';
 import { fetchJob } from './lib-job.mjs';
 
 const dry = process.argv.includes('--dry-run');
@@ -79,11 +79,15 @@ const push = () => {
   catch { git('pull', '--rebase', '--autostash', 'origin', 'main'); git('push'); }
 };
 
-// 1. build captions + poster (build-image also refreshes portal facts from the listing)
+// 1. build captions + poster (build-image also refreshes portal facts from the listing).
+// A poster that fails the layout check (job title overlapping the company, content off
+// the canvas) is held, not approved — it still gets a review issue so it's visible.
+let layout = { ok: true, issues: [] };
 if (!dry) {
   execFileSync('node', [resolve(HERE, 'build-caption.mjs'), slug, '--write'], { stdio: 'inherit' });
-  execFileSync('node', [resolve(HERE, 'build-image.mjs'), slug], { stdio: 'inherit' });
+  layout = buildImage(slug);
 }
+const status = layout.ok ? 'approved' : 'held';
 
 const base = `${front.date}-${slug}`;
 const mdRel = `social/soliyog/queue/${slug}.md`;
@@ -92,9 +96,9 @@ const jpgRel = `social/soliyog/queue/assets/${base}.jpg`;
 
 // 2. promote + commit (so the 09:00 cron will publish it) + push
 if (!dry) {
-  setFront(slug, 'status', 'approved');
+  setFront(slug, 'status', status);
   git('add', mdRel, pngRel, jpgRel);
-  git('commit', '-m', `prep: ${slug} -> approved`, '--', mdRel, pngRel, jpgRel);
+  git('commit', '-m', `prep: ${slug} -> ${status}${layout.ok ? '' : ' (poster layout check failed)'}`, '--', mdRel, pngRel, jpgRel);
   push();
 }
 
@@ -108,14 +112,23 @@ const capIG = f2.caption_instagram || '';
 const capFB = f2.caption_facebook || f2.caption_instagram || '';
 const platforms = [].concat(front.platforms || ['instagram', 'facebook']).join(' + ');
 
-const title = `Review by 09:00 IST — ${job.title} at ${job.company} (${front.date})`;
+const title = layout.ok
+  ? `Review by 09:00 IST — ${job.title} at ${job.company} (${front.date})`
+  : `HELD (poster layout) — ${job.title} at ${job.company} (${front.date})`;
 const body = [
   `<!-- soliyog-review slug=${slug} -->`,
   `**${job.title}** at **${job.company}** — ${[job.location, job.experience, job.applyBy && 'apply by ' + job.applyBy].filter(Boolean).join(' · ')}`,
   '',
   `![poster](${rawPng})`,
   '',
-  `**Posts to ${platforms} at 09:00 IST tomorrow — unless you act below.**`,
+  layout.ok
+    ? `**Posts to ${platforms} at 09:00 IST tomorrow — unless you act below.**`
+    : [
+      '**⚠️ Held — will NOT post. The poster failed the layout check:**',
+      ...layout.issues.map((i) => `- ${i}`),
+      '',
+      'Fix the template / title on a laptop, rebuild, and set `status: ready` again.',
+    ].join('\n'),
   '',
   '<details><summary>Instagram caption</summary>',
   '',
@@ -144,7 +157,7 @@ const body = [
 const bodyFile = process.env.ISSUE_BODY_FILE || resolve(root, '_issue-body.md');
 
 if (dry) {
-  console.log(`\n[dry-run] would: status -> approved, commit "prep: ${slug} -> approved", push, open issue\n`);
+  console.log(`\n[dry-run] would: status -> ${status}, commit "prep: ${slug} -> ${status}", push, open issue\n`);
   console.log(`--- issue title ---\n${title}\n\n--- issue body ---\n${body}\n`);
   process.exit(0);
 }

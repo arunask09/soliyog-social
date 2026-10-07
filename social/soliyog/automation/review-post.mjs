@@ -17,7 +17,7 @@
 import { writeFileSync, appendFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { HERE, readItem, setFront, setBlock } from './lib.mjs';
+import { HERE, readItem, setFront, setBlock, buildImage } from './lib.mjs';
 
 const arg = (n) => { const i = process.argv.indexOf('--' + n); return i >= 0 ? process.argv[i + 1] : null; };
 const slug = arg('slug');
@@ -72,7 +72,8 @@ if (readMatch) {
   if (dry) emit('read-updated', `would set soliyog_read to: "${text}", rebuild, commit`, false);
   setBlock(slug, 'soliyog_read', text);
   execFileSync('node', [resolve(HERE, 'build-caption.mjs'), slug, '--write'], { stdio: 'inherit' });
-  execFileSync('node', [resolve(HERE, 'build-image.mjs'), slug], { stdio: 'inherit' });
+  const layout = buildImage(slug);
+  if (!layout.ok) setFront(slug, 'status', 'held');
   const b = `${front.date}-${slug}`;
   const pngRel = `social/soliyog/queue/assets/${b}.png`;
   const jpgRel = `social/soliyog/queue/assets/${b}.jpg`;
@@ -82,7 +83,9 @@ if (readMatch) {
   const sha = gitOut('rev-parse', 'HEAD');
   const repo = process.env.GITHUB_REPOSITORY || process.env.GH_REPO || 'OWNER/REPO';
   emit('read-updated',
-    `Updated. Rebuilt poster:\n\n![poster](https://raw.githubusercontent.com/${repo}/${sha}/${pngRel})\n\nStill posts at 09:00 IST unless you reply \`skip\`.`,
+    `Updated. Rebuilt poster:\n\n![poster](https://raw.githubusercontent.com/${repo}/${sha}/${pngRel})\n\n`
+      + (layout.ok ? 'Still posts at 09:00 IST unless you reply `skip`.'
+        : `⚠️ Held — will NOT post. The poster failed the layout check:\n${layout.issues.map((i) => `- ${i}`).join('\n')}`),
     false);
 }
 

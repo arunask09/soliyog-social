@@ -49,10 +49,18 @@
     background: var(--amber); padding: 4px 18px 12px; color: #171730;
     border-radius: 12px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
   }
+  /* never shrinks: a squeezed lockup let long titles run over the company/city text */
   .hero .company {
     display: flex; flex-direction: column; align-items: center; gap: 14px;
-    flex: 0 1 auto; max-width: 320px; text-align: center;
+    flex: 0 0 auto; max-width: 320px; text-align: center;
   }
+  /* fallback when the title can't fit beside the lockup: title gets the full width,
+     company drops to its own row underneath */
+  .hero.stacked { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .hero.stacked .role { max-width: 100%; }
+  .hero.stacked .company { flex-direction: row; max-width: none; text-align: left; gap: 18px; }
+  .hero.stacked .logo-tile { width: 84px; height: 84px; border-radius: 18px; }
+  .hero.stacked .logo-tile img { width: 60px; height: 60px; }
   .hero .logo-tile {
     width: 132px; height: 132px; border-radius: 26px; background: #fff; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
@@ -242,31 +250,70 @@
     // Tries a 1-word tail first (the common "headline word" case), then widens to a
     // 2- or 3-word tail when the title ends in a short suffix tag (e.g. "... WFH",
     // "... Remote") that would otherwise dump every real word onto an unfittable line 1.
-    if (d.role) {
+    // If nothing fits beside the lockup at a readable size, the hero stacks (title full
+    // width, company row below) and fits again. Measured only after the webfonts load —
+    // the fallback face has different widths.
+    const fit = () => {
+      if (!d.role) return;
       const w = String(d.role).trim().split(/\s+/);
       const roleEl = document.querySelector('.role');
       const hero = roleEl.parentElement;
-      const gap = parseFloat(getComputedStyle(hero).columnGap || getComputedStyle(hero).gap) || 36;
-      const avail = hero.clientWidth - (c ? c.offsetWidth : 0) - gap - 4;
-      if (w.length === 1) {
-        roleEl.innerHTML = '<span class="l2 hl">' + w[0] + '</span>';
-      } else {
-        const maxTail = Math.min(3, w.length - 1);
-        let placed = false;
-        for (let tail = 1; tail <= maxTail && !placed; tail++) {
-          roleEl.innerHTML = '<span class="l1">' + w.slice(0, -tail).join(' ') + '</span><br>'
+      const tails = w.length === 1 ? [1] : [1, 2, 3].filter((t) => t <= w.length - 1);
+      const tryFit = (avail, minFs) => {
+        for (const tail of tails) {
+          const l1 = w.slice(0, -tail).join(' ');
+          roleEl.innerHTML = (l1 ? '<span class="l1">' + l1 + '</span><br>' : '')
             + '<span class="l2 hl">' + w.slice(-tail).join(' ') + '</span>';
           const parts = roleEl.querySelectorAll('span');
-          for (let fs = 116; fs >= 60; fs -= 2) {
+          for (let fs = 116; fs >= minFs; fs -= 2) {
             roleEl.style.fontSize = fs + 'px';
-            let fits = true;
-            for (const p of parts) if (p.scrollWidth > avail) { fits = false; break; }
-            if (fits) { placed = true; break; }
+            if ([...parts].every((p) => p.scrollWidth <= avail)) return true;
           }
         }
-        // last resort: widest tail tried, smallest size — same fallback as before the fix
+        return false;
+      };
+      const gap = parseFloat(getComputedStyle(hero).columnGap || getComputedStyle(hero).gap) || 36;
+      if (tryFit(hero.clientWidth - (c ? c.offsetWidth : 0) - gap - 4, 72)) return;
+      hero.classList.add('stacked');
+      tryFit(hero.clientWidth - 4, 56);
+      // still too wide -> left as-is; the layout check below reports it
+    };
+
+    // Layout check, read back by build-image.mjs (headless --dump-dom) to block a broken
+    // poster from being approved/posted: <body data-layout='{"ok":..,"issues":[..]}'>
+    const check = () => {
+      const issues = [];
+      const R = (el) => el.getBoundingClientRect();
+      const hit = (a, b) => a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom;
+      const canvas = R(document.querySelector('.canvas'));
+      const hero = document.querySelector('.hero');
+      const parts = [...document.querySelectorAll('.role span')];
+      const co = document.querySelector('.hero .company');
+      const lockup = [['.logo-tile', 'logo'], ['b', 'company name'], ['.co-city', 'city line']];
+      if (co) for (const [sel, name] of lockup) {
+        const el = co.querySelector(sel);
+        if (el && parts.some((p) => hit(R(p), R(el)))) issues.push('job title overlaps the ' + name);
       }
-    }
+      for (const p of parts) if (R(p).right > R(hero).right + 1) issues.push('job title runs past the right margin: "' + p.textContent + '"');
+      const coName = co && co.querySelector('b');
+      if (coName && coName.scrollWidth > coName.clientWidth + 1) issues.push('company name overflows its box');
+      for (const el of document.querySelectorAll('.canvas > :not(.skyline):not(.glow):not(.topbar)')) {
+        const r = R(el);
+        if (r.top < canvas.top - 1 || r.bottom > canvas.bottom + 1 || r.right > canvas.right + 1) {
+          issues.push('content falls outside the poster: ' + (el.className || el.tagName.toLowerCase()));
+        }
+      }
+      document.body.dataset.layout = JSON.stringify({
+        ok: issues.length === 0, issues: [...new Set(issues)],
+        mode: hero.classList.contains('stacked') ? 'stacked' : 'beside',
+        fontSize: parseFloat(getComputedStyle(document.querySelector('.role')).fontSize),
+      });
+    };
+
+    const fontsReady = Promise.all([
+      document.fonts.load('116px Anton'), document.fonts.load('700 30px "Space Grotesk"'),
+    ]).then(() => document.fonts.ready).catch(() => {});
+    Promise.race([fontsReady, new Promise((r) => setTimeout(r, 3000))]).then(() => { fit(); check(); });
   })();
   </script>
 </body>

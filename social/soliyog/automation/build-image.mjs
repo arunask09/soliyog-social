@@ -9,6 +9,8 @@
  * role_tests + soliyog_read (per-post, authored from the listing), kicker (optional).
  * Output: queue/assets/<date>-<slug>.png   (2160x2700, for Facebook /photos)
  *         queue/assets/<date>-<slug>.jpg   (1080x1350, for Instagram /media — JPEG only)
+ * Exit 3: images written, but the layout check failed (title overlapping the company,
+ *         content outside the poster) — issues printed to stderr as "LAYOUT: ...".
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync, rmSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -75,10 +77,30 @@ let html = readFileSync(tpl, 'utf8').replace(
 const buildName = `_build-${slug}-1080x1350.html`;
 const buildPath = resolve(HERE, '../templates', buildName);
 writeFileSync(buildPath, html);
+let layout;
 try {
   execFileSync('bash', ['./render.sh', buildName], { cwd: resolve(HERE, '../templates'), stdio: 'inherit' });
+  layout = checkLayout(buildPath);
 } finally {
   rmSync(buildPath, { force: true });
+}
+
+// The template measures itself after fitting (title vs company lockup, anything outside
+// the canvas) and writes <body data-layout='{"ok":..}'>. Read it back with a second
+// headless pass at the same window size, so the overlap check sees the exact layout.
+function checkLayout(file) {
+  const chrome = process.env.CHROME
+    || ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome', '/usr/bin/chromium']
+      .find((p) => existsSync(p));
+  if (!chrome) throw new Error('layout check: Chrome not found (set $CHROME)');
+  const dom = execFileSync(chrome, [
+    '--headless', '--disable-gpu', '--no-sandbox', '--hide-scrollbars', '--allow-file-access-from-files',
+    '--window-size=1080,1350', '--virtual-time-budget=6000', '--dump-dom', `file://${file}`,
+  ], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 16 << 20 });
+  const m = dom.match(/<body[^>]*\sdata-layout="([^"]*)"/);
+  if (!m) return { ok: false, issues: ['layout check did not run (no data-layout on <body>)'] };
+  const unesc = m[1].replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+  return JSON.parse(unesc);
 }
 
 const outDir = resolve(HERE, '../queue/assets');
@@ -99,3 +121,11 @@ await sharp(destPng)
   .jpeg({ quality: 88, chromaSubsampling: '4:2:0', mozjpeg: true })
   .toFile(destJpg);
 console.log(`OK  ${destJpg}  (${(statSync(destJpg).size / 1024).toFixed(0)} KB)`);
+
+// Images are still written (so the broken one can be inspected), but a failed layout
+// check exits 3 — prep-post holds the item instead of approving it, post.mjs won't publish.
+if (!layout.ok) {
+  for (const i of layout.issues) console.error(`LAYOUT: ${i}`);
+  process.exit(3);
+}
+console.log(`layout OK  (hero ${layout.mode}, title ${layout.fontSize}px)`);
