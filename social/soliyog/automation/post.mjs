@@ -32,6 +32,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { HERE, listItems, readItem, setFront } from './lib.mjs';
+import { fetchJob } from './lib-job.mjs';
 
 const envp = resolve(HERE, '.env');
 if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
@@ -49,28 +50,12 @@ const fbFirstComment = (sourceUrl) => [
 ].filter(Boolean).join('\n\n');
 const args = process.argv.slice(2);
 const dry = args.includes('--dry-run');
-const slugArg = args[args.indexOf('--slug') + 1];
+const slugArg = args.includes('--slug') ? args[args.indexOf('--slug') + 1] : undefined;
 const G = 'https://graph.facebook.com/v21.0';
 
 if (!dry && (!META_TOKEN || !FB_PAGE_ID || !IG_USER_ID)) { console.error('missing META_TOKEN / FB_PAGE_ID / IG_USER_ID'); process.exit(1); }
 
-const today = new Date().toISOString().slice(0, 10);
-const item = slugArg
-  ? { slug: slugArg }
-  : listItems().filter((x) => x.status === 'approved' && (x.date || '9999') <= today).sort((a, b) => (a.date || '').localeCompare(b.date || ''))[0];
-if (!item) { console.log('nothing approved and due — no post today'); process.exit(0); }
-const slug = item.slug;
-const { front } = readItem(slug);
-console.log(`posting: ${slug}`);
-
 const root = resolve(HERE, '../../..');
-const mdRel = `social/soliyog/queue/${slug}.md`;
-const pngRel = `social/soliyog/queue/assets/${front.date}-${slug}.png`;  // 2160x2700 -> Facebook
-const jpgRel = `social/soliyog/queue/assets/${front.date}-${slug}.jpg`;  // 1080x1350 -> Instagram (JPEG only)
-
-// 1. build both images
-execFileSync('node', [resolve(HERE, 'build-image.mjs'), slug], { stdio: 'inherit' });
-
 const git = (...a) => execFileSync('git', a, { cwd: root, stdio: 'inherit' });
 const gitOut = (...a) => execFileSync('git', a, { cwd: root }).toString().trim();
 const dirty = (...paths) => gitOut('status', '--porcelain', '--', ...paths) !== '';
@@ -78,6 +63,43 @@ const push = () => {
   try { git('push'); }
   catch { git('pull', '--rebase', '--autostash', 'origin', 'main'); git('push'); }
 };
+
+const today = new Date().toISOString().slice(0, 10);
+const due = slugArg
+  ? [{ slug: slugArg }]
+  : listItems().filter((x) => x.status === 'approved' && (x.date || '9999') <= today).sort((a, b) => (a.date || '').localeCompare(b.date || ''));
+if (!due.length) { console.log('nothing approved and due — no post today'); process.exit(0); }
+
+// A listing taken down on soliyog.com after approval 404s in build-image, which used to
+// crash the run with the item still `approved` — so it re-failed every day and nothing
+// new was scaffolded. Mark it `expired` (committed, like every status) and move on to
+// the next approved item. Other fetch errors (5xx, network) still fail the run.
+let item;
+for (const x of due) {
+  const src = readItem(x.slug).front.source_url;
+  try { if (src) await fetchJob(src); item = x; break; }
+  catch (e) {
+    if (!/^HTTP (404|410)\b/.test(e.message)) throw e;
+    console.warn(`listing gone (${e.message}) — marking ${x.slug} expired`);
+    if (dry) continue;
+    const rel = `social/soliyog/queue/${x.slug}.md`;
+    setFront(x.slug, 'status', 'expired');
+    git('add', rel);
+    git('commit', '-m', `post: ${x.slug} -> expired`, '--', rel);
+    push();
+  }
+}
+if (!item) { console.log('no approved item with a live listing — no post today'); process.exit(0); }
+const slug = item.slug;
+const { front } = readItem(slug);
+console.log(`posting: ${slug}`);
+
+const mdRel = `social/soliyog/queue/${slug}.md`;
+const pngRel = `social/soliyog/queue/assets/${front.date}-${slug}.png`;  // 2160x2700 -> Facebook
+const jpgRel = `social/soliyog/queue/assets/${front.date}-${slug}.jpg`;  // 1080x1350 -> Instagram (JPEG only)
+
+// 1. build both images
+execFileSync('node', [resolve(HERE, 'build-image.mjs'), slug], { stdio: 'inherit' });
 
 // poll each candidate URL until one returns 200 (jsDelivr can lag a fresh commit; raw is the fallback)
 async function pickLiveUrl(urls) {
