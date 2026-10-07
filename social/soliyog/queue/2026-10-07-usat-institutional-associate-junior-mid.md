@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-07-usat-institutional-associate-junior-mid
 date: 2026-10-07
-status: approved
+status: expired
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1068
