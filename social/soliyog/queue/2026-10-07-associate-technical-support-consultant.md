@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-07-associate-technical-support-consultant
 date: 2026-10-07
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1104
@@ -77,9 +77,9 @@ caption_telegram: |
   Not affiliated with Altera Digital Health LLP. Check their careers page before applying.
   
   #techsupportjobs #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@742087557e6a898de380217809c3bdf326778653/social/soliyog/queue/assets/2026-10-07-2026-10-07-associate-technical-support-consultant.jpg
+posted_at: 2026-10-07T05:00:28.915Z
+post_ids: {"facebook":"1289252704274108_122122559709464634","instagram":"18041049629833391","linkedin":"6ac5d1e136c2a7788dce6ee5","telegram":"47"}
 ---
 
 # Associate Technical Support Consultant — Altera Digital Health LLP
