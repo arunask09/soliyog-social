@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-08-junior-accountant
 date: 2026-10-08
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1109
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with HRvisory. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@71b79acb3615cdf2859708003b0b54c51515f584/social/soliyog/queue/assets/2026-10-08-2026-10-08-junior-accountant.jpg
-posted_at:
-post_ids: {"facebook":"1289252704274108_122122985163464634"}
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@7f09238ffc1fbc580ec5a826e4879b3d382ee0ff/social/soliyog/queue/assets/2026-10-08-2026-10-08-junior-accountant.jpg
+posted_at: 2026-10-08T04:21:41.244Z
+post_ids: {"facebook":"1289252704274108_122122985163464634","instagram":"18024345551923403","linkedin":"6ac71a4995b0fb1c5ccb39bf","telegram":"49"}
 ---
 
 # junior accountant — HRvisory
