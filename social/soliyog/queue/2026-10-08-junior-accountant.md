@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-08-junior-accountant
 date: 2026-10-08
-status: failed
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1109
