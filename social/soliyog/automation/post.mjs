@@ -231,7 +231,19 @@ try {
       if (s.status_code === 'ERROR') throw new Error('IG container ERROR');
       await new Promise((r) => setTimeout(r, 3000));
     }
-    post_ids.instagram = (await api(`${IG_USER_ID}/media_publish`, { creation_id: c.id })).id;
+    // IG can report the container FINISHED and still reject the publish with "Media ID
+    // is not available" for a few more seconds (hit 2026-10-08). A rejected publish
+    // creates nothing, so retrying with backoff can't double-post.
+    for (let attempt = 1; ; attempt++) {
+      try {
+        post_ids.instagram = (await api(`${IG_USER_ID}/media_publish`, { creation_id: c.id })).id;
+        break;
+      } catch (e) {
+        if (attempt >= 6 || !/Media ID is not available|not ready/i.test(e.message)) throw e;
+        console.warn(`IG publish not ready (attempt ${attempt}), retrying in ${attempt * 5}s`);
+        await new Promise((r) => setTimeout(r, attempt * 5000));
+      }
+    }
     console.log('IG ok', post_ids.instagram);
   }
   if (platforms.includes('linkedin') && !post_ids.linkedin) {
