@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-10-gst-associate-fresher
 date: 2026-10-10
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1120
@@ -19,10 +19,14 @@ caption_instagram: |
   Salary: ₹2,40,000–3,00,000/yr
   Apply by: 7 Nov
   
+  Soliyog's read: This is a genuine entry-level opening for freshers wanting hands-on taxation experience in a CA firm. Expect repetitive reconciliation work and strict compliance deadlines, but it builds solid ground-level GST skills.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with ATMS & CO LLP. Check their careers page before applying.
   
   #gstassociatefresher #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   GST Associate - FRESHER at ATMS & CO LLP
   
@@ -30,6 +34,8 @@ caption_facebook: |
   Type: Full-time
   Salary: ₹2,40,000–3,00,000/yr
   Apply by: 7 Nov
+  
+  Soliyog's read: This is a genuine entry-level opening for freshers wanting hands-on taxation experience in a CA firm. Expect repetitive reconciliation work and strict compliance deadlines, but it builds solid ground-level GST skills.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with ATMS & CO LLP. Check their careers page before applying.
@@ -43,11 +49,15 @@ caption_linkedin: |
   Salary: ₹2,40,000–3,00,000/yr
   Apply by: 7 Nov
   
+  Soliyog's read: This is a genuine entry-level opening for freshers wanting hands-on taxation experience in a CA firm. Expect repetitive reconciliation work and strict compliance deadlines, but it builds solid ground-level GST skills.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1120
   Not affiliated with ATMS & CO LLP. Check their careers page before applying.
   
   #gstassociatefresher #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   GST Associate - FRESHER at ATMS & CO LLP
   
@@ -55,6 +65,8 @@ caption_telegram: |
   Type: Full-time
   Salary: ₹2,40,000–3,00,000/yr
   Apply by: 7 Nov
+  
+  Soliyog's read: This is a genuine entry-level opening for freshers wanting hands-on taxation experience in a CA firm. Expect repetitive reconciliation work and strict compliance deadlines, but it builds solid ground-level GST skills.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1120
