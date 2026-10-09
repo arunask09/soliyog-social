@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-10-gst-associate-fresher
 date: 2026-10-10
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1120
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Assisting with regular GST return preparation and filing
+  - Working on GST reconciliations
+  - Handling GST compliance assignments in a CA firm setting
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a genuine entry-level opening for freshers wanting hands-on taxation experience in a CA firm. Expect repetitive reconciliation work and strict compliance deadlines, but it builds solid ground-level GST skills.
 caption_instagram: |
   GST Associate - FRESHER at ATMS & CO LLP
   
