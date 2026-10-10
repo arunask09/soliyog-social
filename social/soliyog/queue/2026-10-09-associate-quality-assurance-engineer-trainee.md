@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-09-associate-quality-assurance-engineer-trainee
 date: 2026-10-09
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1100
@@ -19,10 +19,14 @@ caption_instagram: |
   Salary: ₹20,000–10,00,000/yr
   Apply by: 6 Nov
   
+  Soliyog's read: It gives freshers a structured six-month entry into QA with potential PPO transition. The hard truth is the low stipend of ₹15,000 monthly and compulsory in-office work.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Jungleworks. Check their careers page before applying.
   
   #associatequalityassuranc #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Associate Quality Assurance Engineer - Trainee at Jungleworks
   
@@ -30,6 +34,8 @@ caption_facebook: |
   Type: Full-time
   Salary: ₹20,000–10,00,000/yr
   Apply by: 6 Nov
+  
+  Soliyog's read: It gives freshers a structured six-month entry into QA with potential PPO transition. The hard truth is the low stipend of ₹15,000 monthly and compulsory in-office work.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Jungleworks. Check their careers page before applying.
@@ -43,11 +49,15 @@ caption_linkedin: |
   Salary: ₹20,000–10,00,000/yr
   Apply by: 6 Nov
   
+  Soliyog's read: It gives freshers a structured six-month entry into QA with potential PPO transition. The hard truth is the low stipend of ₹15,000 monthly and compulsory in-office work.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1100
   Not affiliated with Jungleworks. Check their careers page before applying.
   
   #associatequalityassuranc #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Associate Quality Assurance Engineer - Trainee at Jungleworks
   
@@ -55,6 +65,8 @@ caption_telegram: |
   Type: Full-time
   Salary: ₹20,000–10,00,000/yr
   Apply by: 6 Nov
+  
+  Soliyog's read: It gives freshers a structured six-month entry into QA with potential PPO transition. The hard truth is the low stipend of ₹15,000 monthly and compulsory in-office work.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1100
