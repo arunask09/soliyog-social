@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-11-trainee-quote-to-cash
 date: 2026-10-11
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1151
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time · Remote
   Apply by: 8 Nov
   
+  Soliyog's read: This entry-level trainee position offers remote finance work. It involves routine admin duties and strict payment tracking, but provides clear exposure to core Quote to Cash operations.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Oceaneering. Check their careers page before applying.
   
   #traineequotetocash #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Trainee, Quote To Cash at Oceaneering
   
   Location: Chandigarh / remote
   Type: Full-time · Remote
   Apply by: 8 Nov
+  
+  Soliyog's read: This entry-level trainee position offers remote finance work. It involves routine admin duties and strict payment tracking, but provides clear exposure to core Quote to Cash operations.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Oceaneering. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time · Remote
   Apply by: 8 Nov
   
+  Soliyog's read: This entry-level trainee position offers remote finance work. It involves routine admin duties and strict payment tracking, but provides clear exposure to core Quote to Cash operations.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1151
   Not affiliated with Oceaneering. Check their careers page before applying.
   
   #traineequotetocash #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Trainee, Quote To Cash at Oceaneering
   
   Location: Chandigarh / remote
   Type: Full-time · Remote
   Apply by: 8 Nov
+  
+  Soliyog's read: This entry-level trainee position offers remote finance work. It involves routine admin duties and strict payment tracking, but provides clear exposure to core Quote to Cash operations.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1151
