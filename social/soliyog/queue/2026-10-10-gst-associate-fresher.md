@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-10-gst-associate-fresher
 date: 2026-10-10
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1120
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with ATMS & CO LLP. Check their careers page before applying.
   
   #gstassociatefresher #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@cb346b69c36c2556e991df06ba45cd9afc095333/social/soliyog/queue/assets/2026-10-10-2026-10-10-gst-associate-fresher.jpg
+posted_at: 2026-10-10T03:31:27.075Z
+post_ids: {"facebook":"1289252704274108_122123847807464634","instagram":"18127329448831391","linkedin":"6ac9b183b07d37ac975ce47e","telegram":"52"}
 ---
 
 # GST Associate - FRESHER — ATMS & CO LLP
