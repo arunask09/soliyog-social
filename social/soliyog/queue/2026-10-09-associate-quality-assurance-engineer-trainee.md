@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-09-associate-quality-assurance-engineer-trainee
 date: 2026-10-09
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1100
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with Jungleworks. Check their careers page before applying.
   
   #associatequalityassuranc #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@67a27532e44d0ee68e9bdee58a649b0294fb016b/social/soliyog/queue/assets/2026-10-09-2026-10-09-associate-quality-assurance-engineer-trainee.jpg
+posted_at: 2026-10-11T03:31:23.171Z
+post_ids: {"facebook":"1289252704274108_122124279279464634","instagram":"18118026037963473","linkedin":"6acb02fff91f772d45b4fab5","telegram":"54"}
 ---
 
 # Associate Quality Assurance Engineer - Trainee — Jungleworks
