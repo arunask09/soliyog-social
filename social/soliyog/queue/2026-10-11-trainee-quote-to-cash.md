@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-11-trainee-quote-to-cash
 date: 2026-10-11
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1151
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Oceaneering. Check their careers page before applying.
   
   #traineequotetocash #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@1f5e26fc5c3a9ae186c74e39aca9a0fc338274ef/social/soliyog/queue/assets/2026-10-11-2026-10-11-trainee-quote-to-cash.jpg
+posted_at: 2026-10-11T10:14:29.922Z
+post_ids: {"facebook":"1289252704274108_122124376083464634","instagram":"18117963550760183","linkedin":"6acb617abba9419ccb30bb8c","telegram":"56"}
 ---
 
 # Trainee, Quote To Cash — Oceaneering
