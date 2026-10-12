@@ -102,6 +102,20 @@ new post's Instagram/LinkedIn captions (`build-caption.mjs`) and the Facebook fi
 comment (`post.mjs`) will carry a "join our Telegram" line. Leave it unset to omit the
 CTA entirely — nothing breaks either way.
 
+## 2f. WhatsApp Channel — semi-manual handoff
+
+WhatsApp has no official API for posting to Channels, and the unofficial WhatsApp-Web
+automations risk banning the number that owns the channel — so the pipeline doesn't
+post there. Instead, after each successful daily post, the Telegram bot DMs you the
+poster image plus the caption reformatted for WhatsApp (title in `*bold*`, hashtags
+dropped) inside a tap-to-copy code block. Save the image, tap the caption, paste both
+into the WhatsApp Channel.
+
+Setup: open a chat with the bot and send it any message, then read your chat id from
+`https://api.telegram.org/bot<TOKEN>/getUpdates` (`result[].message.chat.id`) and set it
+as `TELEGRAM_ADMIN_CHAT_ID` (repo secret + `.env`). Unset = handoff skipped. It never
+fails the run. Resend one by hand with `node whatsapp-handoff.mjs --slug <slug>`.
+
 ## 4. Credentials
 
 `social/soliyog/automation/.env` (git-ignored — the assistant can't create it):

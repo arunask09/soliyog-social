@@ -20,7 +20,9 @@
  * BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID (needed unless an item opts out of linkedin),
  * TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID (optional — telegram soft-skips without them),
  * TELEGRAM_INVITE_LINK (optional — public t.me/<handle> join link; when set, adds a
- * "join our Telegram" line to the FB first comment cross-promoting the channel)
+ * "join our Telegram" line to the FB first comment cross-promoting the channel),
+ * TELEGRAM_ADMIN_CHAT_ID (optional — when set, the bot DMs the admin the poster + a
+ * WhatsApp-formatted caption to paste into the WhatsApp Channel; see whatsapp-handoff.mjs)
  * (GH_REPO = "user/repo" of the PUBLIC repo this folder is pushed to — for the image URL).
  *
  * On success it commits the queue file (status: posted) and the rendered images back to
@@ -33,12 +35,13 @@ import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { HERE, listItems, readItem, setFront, buildImage } from './lib.mjs';
 import { fetchJob } from './lib-job.mjs';
+import { whatsappCaption, sendHandoff } from './whatsapp-handoff.mjs';
 
 const envp = resolve(HERE, '.env');
 if (existsSync(envp)) for (const l of readFileSync(envp, 'utf8').split('\n')) {
   const m = l.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/); if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
 }
-const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, TELEGRAM_INVITE_LINK } = process.env;
+const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKEDIN_CHANNEL_ID, TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID, TELEGRAM_INVITE_LINK, TELEGRAM_ADMIN_CHAT_ID } = process.env;
 
 // Cross-promotion into the FB first comment, alongside the real job link — omitted
 // when TELEGRAM_INVITE_LINK isn't set. See build-caption.mjs for the IG/LinkedIn
@@ -169,6 +172,10 @@ if (dry) {
       caption: capTG,
     });
   }
+  console.log('\n--- WhatsApp handoff (Telegram DM to admin) ---\n', {
+    chat_id: TELEGRAM_ADMIN_CHAT_ID || '(TELEGRAM_ADMIN_CHAT_ID not set — skipped)',
+    caption: whatsappCaption(capTG),
+  });
   process.exit(0);
 }
 
@@ -291,6 +298,16 @@ try {
     }
   }
   persist({ status: 'posted', posted_at: new Date().toISOString(), post_ids: JSON.stringify(post_ids) });
+  // WhatsApp Channel has no posting API — DM the admin the poster + a WhatsApp-formatted
+  // caption to paste by hand. After persist, and non-fatal: the post is already live.
+  if (TELEGRAM_BOT_TOKEN && TELEGRAM_ADMIN_CHAT_ID) {
+    try {
+      await sendHandoff({ token: TELEGRAM_BOT_TOKEN, chatId: TELEGRAM_ADMIN_CHAT_ID, imageUrl: igUrl, caption: capTG, slug });
+      console.log('WhatsApp handoff sent');
+    } catch (e) {
+      console.warn('WhatsApp handoff skipped (post is live):', e.message);
+    }
+  }
   console.log('done');
 } catch (e) {
   // mark failed and commit it so CI doesn't retry the same broken item every cron run —
