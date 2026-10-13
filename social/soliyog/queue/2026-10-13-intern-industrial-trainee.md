@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-13-intern-industrial-trainee
 date: 2026-10-13
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1166
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with London Stock Exchange Group. Check their careers page before applying.
   
   #internindustrialtrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@4fee04b1e2c18815ac038fd3203356f7638126c8/social/soliyog/queue/assets/2026-10-13-2026-10-13-intern-industrial-trainee.jpg
+posted_at: 2026-10-13T03:31:29.048Z
+post_ids: {"facebook":"1289252704274108_122125066941464634","instagram":"18129558922763614","linkedin":"6acda604c210c8c6dd48493d","telegram":"59"}
 ---
 
 # Intern - Industrial Trainee — London Stock Exchange Group
