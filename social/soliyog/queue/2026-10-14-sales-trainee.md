@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-14-sales-trainee
 date: 2026-10-14
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1163
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Silicon Signals Pvt Ltd. Check their careers page before applying.
   
   #salestrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@20b9d373ccf9b46ff4630c27b4fba1409f70821c/social/soliyog/queue/assets/2026-10-14-2026-10-14-sales-trainee.jpg
+posted_at: 2026-10-14T03:31:31.667Z
+post_ids: {"facebook":"1289252704274108_122125388661464634","instagram":"18356543290174900","linkedin":"6acef7871f3f10bcb7addd5c","telegram":"61"}
 ---
 
 # Sales Trainee — Silicon Signals Pvt Ltd
