@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-17-chartered-accountant-industrial-trainee-2026
 date: 2026-10-17
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1200
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Chartered Accountant industrial training within BP's global finance group
+  - Corporate finance work supporting business decarbonization and operational diversification
+  - Financial analysis aligned with energy transition and new technology initiatives
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is an industrial training stint for active CA students rather than general graduates. The post gives zero task specifics, so you will need to clarify the exact accounting and reporting workload during interviews.
 caption_instagram: |
   Chartered Accountant - Industrial Trainee 2026 at BP
   
