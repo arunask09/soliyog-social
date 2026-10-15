@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-16-bsa-operations-junior-analyst
 date: 2026-10-16
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1186
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 12 Nov
   
+  Soliyog's read: This junior role offers direct exposure to enterprise financial digitisation and Blackline implementation at scale. The challenging part will be getting up to speed quickly on complex balance sheet reconciliations and corporate accounting controls.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with BP. Check their careers page before applying.
   
   #bsaoperationsjunioranaly #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   BSA Operations Junior Analyst at BP
   
   Type: Full-time
   Apply by: 12 Nov
+  
+  Soliyog's read: This junior role offers direct exposure to enterprise financial digitisation and Blackline implementation at scale. The challenging part will be getting up to speed quickly on complex balance sheet reconciliations and corporate accounting controls.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with BP. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 12 Nov
   
+  Soliyog's read: This junior role offers direct exposure to enterprise financial digitisation and Blackline implementation at scale. The challenging part will be getting up to speed quickly on complex balance sheet reconciliations and corporate accounting controls.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1186
   Not affiliated with BP. Check their careers page before applying.
   
   #bsaoperationsjunioranaly #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   BSA Operations Junior Analyst at BP
   
   Type: Full-time
   Apply by: 12 Nov
+  
+  Soliyog's read: This junior role offers direct exposure to enterprise financial digitisation and Blackline implementation at scale. The challenging part will be getting up to speed quickly on complex balance sheet reconciliations and corporate accounting controls.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1186
