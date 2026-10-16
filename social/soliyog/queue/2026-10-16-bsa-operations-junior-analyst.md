@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-16-bsa-operations-junior-analyst
 date: 2026-10-16
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1186
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with BP. Check their careers page before applying.
   
   #bsaoperationsjunioranaly #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@5cd1a62885e9691bf7d5427b705f405cb8731ad0/social/soliyog/queue/assets/2026-10-16-2026-10-16-bsa-operations-junior-analyst.jpg
+posted_at: 2026-10-16T03:31:24.782Z
+post_ids: {"facebook":"1289252704274108_122126146881464634","instagram":"18111806306179796","linkedin":"6ad19a81e991a49db3c71981","telegram":"65"}
 ---
 
 # BSA Operations Junior Analyst — BP
