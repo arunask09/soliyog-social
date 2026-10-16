@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-18-technology-engineering-trainee-entry
 date: 2026-10-18
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1183
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Designing, developing, testing, deploying, maintaining, and improving software
+  - Translating functional and technical requirements into detailed architecture and design
+  - Applying BDD and TDD practices across development
+  - Performing code reviews and code analysis techniques
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is a genuine entry-level engineering trainee role at an established firm. The challenge is that you are expected to understand detailed architecture, code analysis, and strict TDD or BDD practices from day one.
 caption_instagram: |
   Technology Engineering Trainee - Entry at Equifax
   
