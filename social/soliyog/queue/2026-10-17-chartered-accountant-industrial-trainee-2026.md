@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-17-chartered-accountant-industrial-trainee-2026
 date: 2026-10-17
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1200
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 13 Nov
   
+  Soliyog's read: This is an industrial training stint for active CA students rather than general graduates. The post gives zero task specifics, so you will need to clarify the exact accounting and reporting workload during interviews.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with BP. Check their careers page before applying.
   
   #charteredaccountantindus #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Chartered Accountant - Industrial Trainee 2026 at BP
   
   Type: Full-time
   Apply by: 13 Nov
+  
+  Soliyog's read: This is an industrial training stint for active CA students rather than general graduates. The post gives zero task specifics, so you will need to clarify the exact accounting and reporting workload during interviews.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with BP. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 13 Nov
   
+  Soliyog's read: This is an industrial training stint for active CA students rather than general graduates. The post gives zero task specifics, so you will need to clarify the exact accounting and reporting workload during interviews.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1200
   Not affiliated with BP. Check their careers page before applying.
   
   #charteredaccountantindus #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Chartered Accountant - Industrial Trainee 2026 at BP
   
   Type: Full-time
   Apply by: 13 Nov
+  
+  Soliyog's read: This is an industrial training stint for active CA students rather than general graduates. The post gives zero task specifics, so you will need to clarify the exact accounting and reporting workload during interviews.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1200
