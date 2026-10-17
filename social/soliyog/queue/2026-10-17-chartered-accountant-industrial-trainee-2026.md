@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-17-chartered-accountant-industrial-trainee-2026
 date: 2026-10-17
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1200
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with BP. Check their careers page before applying.
   
   #charteredaccountantindus #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@8566b97899ca06e32bc0440af7fd74f5b1cba08c/social/soliyog/queue/assets/2026-10-17-2026-10-17-chartered-accountant-industrial-trainee-2026.jpg
+posted_at: 2026-10-17T03:31:18.231Z
+post_ids: {"facebook":"1289252704274108_122126467893464634","instagram":"18104614238573697","linkedin":"6ad2ebfa8ac6cfe5442b0729","telegram":"67"}
 ---
 
 # Chartered Accountant - Industrial Trainee 2026 — BP
