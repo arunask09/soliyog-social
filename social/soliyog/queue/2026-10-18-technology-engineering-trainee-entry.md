@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-18-technology-engineering-trainee-entry
 date: 2026-10-18
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1183
@@ -66,9 +66,9 @@ caption_telegram: |
   Not affiliated with Equifax. Check their careers page before applying.
   
   #technologyengineeringtra #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@2560a26133e89544a4b9e767115b7caf84caf33a/social/soliyog/queue/assets/2026-10-18-2026-10-18-technology-engineering-trainee-entry.jpg
+posted_at: 2026-10-18T03:31:32.543Z
+post_ids: {"facebook":"1289252704274108_122126771511464634","instagram":"17937373146126811","linkedin":"6ad43d89938409f1d0b4066f","telegram":"69"}
 ---
 
 # Technology Engineering Trainee - Entry — Equifax
