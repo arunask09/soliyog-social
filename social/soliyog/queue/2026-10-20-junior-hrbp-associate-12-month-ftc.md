@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-20-junior-hrbp-associate-12-month-ftc
 date: 2026-10-20
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1235
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Human resources business partner duties in the Human Capital Group
+  - A 12-month fixed-term contract at an associate level
+  - Supporting HR operations within a global investment bank
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This offers solid HR exposure inside a global investment bank. Keep in mind it is a 12-month fixed-term contract, and as an associate role, it may require prior professional experience.
 caption_instagram: |
   Junior HRBP, Associate (12 month FTC) at Houlihan Lokey
   
