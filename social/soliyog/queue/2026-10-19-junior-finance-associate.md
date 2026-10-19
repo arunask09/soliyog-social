@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-19-junior-finance-associate
 date: 2026-10-19
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1225
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Amina. Check their careers page before applying.
   
   #juniorfinanceassociate #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@f2670284d848996113bd8873d949fa525950edd1/social/soliyog/queue/assets/2026-10-19-2026-10-19-junior-finance-associate.jpg
+posted_at: 2026-10-19T03:31:33.096Z
+post_ids: {"facebook":"1289252704274108_122127170709464634","instagram":"18092676158487644","linkedin":"6ad58f090a208cb323916896","telegram":"71"}
 ---
 
 # Junior Finance Associate — Amina
