@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-21-charge-entry-specialist
 date: 2026-10-21
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1248
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Entering patient demographics, insurance details, and clinical charges accurately
+  - Supporting healthcare billing accuracy and revenue cycle performance
+  - Following technology-enabled processes in a healthcare operations team
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  It offers practical operational experience in healthcare billing systems. The main challenge will be maintaining constant accuracy and speed when entering detailed patient and insurance records.
 caption_instagram: |
   Charge Entry Specialist at Jobgether
   
