@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-20-junior-hrbp-associate-12-month-ftc
 date: 2026-10-20
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1235
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Houlihan Lokey. Check their careers page before applying.
   
   #juniorhrbpassociate12mon #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@6c9895d8616bf03cd808cdb7e1ef055dec467405/social/soliyog/queue/assets/2026-10-20-2026-10-20-junior-hrbp-associate-12-month-ftc.jpg
+posted_at: 2026-10-20T03:31:23.140Z
+post_ids: {"facebook":"1289252704274108_122127458865464634","instagram":"18143192851591432","linkedin":"6ad6e07f2d48e20f64c66158","telegram":"73"}
 ---
 
 # Junior HRBP, Associate (12 month FTC) — Houlihan Lokey
