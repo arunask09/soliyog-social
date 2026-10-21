@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-22-junior-executive
 date: 2026-10-22
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1258
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Preparing bank-wise indents and updating route-wise sheets
+  - Managing ATM routes and combination passwords
+  - Handling bank withdrawals, cash processing, and ATM loading
+  - Managing First Line Maintenance calls for ATM downtime and errors
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is hands-on operational work involving cash processing, ATM passwords, and route management. It demands strict accuracy and handling live downtime calls, but offers clear exposure to cash logistics.
 caption_instagram: |
   Junior Executive at Brinks
   
