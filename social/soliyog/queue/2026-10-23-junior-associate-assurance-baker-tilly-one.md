@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-23-junior-associate-assurance-baker-tilly-one
 date: 2026-10-23
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1273
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Assurance and accounting support within a global advisory network
+  - Full-time junior associate work in the finance industry
+  - Handling client advisory across international business markets
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This junior assurance role offers exposure to a global accounting network. However, the listing lacks specific tool requirements and experience details, so expect to ask for clarity during early interview stages.
 caption_instagram: |
   Junior Associate - Assurance - Baker Tilly One at Baker Tilly
   
