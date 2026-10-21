@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-22-junior-executive
 date: 2026-10-22
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1258
@@ -18,15 +18,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 18 Nov
   
+  Soliyog's read: This is hands-on operational work involving cash processing, ATM passwords, and route management. It demands strict accuracy and handling live downtime calls, but offers clear exposure to cash logistics.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Brinks. Check their careers page before applying.
   
   #juniorexecutive #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Executive at Brinks
   
   Type: Full-time
   Apply by: 18 Nov
+  
+  Soliyog's read: This is hands-on operational work involving cash processing, ATM passwords, and route management. It demands strict accuracy and handling live downtime calls, but offers clear exposure to cash logistics.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Brinks. Check their careers page before applying.
@@ -38,16 +44,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 18 Nov
   
+  Soliyog's read: This is hands-on operational work involving cash processing, ATM passwords, and route management. It demands strict accuracy and handling live downtime calls, but offers clear exposure to cash logistics.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1258
   Not affiliated with Brinks. Check their careers page before applying.
   
   #juniorexecutive #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Executive at Brinks
   
   Type: Full-time
   Apply by: 18 Nov
+  
+  Soliyog's read: This is hands-on operational work involving cash processing, ATM passwords, and route management. It demands strict accuracy and handling live downtime calls, but offers clear exposure to cash logistics.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1258
