@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-21-charge-entry-specialist
 date: 2026-10-21
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1248
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Jobgether. Check their careers page before applying.
   
   #chargeentryspecialist #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@806328f9f01890a215657391eb745f3a67119ba6/social/soliyog/queue/assets/2026-10-21-2026-10-21-charge-entry-specialist.jpg
+posted_at: 2026-10-21T03:31:24.850Z
+post_ids: {"facebook":"1289252704274108_122127758949464634","instagram":"18119843462287374","linkedin":"6ad83201aff466fe09fca109","telegram":"75"}
 ---
 
 # Charge Entry Specialist — Jobgether
