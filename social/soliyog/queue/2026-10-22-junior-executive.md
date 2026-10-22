@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-22-junior-executive
 date: 2026-10-22
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1258
@@ -66,9 +66,9 @@ caption_telegram: |
   Not affiliated with Brinks. Check their careers page before applying.
   
   #juniorexecutive #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@a7d7ebfa12c31d644b7a2367565edda2e81ff239/social/soliyog/queue/assets/2026-10-22-2026-10-22-junior-executive.jpg
+posted_at: 2026-10-22T03:31:27.392Z
+post_ids: {"facebook":"1289252704274108_122128083921464634","instagram":"18218825284344809","linkedin":"6ad98383ecaa6cda0425f79a","telegram":"77"}
 ---
 
 # Junior Executive — Brinks
