@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-24-devops-trainee
 date: 2026-10-24
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1283
@@ -18,16 +18,22 @@ caption_instagram: |
   Experience: 0–1 yrs / Freshers
   Apply by: 20 Nov
   
+  Soliyog's read: This is a genuine fresher role for candidates in Mumbai. You need to know your Linux, container, and CI/CD basics upfront, but the daily work centers on supporting existing pipelines and environments.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with 3i Infotech Limited. Check their careers page before applying.
   
   #devopstrainee #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Devops - Trainee at 3i Infotech Limited
   
   Type: Full-time
   Experience: 0–1 yrs / Freshers
   Apply by: 20 Nov
+  
+  Soliyog's read: This is a genuine fresher role for candidates in Mumbai. You need to know your Linux, container, and CI/CD basics upfront, but the daily work centers on supporting existing pipelines and environments.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with 3i Infotech Limited. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Experience: 0–1 yrs / Freshers
   Apply by: 20 Nov
   
+  Soliyog's read: This is a genuine fresher role for candidates in Mumbai. You need to know your Linux, container, and CI/CD basics upfront, but the daily work centers on supporting existing pipelines and environments.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1283
   Not affiliated with 3i Infotech Limited. Check their careers page before applying.
   
   #devopstrainee #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Devops - Trainee at 3i Infotech Limited
   
   Type: Full-time
   Experience: 0–1 yrs / Freshers
   Apply by: 20 Nov
+  
+  Soliyog's read: This is a genuine fresher role for candidates in Mumbai. You need to know your Linux, container, and CI/CD basics upfront, but the daily work centers on supporting existing pipelines and environments.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1283
