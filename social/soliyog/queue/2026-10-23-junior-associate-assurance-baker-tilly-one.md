@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-23-junior-associate-assurance-baker-tilly-one
 date: 2026-10-23
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1273
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Baker Tilly. Check their careers page before applying.
   
   #juniorassociateassurance #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@2368ba896b4c8db7b12a3c93a8d948bbe80aee89/social/soliyog/queue/assets/2026-10-23-2026-10-23-junior-associate-assurance-baker-tilly-one.jpg
+posted_at: 2026-10-23T03:31:31.713Z
+post_ids: {"facebook":"1289252704274108_122128416069464634","instagram":"18122132827931469","linkedin":"6adad508d447d56a6474ee54","telegram":"79"}
 ---
 
 # Junior Associate - Assurance - Baker Tilly One — Baker Tilly
