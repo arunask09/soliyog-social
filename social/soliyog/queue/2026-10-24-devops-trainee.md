@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-24-devops-trainee
 date: 2026-10-24
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1283
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with 3i Infotech Limited. Check their careers page before applying.
   
   #devopstrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@5b56ab7cc5b48a089ea386e2d9e4f692e426e63e/social/soliyog/queue/assets/2026-10-24-2026-10-24-devops-trainee.jpg
+posted_at: 2026-10-24T03:31:24.732Z
+post_ids: {"facebook":"1289252704274108_122128704525464634","instagram":"17884107054522663","linkedin":"6adc2680bd33ce99c303d1ae","telegram":"81"}
 ---
 
 # Devops - Trainee — 3i Infotech Limited
