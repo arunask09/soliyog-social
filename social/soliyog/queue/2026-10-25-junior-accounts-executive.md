@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-25-junior-accounts-executive
 date: 2026-10-25
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1303
@@ -21,10 +21,14 @@ caption_instagram: |
   Salary: ₹15,000–20,000/yr
   Apply by: 22 Nov
   
+  Soliyog's read: Requires 1 to 2 years of experience, so this is not for freshers. The work is repetitive and heavy on routine sales document verification, but it offers grounded practice in daily ledger and Tally operations.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Saburi Ply. Check their careers page before applying.
   
   #junioraccountsexecutive #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Accounts Executive at Saburi Ply
   
@@ -33,6 +37,8 @@ caption_facebook: |
   Experience: 1–2 yrs
   Salary: ₹15,000–20,000/yr
   Apply by: 22 Nov
+  
+  Soliyog's read: Requires 1 to 2 years of experience, so this is not for freshers. The work is repetitive and heavy on routine sales document verification, but it offers grounded practice in daily ledger and Tally operations.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Saburi Ply. Check their careers page before applying.
@@ -47,11 +53,15 @@ caption_linkedin: |
   Salary: ₹15,000–20,000/yr
   Apply by: 22 Nov
   
+  Soliyog's read: Requires 1 to 2 years of experience, so this is not for freshers. The work is repetitive and heavy on routine sales document verification, but it offers grounded practice in daily ledger and Tally operations.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1303
   Not affiliated with Saburi Ply. Check their careers page before applying.
   
   #junioraccountsexecutive #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Accounts Executive at Saburi Ply
   
@@ -60,6 +70,8 @@ caption_telegram: |
   Experience: 1–2 yrs
   Salary: ₹15,000–20,000/yr
   Apply by: 22 Nov
+  
+  Soliyog's read: Requires 1 to 2 years of experience, so this is not for freshers. The work is repetitive and heavy on routine sales document verification, but it offers grounded practice in daily ledger and Tally operations.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1303
