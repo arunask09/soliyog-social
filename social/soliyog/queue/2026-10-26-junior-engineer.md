@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-26-junior-engineer
 date: 2026-10-26
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1312
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Delivering clean and maintainable code for enterprise systems
+  - Working in agile, onsite engineering environments
+  - Building software products across finance, logistics, and retail sectors
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  The ₹4,20,000 to ₹5,40,000 salary is solid for an Indore-based junior role. Expect an intense, fully onsite setup where you must deliver production-ready code for mid-market and enterprise clients.
 caption_instagram: |
   Junior Engineer at Asaaeta Sulution Privet Limited
   
