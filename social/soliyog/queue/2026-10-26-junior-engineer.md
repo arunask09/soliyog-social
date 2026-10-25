@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-26-junior-engineer
 date: 2026-10-26
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1312
@@ -19,10 +19,14 @@ caption_instagram: |
   Salary: ₹4,20,000–5,40,000/yr
   Apply by: 23 Nov
   
+  Soliyog's read: The ₹4,20,000 to ₹5,40,000 salary is solid for an Indore-based junior role. Expect an intense, fully onsite setup where you must deliver production-ready code for mid-market and enterprise clients.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Asaaeta Sulution Privet Limited. Check their careers page before applying.
   
   #juniorengineer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Engineer at Asaaeta Sulution Privet Limited
   
@@ -30,6 +34,8 @@ caption_facebook: |
   Type: Full-time
   Salary: ₹4,20,000–5,40,000/yr
   Apply by: 23 Nov
+  
+  Soliyog's read: The ₹4,20,000 to ₹5,40,000 salary is solid for an Indore-based junior role. Expect an intense, fully onsite setup where you must deliver production-ready code for mid-market and enterprise clients.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Asaaeta Sulution Privet Limited. Check their careers page before applying.
@@ -43,11 +49,15 @@ caption_linkedin: |
   Salary: ₹4,20,000–5,40,000/yr
   Apply by: 23 Nov
   
+  Soliyog's read: The ₹4,20,000 to ₹5,40,000 salary is solid for an Indore-based junior role. Expect an intense, fully onsite setup where you must deliver production-ready code for mid-market and enterprise clients.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1312
   Not affiliated with Asaaeta Sulution Privet Limited. Check their careers page before applying.
   
   #juniorengineer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Engineer at Asaaeta Sulution Privet Limited
   
@@ -55,6 +65,8 @@ caption_telegram: |
   Type: Full-time
   Salary: ₹4,20,000–5,40,000/yr
   Apply by: 23 Nov
+  
+  Soliyog's read: The ₹4,20,000 to ₹5,40,000 salary is solid for an Indore-based junior role. Expect an intense, fully onsite setup where you must deliver production-ready code for mid-market and enterprise clients.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1312
