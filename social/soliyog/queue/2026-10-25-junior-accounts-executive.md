@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-25-junior-accounts-executive
 date: 2026-10-25
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1303
@@ -78,9 +78,9 @@ caption_telegram: |
   Not affiliated with Saburi Ply. Check their careers page before applying.
   
   #junioraccountsexecutive #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@d1c2d900323aaef6e552164ab862ae39e2406643/social/soliyog/queue/assets/2026-10-25-2026-10-25-junior-accounts-executive.jpg
+posted_at: 2026-10-25T03:31:18.151Z
+post_ids: {"facebook":"1289252704274108_122129031003464634","instagram":"18181788793437173","linkedin":"6add77fa8b3d437ddcecdfa8","telegram":"83"}
 ---
 
 # Junior Accounts Executive — Saburi Ply
