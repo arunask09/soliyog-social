@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-28-junior-associate-ar
 date: 2026-10-28
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1331
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Identifying inpatient and observation accounts requiring notification
+  - Submitting notifications using payer portals, EDI, fax, or phone calls
+  - Documenting authorization numbers and tracking pending or rejected submissions
+  - Ensuring compliance with strict payer timeliness requirements
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This entry-level finance role offers structured experience in accounts receivable operations. The hard part is handling repetitive portal follow-ups and calls while meeting tight payer deadlines.
 caption_instagram: |
   Junior Associate AR at Guidehouse
   
