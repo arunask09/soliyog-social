@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-26-junior-engineer
 date: 2026-10-26
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1312
@@ -73,9 +73,9 @@ caption_telegram: |
   Not affiliated with Asaaeta Sulution Privet Limited. Check their careers page before applying.
   
   #juniorengineer #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@402ca6aec0fc7119686796394dbf3f2fb219677b/social/soliyog/queue/assets/2026-10-26-2026-10-26-junior-engineer.jpg
+posted_at: 2026-10-26T03:31:22.954Z
+post_ids: {"facebook":"1289252704274108_122129353737464634","instagram":"17883354486536078","linkedin":"6adec97fe4be8a4d86e01c66","telegram":"85"}
 ---
 
 # Junior Engineer — Asaaeta Sulution Privet Limited
