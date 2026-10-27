@@ -1,17 +1,16 @@
 ---
 slug: 2026-10-29-2027-software-engineer-campus-graduate-program-iit-madras
 date: 2026-10-29
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1326
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Building real-time data ingestion pipelines and low-latency trading platforms
+  - Developing cloud-native applications, analytics pipelines, and AI research tools
+  - Applying open-source solutions and enterprise agile methodology in Bengaluru
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This program focuses on complex finance tech like low-latency systems and AI tools in Bengaluru. While aimed at campus graduates, the listing contradictory requires 30+ years of experience.
 caption_instagram: |
   2027 Software Engineer - Campus Graduate Program - IIT Madras at Point72
   
