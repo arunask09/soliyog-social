@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-27-trainee-test-engineer
 date: 2026-10-27
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1320
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Quality Engineering. Check their careers page before applying.
   
   #traineetestengineer #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@9928232bc0033a8cf7d2b0c26e782db47e5f0d37/social/soliyog/queue/assets/2026-10-27-2026-10-27-trainee-test-engineer.jpg
+posted_at: 2026-10-27T03:31:23.904Z
+post_ids: {"facebook":"1289252704274108_122129635629464634","instagram":"17960787825255955","linkedin":"6ae01b00e322dad80120173e","telegram":"87"}
 ---
 
 # Trainee Test Engineer — Quality Engineering
