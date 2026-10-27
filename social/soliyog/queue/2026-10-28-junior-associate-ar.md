@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-28-junior-associate-ar
 date: 2026-10-28
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1331
@@ -18,15 +18,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 24 Nov
   
+  Soliyog's read: This entry-level finance role offers structured experience in accounts receivable operations. The hard part is handling repetitive portal follow-ups and calls while meeting tight payer deadlines.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorassociatear #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Associate AR at Guidehouse
   
   Type: Full-time
   Apply by: 24 Nov
+  
+  Soliyog's read: This entry-level finance role offers structured experience in accounts receivable operations. The hard part is handling repetitive portal follow-ups and calls while meeting tight payer deadlines.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Guidehouse. Check their careers page before applying.
@@ -38,16 +44,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 24 Nov
   
+  Soliyog's read: This entry-level finance role offers structured experience in accounts receivable operations. The hard part is handling repetitive portal follow-ups and calls while meeting tight payer deadlines.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1331
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorassociatear #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Associate AR at Guidehouse
   
   Type: Full-time
   Apply by: 24 Nov
+  
+  Soliyog's read: This entry-level finance role offers structured experience in accounts receivable operations. The hard part is handling repetitive portal follow-ups and calls while meeting tight payer deadlines.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1331
