@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-29-2027-software-engineer-campus-graduate-program-iit-madras
 date: 2026-10-29
-status: ready
+status: held
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1326
@@ -19,10 +19,14 @@ caption_instagram: |
   Experience: 30+ yrs
   Apply by: 9 Dec
   
+  Soliyog's read: This program focuses on complex finance tech like low-latency systems and AI tools in Bengaluru. While aimed at campus graduates, the listing contradictory requires 30+ years of experience.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   2027 Software Engineer - Campus Graduate Program - IIT Madras at Point72
   
@@ -30,6 +34,8 @@ caption_facebook: |
   Type: Full-time
   Experience: 30+ yrs
   Apply by: 9 Dec
+  
+  Soliyog's read: This program focuses on complex finance tech like low-latency systems and AI tools in Bengaluru. While aimed at campus graduates, the listing contradictory requires 30+ years of experience.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
@@ -43,11 +49,15 @@ caption_linkedin: |
   Experience: 30+ yrs
   Apply by: 9 Dec
   
+  Soliyog's read: This program focuses on complex finance tech like low-latency systems and AI tools in Bengaluru. While aimed at campus graduates, the listing contradictory requires 30+ years of experience.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1326
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   2027 Software Engineer - Campus Graduate Program - IIT Madras at Point72
   
@@ -55,6 +65,8 @@ caption_telegram: |
   Type: Full-time
   Experience: 30+ yrs
   Apply by: 9 Dec
+  
+  Soliyog's read: This program focuses on complex finance tech like low-latency systems and AI tools in Bengaluru. While aimed at campus graduates, the listing contradictory requires 30+ years of experience.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1326
