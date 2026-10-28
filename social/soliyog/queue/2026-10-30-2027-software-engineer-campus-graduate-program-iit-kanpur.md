@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-30-2027-software-engineer-campus-graduate-program-iit-kanpur
 date: 2026-10-30
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1325
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Building real-time data ingestion pipelines and cloud-native applications
+  - Developing low-latency trading platforms and AI-driven research tools
+  - Applying open-source solutions and enterprise agile methodology
+  - Working with Agentic AI to accelerate engineering workflows
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
 caption_instagram: |
   2027 Software Engineer - Campus Graduate Program - IIT Kanpur at Point72
   
