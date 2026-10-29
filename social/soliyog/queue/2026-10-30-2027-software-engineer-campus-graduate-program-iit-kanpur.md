@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-30-2027-software-engineer-campus-graduate-program-iit-kanpur
 date: 2026-10-30
-status: ready
+status: held
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1325
@@ -20,10 +20,14 @@ caption_instagram: |
   Experience: 30+ yrs
   Apply by: 9 Dec
   
+  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   2027 Software Engineer - Campus Graduate Program - IIT Kanpur at Point72
   
@@ -31,6 +35,8 @@ caption_facebook: |
   Type: Full-time
   Experience: 30+ yrs
   Apply by: 9 Dec
+  
+  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
@@ -44,11 +50,15 @@ caption_linkedin: |
   Experience: 30+ yrs
   Apply by: 9 Dec
   
+  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1325
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   2027 Software Engineer - Campus Graduate Program - IIT Kanpur at Point72
   
@@ -56,6 +66,8 @@ caption_telegram: |
   Type: Full-time
   Experience: 30+ yrs
   Apply by: 9 Dec
+  
+  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1325
