@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-30-2027-software-engineer-campus-graduate-program-iit-kanpur
 date: 2026-10-30
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1325
