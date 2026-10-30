@@ -9,6 +9,22 @@ const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct
 const fmtDay = (iso) => { const d = new Date(iso); return isNaN(d) ? '' : `${d.getUTCDate()} ${MON[d.getUTCMonth()]}`; };
 const stripHtml = (s) => String(s || '').replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/gi, ' ').replace(/\s+/g, ' ').trim();
 
+// Free-text fallback: "N years experience" / "2-4 years of relevant experience" in the
+// description. Company boilerplate also matches the shape — job 1325 (Point72): "more
+// than 30 years of investing experience" became "Experience: 30+ yrs" on a campus-grad
+// poster. So skip company-history phrasing, and treat anything over 15 years as not a
+// job requirement (omit it rather than publish a wrong fact).
+const COMPANY_HISTORY = /\b(?:investing|operating|operations|history|heritage|legacy|business|serving|innovation|excellence|trading|our|the firm|the company)\b/i;
+export function experienceFromText(text) {
+  const re = /(\d{1,2})\s*(?:\+|-|–|to|and)?\s*(\d{1,2})?\+?\s*years?['’]?\s+((?:[\w-]+\s+){0,3}?)experience/gi;
+  for (const ym of String(text || '').matchAll(re)) {
+    const lo = +ym[1], hi = ym[2] ? +ym[2] : 0;
+    if (lo <= 0 || lo > 15 || hi > 15 || COMPANY_HISTORY.test(ym[3])) continue;
+    return hi > lo ? `${lo}–${hi} yrs` : `${lo}+ yrs`;
+  }
+  return '';
+}
+
 const LABELS = 'Location|Interview Mode|Employment Type|Work Schedule|Work Mode|Package|Salary|Stipend|CTC|Experience|Qualification|Education|Note|About|Company|Job Title|Role|Responsibilities|Requirements|Key Skills|Skills';
 
 export async function fetchJob(idOrUrl) {
@@ -69,12 +85,7 @@ export async function fetchJob(idOrUrl) {
     if (/^0\s*yrs|^fresh/i.test(experience)) experience = 'Freshers welcome';
     // Guard: a description that spells out "N years experience" must not be downgraded to
     // "Freshers welcome" by a JSON-LD experienceRequirements.monthsOfExperience of 0.
-    if (!experience) {
-      const ym = descriptionText.match(
-        /(\d{1,2})\s*(?:\+|-|–|to|and)?\s*(\d{1,2})?\+?\s*years?['’]?\s+(?:[\w-]+\s+){0,3}?experience/i,
-      );
-      if (ym && +ym[1] > 0) experience = ym[2] && +ym[2] > +ym[1] ? `${ym[1]}–${ym[2]} yrs` : `${ym[1]}+ yrs`;
-    }
+    if (!experience) experience = experienceFromText(descriptionText);
     if (!experience) {
       const months = ld.experienceRequirements?.monthsOfExperience;
       if (typeof months === 'number') {

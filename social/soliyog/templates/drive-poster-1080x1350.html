@@ -258,7 +258,17 @@
       const w = String(d.role).trim().split(/\s+/);
       const roleEl = document.querySelector('.role');
       const hero = roleEl.parentElement;
-      const tails = w.length === 1 ? [1] : [1, 2, 3].filter((t) => t <= w.length - 1);
+      // Long titles ("2027 Software Engineer - Campus Graduate Program - IIT Kanpur") can't
+      // fit any 1-3 word tail, so fall back to every other split, most balanced first —
+      // skipping splits that leave a bare "-" / "|" at either end of a line.
+      const sep = (s) => /^[-–—|·]$/.test(s);
+      const len = (a) => a.join(' ').length;
+      const rest = [];
+      for (let t = 4; t <= w.length - 1; t++) rest.push(t);
+      rest.sort((a, b) => Math.max(len(w.slice(0, -a)), len(w.slice(-a))) - Math.max(len(w.slice(0, -b)), len(w.slice(-b))));
+      const all = w.length === 1 ? [1] : [1, 2, 3].filter((t) => t <= w.length - 1).concat(rest);
+      const clean = all.filter((t) => t === w.length || (!sep(w[w.length - t - 1]) && !sep(w[w.length - t])));
+      const tails = clean.length ? clean : all;
       const tryFit = (avail, minFs) => {
         for (const tail of tails) {
           const l1 = w.slice(0, -tail).join(' ');

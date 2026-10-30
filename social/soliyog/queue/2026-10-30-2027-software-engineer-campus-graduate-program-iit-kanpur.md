@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-30-2027-software-engineer-campus-graduate-program-iit-kanpur
 date: 2026-10-30
-status: held
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1325
@@ -11,16 +11,15 @@ role_tests: |
   - Applying open-source solutions and enterprise agile methodology
   - Working with Agentic AI to accelerate engineering workflows
 soliyog_read: |
-  Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  This is a campus program for engineering students graduating in 2026, so no prior work experience is expected. The bar is strong coding in Python, Java or C++ plus comfort with Git. The title ties it to IIT Kanpur, so check with your placement cell before applying directly.
 caption_instagram: |
   2027 Software Engineer - Campus Graduate Program - IIT Kanpur at Point72
   
   Location: India
   Type: Full-time
-  Experience: 30+ yrs
   Apply by: 9 Dec
   
-  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  Soliyog's read: This is a campus program for engineering students graduating in 2026, so no prior work experience is expected. The bar is strong coding in Python, Java or C++ plus comfort with Git. The title ties it to IIT Kanpur, so check with your placement cell before applying directly.
   
   Full listing and how to apply — link in bio.
   Not affiliated with Point72. Check their careers page before applying.
@@ -33,10 +32,9 @@ caption_facebook: |
   
   Location: India
   Type: Full-time
-  Experience: 30+ yrs
   Apply by: 9 Dec
   
-  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  Soliyog's read: This is a campus program for engineering students graduating in 2026, so no prior work experience is expected. The bar is strong coding in Python, Java or C++ plus comfort with Git. The title ties it to IIT Kanpur, so check with your placement cell before applying directly.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
@@ -47,10 +45,9 @@ caption_linkedin: |
   
   Location: India
   Type: Full-time
-  Experience: 30+ yrs
   Apply by: 9 Dec
   
-  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  Soliyog's read: This is a campus program for engineering students graduating in 2026, so no prior work experience is expected. The bar is strong coding in Python, Java or C++ plus comfort with Git. The title ties it to IIT Kanpur, so check with your placement cell before applying directly.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1325
@@ -64,10 +61,9 @@ caption_telegram: |
   
   Location: India
   Type: Full-time
-  Experience: 30+ yrs
   Apply by: 9 Dec
   
-  Soliyog's read: Despite the campus title, the listing specifies 30+ years of experience, making this unsuitable for freshers. Building low-latency trading systems and real-time data pipelines demands heavy technical rigour and domain precision.
+  Soliyog's read: This is a campus program for engineering students graduating in 2026, so no prior work experience is expected. The bar is strong coding in Python, Java or C++ plus comfort with Git. The title ties it to IIT Kanpur, so check with your placement cell before applying directly.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1325
@@ -80,7 +76,7 @@ post_ids:
 ---
 
 # 2027 Software Engineer - Campus Graduate Program - IIT Kanpur — Point72
-Portal facts (auto): India · Full-time · 30+ yrs · apply by 9 Dec
+Portal facts (auto): India · Full-time · apply by 9 Dec
 
 Fill `role_tests` + `soliyog_read` from the listing, then set `status: ready`.
 The afternoon prep job (13:00 IST) promotes it to `approved` and opens a GitHub issue
