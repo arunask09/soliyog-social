@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-01-2027-software-engineer-campus-graduate-program-iit-bhu
 date: 2026-11-01
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1323
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Involves real-time data ingestion, low-latency trading, and analytics pipelines
+  - Requires building resilient cloud-native applications and AI research tools
+  - Uses open-source solutions and enterprise agile methodology
+  - Focuses on engineering acceleration using Agentic AI
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This campus program offers real finance-tech work in low-latency trading and cloud systems. Building high-speed, secure applications at scale is demanding, but it gives 2027 graduates serious technical depth.
 caption_instagram: |
   2027 Software Engineer - Campus Graduate Program - IIT BHU at Point72
   
