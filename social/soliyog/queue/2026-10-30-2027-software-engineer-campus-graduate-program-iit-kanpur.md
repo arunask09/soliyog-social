@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-30-2027-software-engineer-campus-graduate-program-iit-kanpur
 date: 2026-10-30
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1325
@@ -70,9 +70,9 @@ caption_telegram: |
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://raw.githubusercontent.com/arunask09/soliyog-social/cd5aff032f853da4ef7631949c92537aea63ba97/social/soliyog/queue/assets/2026-10-30-2026-10-30-2027-software-engineer-campus-graduate-program-iit-kanpur.jpg
+posted_at: 2026-10-31T03:31:37.298Z
+post_ids: {"facebook":"1289252704274108_122130901035464634","instagram":"18027464627866407","linkedin":"6ae5610deaa24d6f9a5352f9","telegram":"93"}
 ---
 
 # 2027 Software Engineer - Campus Graduate Program - IIT Kanpur — Point72
