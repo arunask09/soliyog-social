@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-31-2027-software-engineer-campus-graduate-program-iit-hyderabad
 date: 2026-10-31
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1324
@@ -17,18 +17,24 @@ caption_instagram: |
   
   Location: India
   Type: Full-time
-  Apply by: 9 Dec
+  Apply by: 14 Dec
+  
+  Soliyog's read: This campus program offers direct exposure to global hedge fund technology in Bengaluru. The work is demanding, requiring you to solve complex low-latency and real-time data problems at scale using modern cloud and AI tech.
   
   Full listing and how to apply — link in bio.
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   2027 Software Engineer - Campus Graduate Program - IIT Hyderabad at Point72
   
   Location: India
   Type: Full-time
-  Apply by: 9 Dec
+  Apply by: 14 Dec
+  
+  Soliyog's read: This campus program offers direct exposure to global hedge fund technology in Bengaluru. The work is demanding, requiring you to solve complex low-latency and real-time data problems at scale using modern cloud and AI tech.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
@@ -39,19 +45,25 @@ caption_linkedin: |
   
   Location: India
   Type: Full-time
-  Apply by: 9 Dec
+  Apply by: 14 Dec
+  
+  Soliyog's read: This campus program offers direct exposure to global hedge fund technology in Bengaluru. The work is demanding, requiring you to solve complex low-latency and real-time data problems at scale using modern cloud and AI tech.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1324
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   2027 Software Engineer - Campus Graduate Program - IIT Hyderabad at Point72
   
   Location: India
   Type: Full-time
-  Apply by: 9 Dec
+  Apply by: 14 Dec
+  
+  Soliyog's read: This campus program offers direct exposure to global hedge fund technology in Bengaluru. The work is demanding, requiring you to solve complex low-latency and real-time data problems at scale using modern cloud and AI tech.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1324
