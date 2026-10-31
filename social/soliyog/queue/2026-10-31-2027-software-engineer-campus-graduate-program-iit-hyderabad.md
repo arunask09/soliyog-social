@@ -1,7 +1,7 @@
 ---
 slug: 2026-10-31-2027-software-engineer-campus-graduate-program-iit-hyderabad
 date: 2026-10-31
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1324
@@ -70,9 +70,9 @@ caption_telegram: |
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@399ae9dc6a125d9431debb026ee0b315579508e5/social/soliyog/queue/assets/2026-10-31-2026-10-31-2027-software-engineer-campus-graduate-program-iit-hyderabad.jpg
+posted_at: 2026-10-31T09:53:15.095Z
+post_ids: {"facebook":"1289252704274108_122130965487464634","instagram":"17920076724462653","linkedin":"6ae5ba7fceb491e585ebc318","telegram":"95"}
 ---
 
 # 2027 Software Engineer - Campus Graduate Program - IIT Hyderabad — Point72
