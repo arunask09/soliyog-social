@@ -31,7 +31,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { HERE } from './lib.mjs';
+import { HERE, tagLinks } from './lib.mjs';
 import { scrapeAll, pickCandidates } from './next-post.mjs';
 import { fetchJob } from './lib-job.mjs';
 
@@ -63,7 +63,7 @@ function formatListing(job) {
     job.location ? `📍Location: ${job.location}` : null,
     job.salary ? `💰Salary: ${job.salary}` : null,
     '',
-    `👉 Apply Link 🔗${job.url}`,
+    `👉 Apply Link 🔗${tagLinks(job.url, 'telegram', 'telegram-batch')}`,
     `(Not affiliated with ${job.company.replace(/\.+$/, '')} — verify on their careers page)`,
   ];
   return lines.filter((l) => l !== null).join('\n');

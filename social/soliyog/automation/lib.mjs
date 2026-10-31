@@ -8,6 +8,23 @@ export const HERE = dirname(fileURLToPath(import.meta.url));
 export const QUEUE = resolve(HERE, '../queue');
 export const qpath = (slug) => resolve(QUEUE, `${slug}.md`);
 
+// Tag every soliyog.com link in a caption with UTM params so the site's GA4
+// (Acquisition > Traffic acquisition) shows which channel and feed sent each
+// visit. Applied at publish time, so already-queued captions get tagged too.
+// Links that already carry utm_ params, and non-soliyog links, are left alone.
+export function tagLinks(text, source, campaign = 'daily-post') {
+  return String(text).replace(/https?:\/\/(?:www\.)?soliyog\.com[^\s)>\]]*/g, (match) => {
+    const trail = match.match(/[.,!?;:]+$/)?.[0] ?? '';
+    const raw = trail ? match.slice(0, -trail.length) : match;
+    if (/[?&]utm_/.test(raw)) return match;
+    const u = new URL(raw);
+    u.searchParams.set('utm_source', source);
+    u.searchParams.set('utm_medium', 'social');
+    u.searchParams.set('utm_campaign', campaign);
+    return u.toString() + trail;
+  });
+}
+
 // parse the top --- ... --- block. Supports "k: v", "k: [a, b]", and "k: |" indented blocks.
 export function parseFront(md) {
   const m = md.match(/^---\n([\s\S]*?)\n---/);

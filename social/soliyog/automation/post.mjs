@@ -33,7 +33,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
-import { HERE, listItems, readItem, setFront, buildImage } from './lib.mjs';
+import { HERE, listItems, readItem, setFront, buildImage, tagLinks } from './lib.mjs';
 import { fetchJob } from './lib-job.mjs';
 import { whatsappCaption, sendHandoff } from './whatsapp-handoff.mjs';
 
@@ -48,7 +48,7 @@ const { META_TOKEN, FB_PAGE_ID, IG_USER_ID, GH_REPO, BUFFER_TOKEN, BUFFER_LINKED
 // equivalents (Facebook has no in-body link, so this has to ride the same
 // first-comment mechanism as the job link itself).
 const fbFirstComment = (sourceUrl) => [
-  `Full listing and how to apply:\n${sourceUrl}`,
+  `Full listing and how to apply:\n${tagLinks(sourceUrl, 'facebook')}`,
   TELEGRAM_INVITE_LINK ? `Join our Telegram for daily fresher job alerts: ${TELEGRAM_INVITE_LINK}` : null,
 ].filter(Boolean).join('\n\n');
 const args = process.argv.slice(2);
@@ -150,8 +150,12 @@ if (dry) {
 
 const capFB = front.caption_facebook || front.caption_instagram || '';
 const capIG = front.caption_instagram || front.caption_facebook || '';
-const capLI = front.caption_linkedin || capFB;
-const capTG = front.caption_telegram || capLI;
+const rawLI = front.caption_linkedin || capFB;
+const rawTG = front.caption_telegram || rawLI;
+const capLI = tagLinks(rawLI, 'linkedin');
+const capTG = tagLinks(rawTG, 'telegram');
+// The WhatsApp Channel post is forwarded by hand from the handoff DM.
+const capWA = tagLinks(rawTG, 'whatsapp');
 console.log(`FB image: ${fbUrl}\nIG image: ${igUrl}`);
 if (dry) {
   console.log('\n--- FB /photos ---\n', { url: fbUrl, caption: capFB });
@@ -174,7 +178,7 @@ if (dry) {
   }
   console.log('\n--- WhatsApp handoff (Telegram DM to admin) ---\n', {
     chat_id: TELEGRAM_ADMIN_CHAT_ID || '(TELEGRAM_ADMIN_CHAT_ID not set — skipped)',
-    caption: whatsappCaption(capTG),
+    caption: whatsappCaption(capWA),
   });
   process.exit(0);
 }
@@ -302,7 +306,7 @@ try {
   // caption to paste by hand. After persist, and non-fatal: the post is already live.
   if (TELEGRAM_BOT_TOKEN && TELEGRAM_ADMIN_CHAT_ID) {
     try {
-      await sendHandoff({ token: TELEGRAM_BOT_TOKEN, chatId: TELEGRAM_ADMIN_CHAT_ID, imageUrl: igUrl, caption: capTG, slug });
+      await sendHandoff({ token: TELEGRAM_BOT_TOKEN, chatId: TELEGRAM_ADMIN_CHAT_ID, imageUrl: igUrl, caption: capWA, slug });
       console.log('WhatsApp handoff sent');
     } catch (e) {
       console.warn('WhatsApp handoff skipped (post is live):', e.message);
