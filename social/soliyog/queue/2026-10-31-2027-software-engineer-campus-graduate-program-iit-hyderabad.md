@@ -1,17 +1,17 @@
 ---
 slug: 2026-10-31-2027-software-engineer-campus-graduate-program-iit-hyderabad
 date: 2026-10-31
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1324
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Building real-time data ingestion pipelines and low-latency trading platforms
+  - Developing cloud-native applications using open-source tools and agile methods
+  - Creating AI-driven research tools and implementing agentic AI solutions
+  - Designing secure and resilient high-speed financial infrastructure
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This campus program offers direct exposure to global hedge fund technology in Bengaluru. The work is demanding, requiring you to solve complex low-latency and real-time data problems at scale using modern cloud and AI tech.
 caption_instagram: |
   2027 Software Engineer - Campus Graduate Program - IIT Hyderabad at Point72
   
