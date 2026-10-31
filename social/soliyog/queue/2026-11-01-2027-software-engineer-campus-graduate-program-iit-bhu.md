@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-01-2027-software-engineer-campus-graduate-program-iit-bhu
 date: 2026-11-01
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1323
@@ -19,16 +19,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 14 Dec
   
+  Soliyog's read: This campus program offers real finance-tech work in low-latency trading and cloud systems. Building high-speed, secure applications at scale is demanding, but it gives 2027 graduates serious technical depth.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   2027 Software Engineer - Campus Graduate Program - IIT BHU at Point72
   
   Location: India
   Type: Full-time
   Apply by: 14 Dec
+  
+  Soliyog's read: This campus program offers real finance-tech work in low-latency trading and cloud systems. Building high-speed, secure applications at scale is demanding, but it gives 2027 graduates serious technical depth.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Point72. Check their careers page before applying.
@@ -41,17 +47,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 14 Dec
   
+  Soliyog's read: This campus program offers real finance-tech work in low-latency trading and cloud systems. Building high-speed, secure applications at scale is demanding, but it gives 2027 graduates serious technical depth.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1323
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   2027 Software Engineer - Campus Graduate Program - IIT BHU at Point72
   
   Location: India
   Type: Full-time
   Apply by: 14 Dec
+  
+  Soliyog's read: This campus program offers real finance-tech work in low-latency trading and cloud systems. Building high-speed, secure applications at scale is demanding, but it gives 2027 graduates serious technical depth.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1323
