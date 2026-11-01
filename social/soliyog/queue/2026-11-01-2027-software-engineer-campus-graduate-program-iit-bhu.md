@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-01-2027-software-engineer-campus-graduate-program-iit-bhu
 date: 2026-11-01
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1323
@@ -70,9 +70,9 @@ caption_telegram: |
   Not affiliated with Point72. Check their careers page before applying.
   
   #2027softwareengineercamp #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@ae3a2ce948bf94f1b517c8acf8c87ff8a3574d9e/social/soliyog/queue/assets/2026-11-01-2026-11-01-2027-software-engineer-campus-graduate-program-iit-bhu.jpg
+posted_at: 2026-11-01T03:31:25.030Z
+post_ids: {"facebook":"1289252704274108_122131169049464634","instagram":"18105588218573664","linkedin":"6ae6b281cf3a3112f3d998e1","telegram":"96"}
 ---
 
 # 2027 Software Engineer - Campus Graduate Program - IIT BHU — Point72
