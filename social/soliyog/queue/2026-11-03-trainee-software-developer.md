@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-03-trainee-software-developer
 date: 2026-11-03
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1383
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Tests core OOPs concepts, C, C++, databases, Python, and logic
+  - Involves working on live international client projects like Nokia and eBay
+  - Provides mentorship across Java, Python, PHP, Drupal, and .NET stacks
+  - Requires an in-person face-to-face interview round in Indore
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  It offers real exposure to international client projects for 2026 and 2027 CSE freshers. However, the pay starts very low at ₹60,000 per year, and you must attend an in-person interview in Indore for immediate joining.
 caption_instagram: |
   Trainee Software Developer at Cyber Infrastructure
   
