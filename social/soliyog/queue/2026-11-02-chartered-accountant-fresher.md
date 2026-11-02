@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-02-chartered-accountant-fresher
 date: 2026-11-02
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1392
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Vrinda International. Check their careers page before applying.
   
   #charteredaccountantfresh #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@56f7c1d30a5be0f7d1863425ae70c9e82d11b8cf/social/soliyog/queue/assets/2026-11-02-2026-11-02-chartered-accountant-fresher.jpg
+posted_at: 2026-11-02T03:31:26.987Z
+post_ids: {"facebook":"1289252704274108_122131429635464634","instagram":"18106312295327323","linkedin":"6ae804031a965d64fbe71f4a","telegram":"98"}
 ---
 
 # Chartered Accountant – Fresher — Vrinda International
