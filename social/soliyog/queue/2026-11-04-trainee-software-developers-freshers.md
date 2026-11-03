@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-04-trainee-software-developers-freshers
 date: 2026-11-04
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1416
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Trainee software development position located in Hyderabad
+  - Work involving unspecified technologies across a variety of domains
+  - Requires calling a phone number to get detailed role information
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This listing explicitly states that charges apply, which is a major red flag for freshers. It offers no concrete details about technical requirements or day-to-day responsibilities.
 caption_instagram: |
   Trainee Software Developers ( Freshers ) at MAK
   
