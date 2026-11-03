@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-03-trainee-software-developer
 date: 2026-11-03
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1383
@@ -70,9 +70,9 @@ caption_telegram: |
   Not affiliated with Cyber Infrastructure. Check their careers page before applying.
   
   #traineesoftwaredeveloper #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@7cb00e7ebba57c0ed8ce1f142b1f0f3870f8b46a/social/soliyog/queue/assets/2026-11-03-2026-11-03-trainee-software-developer.jpg
+posted_at: 2026-11-03T03:31:37.073Z
+post_ids: {"facebook":"1289252704274108_122131669515464634","instagram":"18100039439441602","linkedin":"6ae9558da86fdc4e317adc08","telegram":"100"}
 ---
 
 # Trainee Software Developer — Cyber Infrastructure
