@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-04-trainee-software-developers-freshers
 date: 2026-11-04
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1416
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with MAK. Check their careers page before applying.
   
   #traineesoftwaredeveloper #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@f8e58f18127a5609d0916965229d0da8497cfec8/social/soliyog/queue/assets/2026-11-04-2026-11-04-trainee-software-developers-freshers.jpg
+posted_at: 2026-11-04T03:31:26.409Z
+post_ids: {"facebook":"1289252704274108_122131917267464634","instagram":"18646783465031552","linkedin":"6aeaa70187b7c6d24c8a9991","telegram":"102"}
 ---
 
 # Trainee Software Developers ( Freshers ) — MAK
