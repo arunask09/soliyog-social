@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-05-team-leader-fiduciary-fund-servs
 date: 2026-11-05
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1429
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Delivering fund service reports to stakeholders per SLA timelines
+  - Calculating and posting accurate valuation entries
+  - Ensuring strict reporting deadlines and SLA commitments are met
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  As a Team Leader position, this is not a fresher role. It suits those with fund accounting experience, though meeting strict SLA reporting deadlines and maintaining valuation accuracy will be tough.
 caption_instagram: |
   Team Leader, Fiduciary & Fund Servs at Standard Chartered Bank
   
