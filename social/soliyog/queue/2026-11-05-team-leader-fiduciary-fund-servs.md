@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-05-team-leader-fiduciary-fund-servs
 date: 2026-11-05
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1429
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 3 Dec
   
+  Soliyog's read: As a Team Leader position, this is not a fresher role. It suits those with fund accounting experience, though meeting strict SLA reporting deadlines and maintaining valuation accuracy will be tough.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Standard Chartered Bank. Check their careers page before applying.
   
   #teamleaderfiduciaryfunds #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Team Leader, Fiduciary & Fund Servs at Standard Chartered Bank
   
   Location: Bengaluru
   Type: Full-time
   Apply by: 3 Dec
+  
+  Soliyog's read: As a Team Leader position, this is not a fresher role. It suits those with fund accounting experience, though meeting strict SLA reporting deadlines and maintaining valuation accuracy will be tough.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Standard Chartered Bank. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 3 Dec
   
+  Soliyog's read: As a Team Leader position, this is not a fresher role. It suits those with fund accounting experience, though meeting strict SLA reporting deadlines and maintaining valuation accuracy will be tough.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1429
   Not affiliated with Standard Chartered Bank. Check their careers page before applying.
   
   #teamleaderfiduciaryfunds #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Team Leader, Fiduciary & Fund Servs at Standard Chartered Bank
   
   Location: Bengaluru
   Type: Full-time
   Apply by: 3 Dec
+  
+  Soliyog's read: As a Team Leader position, this is not a fresher role. It suits those with fund accounting experience, though meeting strict SLA reporting deadlines and maintaining valuation accuracy will be tough.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1429
