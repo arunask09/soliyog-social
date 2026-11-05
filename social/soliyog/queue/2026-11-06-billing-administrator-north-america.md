@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-06-billing-administrator-north-america
 date: 2026-11-06
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1439
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 4 Dec
   
+  Soliyog's read: WTW is a large global firm, but this brief listing gives no specific skill requirements or experience criteria. You will need to clarify the precise day-to-day tasks and required tools during the screening process.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with WTW. Check their careers page before applying.
   
   #billingadministratornort #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Billing Administrator - North America at WTW
   
   Location: Mumbai
   Type: Full-time
   Apply by: 4 Dec
+  
+  Soliyog's read: WTW is a large global firm, but this brief listing gives no specific skill requirements or experience criteria. You will need to clarify the precise day-to-day tasks and required tools during the screening process.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with WTW. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 4 Dec
   
+  Soliyog's read: WTW is a large global firm, but this brief listing gives no specific skill requirements or experience criteria. You will need to clarify the precise day-to-day tasks and required tools during the screening process.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1439
   Not affiliated with WTW. Check their careers page before applying.
   
   #billingadministratornort #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Billing Administrator - North America at WTW
   
   Location: Mumbai
   Type: Full-time
   Apply by: 4 Dec
+  
+  Soliyog's read: WTW is a large global firm, but this brief listing gives no specific skill requirements or experience criteria. You will need to clarify the precise day-to-day tasks and required tools during the screening process.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1439
