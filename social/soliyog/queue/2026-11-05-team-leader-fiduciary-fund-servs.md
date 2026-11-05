@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-05-team-leader-fiduciary-fund-servs
 date: 2026-11-05
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1429
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Standard Chartered Bank. Check their careers page before applying.
   
   #teamleaderfiduciaryfunds #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@5c2074227f0e92a22e273d75aaa382b1d7d6074f/social/soliyog/queue/assets/2026-11-05-2026-11-05-team-leader-fiduciary-fund-servs.jpg
+posted_at: 2026-11-05T03:31:26.344Z
+post_ids: {"facebook":"1289252704274108_122132213115464634","instagram":"18127039676298793","linkedin":"6aebf882f283c8dd45b7d063","telegram":"104"}
 ---
 
 # Team Leader, Fiduciary & Fund Servs — Standard Chartered Bank
