@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-06-billing-administrator-north-america
 date: 2026-11-06
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1439
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with WTW. Check their careers page before applying.
   
   #billingadministratornort #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@4592fe210233ccfe68bbb6e75a8de4d40b6c6bcb/social/soliyog/queue/assets/2026-11-06-2026-11-06-billing-administrator-north-america.jpg
+posted_at: 2026-11-06T03:31:29.216Z
+post_ids: {"facebook":"1289252704274108_122132461089464634","instagram":"18154389337557353","linkedin":"6aed4a05f3498efda768a608","telegram":"106"}
 ---
 
 # Billing Administrator - North America — WTW
