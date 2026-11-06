@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-07-junior-associate-accounts-payable
 date: 2026-11-07
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1452
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 5 Dec
   
+  Soliyog's read: This is a standard entry-level accounts payable role focused on daily invoice processing and reporting. The work is highly repetitive and procedural, but it gives you solid grounding in core finance operations.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Oceaneering. Check their careers page before applying.
   
   #juniorassociateaccountsp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Associate, Accounts payable at Oceaneering
   
   Location: Chandigarh
   Type: Full-time
   Apply by: 5 Dec
+  
+  Soliyog's read: This is a standard entry-level accounts payable role focused on daily invoice processing and reporting. The work is highly repetitive and procedural, but it gives you solid grounding in core finance operations.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Oceaneering. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 5 Dec
   
+  Soliyog's read: This is a standard entry-level accounts payable role focused on daily invoice processing and reporting. The work is highly repetitive and procedural, but it gives you solid grounding in core finance operations.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1452
   Not affiliated with Oceaneering. Check their careers page before applying.
   
   #juniorassociateaccountsp #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Associate, Accounts payable at Oceaneering
   
   Location: Chandigarh
   Type: Full-time
   Apply by: 5 Dec
+  
+  Soliyog's read: This is a standard entry-level accounts payable role focused on daily invoice processing and reporting. The work is highly repetitive and procedural, but it gives you solid grounding in core finance operations.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1452
