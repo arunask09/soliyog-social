@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-07-junior-associate-accounts-payable
 date: 2026-11-07
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1452
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Oceaneering. Check their careers page before applying.
   
   #juniorassociateaccountsp #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@b403be2fc1168d53d48a23a6302756228ad47eda/social/soliyog/queue/assets/2026-11-07-2026-11-07-junior-associate-accounts-payable.jpg
+posted_at: 2026-11-07T03:31:35.321Z
+post_ids: {"facebook":"1289252704274108_122132736687464634","instagram":"18173302645465199","linkedin":"6aee9b8b004e4879a72f9aa5","telegram":"108"}
 ---
 
 # Junior Associate, Accounts payable — Oceaneering
