@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-08-junior-us-tax-executive
 date: 2026-11-08
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1456
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Hands-on preparation of US individual and business tax returns
+  - Structured training provided in US taxation
+  - Working alongside experienced tax professionals
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This is an entry-level role open to recent graduates. You get structured training to learn US taxation, but you will need to quickly adapt to preparing individual and business returns alongside senior staff.
 caption_instagram: |
   Junior US Tax Executive at Safebooks Global
   
