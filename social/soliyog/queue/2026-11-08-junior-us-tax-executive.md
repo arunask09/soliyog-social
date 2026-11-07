@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-08-junior-us-tax-executive
 date: 2026-11-08
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1456
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 6 Dec
   
+  Soliyog's read: This is an entry-level role open to recent graduates. You get structured training to learn US taxation, but you will need to quickly adapt to preparing individual and business returns alongside senior staff.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Safebooks Global. Check their careers page before applying.
   
   #juniorustaxexecutive #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior US Tax Executive at Safebooks Global
   
   Location: Maharashtra
   Type: Full-time
   Apply by: 6 Dec
+  
+  Soliyog's read: This is an entry-level role open to recent graduates. You get structured training to learn US taxation, but you will need to quickly adapt to preparing individual and business returns alongside senior staff.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Safebooks Global. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 6 Dec
   
+  Soliyog's read: This is an entry-level role open to recent graduates. You get structured training to learn US taxation, but you will need to quickly adapt to preparing individual and business returns alongside senior staff.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1456
   Not affiliated with Safebooks Global. Check their careers page before applying.
   
   #juniorustaxexecutive #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior US Tax Executive at Safebooks Global
   
   Location: Maharashtra
   Type: Full-time
   Apply by: 6 Dec
+  
+  Soliyog's read: This is an entry-level role open to recent graduates. You get structured training to learn US taxation, but you will need to quickly adapt to preparing individual and business returns alongside senior staff.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1456
