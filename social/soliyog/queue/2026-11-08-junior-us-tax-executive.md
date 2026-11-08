@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-08-junior-us-tax-executive
 date: 2026-11-08
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1456
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Safebooks Global. Check their careers page before applying.
   
   #juniorustaxexecutive #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@0e3a7672046f4ff48c8cc1ce8df8d1ddc5272613/social/soliyog/queue/assets/2026-11-08-2026-11-08-junior-us-tax-executive.jpg
+posted_at: 2026-11-08T03:31:29.385Z
+post_ids: {"facebook":"1289252704274108_122132963889464634","instagram":"18026970080865790","linkedin":"6aefed05562f2e6de995dfd9","telegram":"110"}
 ---
 
 # Junior US Tax Executive — Safebooks Global
