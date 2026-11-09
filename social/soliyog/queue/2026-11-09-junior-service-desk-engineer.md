@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-09-junior-service-desk-engineer
 date: 2026-11-09
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1448
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorservicedeskenginee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@b8ef03d500f981a1c79a1be18ed03fda7716892c/social/soliyog/queue/assets/2026-11-09-2026-11-09-junior-service-desk-engineer.jpg
+posted_at: 2026-11-09T03:31:28.376Z
+post_ids: {"facebook":"1289252704274108_122133192147464634","instagram":"18141385096538342","linkedin":"6af13e85cac9d7525f669531","telegram":"112"}
 ---
 
 # Junior Service Desk Engineer — Guidehouse
