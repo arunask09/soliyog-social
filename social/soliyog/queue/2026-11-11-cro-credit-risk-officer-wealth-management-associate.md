@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-11-cro-credit-risk-officer-wealth-management-associate
 date: 2026-11-11
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1489
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Deutsche Bank. Check their careers page before applying.
   
   #crocreditriskofficerweal #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@29bf38854f2b121df64ab8ddb5f730b8bd3d511e/social/soliyog/queue/assets/2026-11-11-2026-11-11-cro-credit-risk-officer-wealth-management-associate.jpg
+posted_at: 2026-11-11T03:31:22.793Z
+post_ids: {"facebook":"1289252704274108_122133772521464634","instagram":"18126873253931374","linkedin":"6af3e17f6a689e197d1fe659","telegram":"116"}
 ---
 
 # CRO - Credit Risk Officer-(Wealth Management) - Associate — Deutsche Bank
