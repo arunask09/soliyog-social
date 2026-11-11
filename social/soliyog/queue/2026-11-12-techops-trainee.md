@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-12-techops-trainee
 date: 2026-11-12
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1498
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Monitoring system performance, servers, and applications for uptime
+  - Basic Linux sysadmin tasks like user management and file permissions
+  - Process monitoring across Linux systems
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This trainee role offers practical entry-level experience in basic Linux administration and system monitoring. The main challenge will be maintaining continuous uptime and reliability for live gaming applications.
 caption_instagram: |
   Techops Trainee at Light & Wonder
   
