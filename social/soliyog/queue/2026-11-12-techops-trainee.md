@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-12-techops-trainee
 date: 2026-11-12
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1498
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Light & Wonder. Check their careers page before applying.
   
   #techopstrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@88717c9851ada14c98c4612cdbb2a5dc5eff02ab/social/soliyog/queue/assets/2026-11-12-2026-11-12-techops-trainee.jpg
+posted_at: 2026-11-12T03:31:33.318Z
+post_ids: {"facebook":"1289252704274108_122134107603464634","instagram":"17953543473344939","linkedin":"6af53309cb4c7286fd0fa4f7","telegram":"118"}
 ---
 
 # Techops Trainee — Light & Wonder
