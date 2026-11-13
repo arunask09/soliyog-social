@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-13-process-associate-junior-process-associate-fp-a
 date: 2026-11-13
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1524
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with KONE. Check their careers page before applying.
   
   #processassociatejuniorpr #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@36cab6b1e4e70fe27bf48379b13fc410e0cbdebf/social/soliyog/queue/assets/2026-11-13-2026-11-13-process-associate-junior-process-associate-fp-a.jpg
+posted_at: 2026-11-13T03:31:48.485Z
+post_ids: {"facebook":"1289252704274108_122134400985464634","instagram":"18134535670690062","linkedin":"6af68499fb90ccefdd17a18c","telegram":"120"}
 ---
 
 # Process Associate / Junior Process Associate - FP&A — KONE
