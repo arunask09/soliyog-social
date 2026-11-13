@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-14-junior-officer
 date: 2026-11-14
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1545
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 12 Dec
   
+  Soliyog's read: This is foundational accounting work covering core ledger maintenance and reconciliations. The routine entry tasks can be repetitive, but it provides direct practice in fundamental financial bookkeeping.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with TIRUPATI. Check their careers page before applying.
   
   #juniorofficer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Officer at TIRUPATI
   
   Type: Full-time
   Apply by: 12 Dec
+  
+  Soliyog's read: This is foundational accounting work covering core ledger maintenance and reconciliations. The routine entry tasks can be repetitive, but it provides direct practice in fundamental financial bookkeeping.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with TIRUPATI. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 12 Dec
   
+  Soliyog's read: This is foundational accounting work covering core ledger maintenance and reconciliations. The routine entry tasks can be repetitive, but it provides direct practice in fundamental financial bookkeeping.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1545
   Not affiliated with TIRUPATI. Check their careers page before applying.
   
   #juniorofficer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Officer at TIRUPATI
   
   Type: Full-time
   Apply by: 12 Dec
+  
+  Soliyog's read: This is foundational accounting work covering core ledger maintenance and reconciliations. The routine entry tasks can be repetitive, but it provides direct practice in fundamental financial bookkeeping.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1545
