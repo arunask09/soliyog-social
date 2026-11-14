@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-15-management-trainee-finance
 date: 2026-11-15
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1554
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 13 Dec
   
+  Soliyog's read: This role involves handling finance business enablement from ERM's Global Delivery Centre. Since the provided text lacks specific tool requirements and experience criteria, clear up the exact daily responsibilities during your initial interview.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with ERM. Check their careers page before applying.
   
   #managementtraineefinance #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Management Trainee Finance at ERM
   
   Location: Delhi
   Type: Full-time
   Apply by: 13 Dec
+  
+  Soliyog's read: This role involves handling finance business enablement from ERM's Global Delivery Centre. Since the provided text lacks specific tool requirements and experience criteria, clear up the exact daily responsibilities during your initial interview.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with ERM. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 13 Dec
   
+  Soliyog's read: This role involves handling finance business enablement from ERM's Global Delivery Centre. Since the provided text lacks specific tool requirements and experience criteria, clear up the exact daily responsibilities during your initial interview.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1554
   Not affiliated with ERM. Check their careers page before applying.
   
   #managementtraineefinance #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Management Trainee Finance at ERM
   
   Location: Delhi
   Type: Full-time
   Apply by: 13 Dec
+  
+  Soliyog's read: This role involves handling finance business enablement from ERM's Global Delivery Centre. Since the provided text lacks specific tool requirements and experience criteria, clear up the exact daily responsibilities during your initial interview.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1554
