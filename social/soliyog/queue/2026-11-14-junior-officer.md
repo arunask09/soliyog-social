@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-14-junior-officer
 date: 2026-11-14
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1545
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with TIRUPATI. Check their careers page before applying.
   
   #juniorofficer #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@9f79ca00105bc2f4cbb4faa66b6012802dc0e12e/social/soliyog/queue/assets/2026-11-14-2026-11-14-junior-officer.jpg
+posted_at: 2026-11-14T03:31:28.289Z
+post_ids: {"facebook":"1289252704274108_122134680345464634","instagram":"18121561385050038","linkedin":"6af7d604d16af15d4ded0555","telegram":"122"}
 ---
 
 # Junior Officer — TIRUPATI
