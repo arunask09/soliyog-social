@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-15-management-trainee-finance
 date: 2026-11-15
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1554
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with ERM. Check their careers page before applying.
   
   #managementtraineefinance #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@436d34f05d10f3dfac447ba0ad7906a63b9bcaff/social/soliyog/queue/assets/2026-11-15-2026-11-15-management-trainee-finance.jpg
+posted_at: 2026-11-15T03:31:31.969Z
+post_ids: {"facebook":"1289252704274108_122135023047464634","instagram":"18039342365891049","linkedin":"6af92788918fe79d2ebc52bc","telegram":"124"}
 ---
 
 # Management Trainee Finance — ERM
