@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-17-product-trainee
 date: 2026-11-17
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1542
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Product thinking to identify platform problems
+  - Analytical skills to turn data into insights
+  - AI fluency to help solve product challenges
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This trainee post demands immediate AI fluency and strong analytical skills. The hard part will be turning broad startup database insights into practical product features right from the start.
 caption_instagram: |
   Product Trainee at Inc42
   
