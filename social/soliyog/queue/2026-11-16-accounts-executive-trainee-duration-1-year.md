@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-16-accounts-executive-trainee-duration-1-year
 date: 2026-11-16
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1543
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Paxcom. Check their careers page before applying.
   
   #accountsexecutivetrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@c6d826b7cffbd975e06dbd96a861baa442948cdd/social/soliyog/queue/assets/2026-11-16-2026-11-16-accounts-executive-trainee-duration-1-year.jpg
+posted_at: 2026-11-16T03:31:33.641Z
+post_ids: {"facebook":"1289252704274108_122135245191464634","instagram":"17913250356575220","linkedin":"6afa790a8e87c256a3acddd2","telegram":"126"}
 ---
 
 # Accounts Executive Trainee (Duration 1 Year) — Paxcom
