@@ -1,17 +1,17 @@
 ---
 slug: 2026-11-18-trainee-accounts
 date: 2026-11-18
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1584
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Hands-on accounting and reconciliation using Oracle AP
+  - Handling credit card, Happay, and petty cash expense accounting
+  - Managing e-commerce AP reconciliation and supplier master creation
+  - Verifying and accounting for payments, advances, and AR receipts
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This trainee position offers direct exposure to accounts payable, AR receipts, and reconciliations using Oracle AP and Happay. Daily handling of routine petty cash, credit card statements, and e-commerce records will require continuous attention to detail.
 caption_instagram: |
   Trainee - Accounts at Pon Pure Chemicals
   
