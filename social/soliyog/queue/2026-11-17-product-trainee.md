@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-17-product-trainee
 date: 2026-11-17
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1542
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with Inc42. Check their careers page before applying.
   
   #producttrainee #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@7ff452286d0a065b6249f9078beee99bbbb4af4c/social/soliyog/queue/assets/2026-11-17-2026-11-17-product-trainee.jpg
+posted_at: 2026-11-17T03:31:34.413Z
+post_ids: {"facebook":"1289252704274108_122135507397464634","instagram":"17866222347696821","linkedin":"6afbca8a85dca6b14a1a91b6","telegram":"128"}
 ---
 
 # Product Trainee — Inc42
