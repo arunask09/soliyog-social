@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-18-trainee-accounts
 date: 2026-11-18
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1584
@@ -19,16 +19,22 @@ caption_instagram: |
   Salary: ₹30,00,000–42,00,000/yr
   Apply by: 13 Dec
   
+  Soliyog's read: This trainee position offers direct exposure to accounts payable, AR receipts, and reconciliations using Oracle AP and Happay. Daily handling of routine petty cash, credit card statements, and e-commerce records will require continuous attention to detail.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Pon Pure Chemicals. Check their careers page before applying.
   
   #traineeaccounts #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Trainee - Accounts at Pon Pure Chemicals
   
   Type: Full-time
   Salary: ₹30,00,000–42,00,000/yr
   Apply by: 13 Dec
+  
+  Soliyog's read: This trainee position offers direct exposure to accounts payable, AR receipts, and reconciliations using Oracle AP and Happay. Daily handling of routine petty cash, credit card statements, and e-commerce records will require continuous attention to detail.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Pon Pure Chemicals. Check their careers page before applying.
@@ -41,17 +47,23 @@ caption_linkedin: |
   Salary: ₹30,00,000–42,00,000/yr
   Apply by: 13 Dec
   
+  Soliyog's read: This trainee position offers direct exposure to accounts payable, AR receipts, and reconciliations using Oracle AP and Happay. Daily handling of routine petty cash, credit card statements, and e-commerce records will require continuous attention to detail.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1584
   Not affiliated with Pon Pure Chemicals. Check their careers page before applying.
   
   #traineeaccounts #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Trainee - Accounts at Pon Pure Chemicals
   
   Type: Full-time
   Salary: ₹30,00,000–42,00,000/yr
   Apply by: 13 Dec
+  
+  Soliyog's read: This trainee position offers direct exposure to accounts payable, AR receipts, and reconciliations using Oracle AP and Happay. Daily handling of routine petty cash, credit card statements, and e-commerce records will require continuous attention to detail.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1584
