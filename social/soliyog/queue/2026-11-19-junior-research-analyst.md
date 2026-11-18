@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-19-junior-research-analyst
 date: 2026-11-19
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1541
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Researching governance, risk, and compliance domain topics
+  - Working with AI-driven GRC SaaS platform solutions
+  - Supporting consolidated risk management and resilience reporting
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This role offers early exposure to AI-driven GRC SaaS platforms. The main challenge will be grasping complex corporate governance and risk management domain concepts fast.
 caption_instagram: |
   Junior Research Analyst at Diligent Governance
   
