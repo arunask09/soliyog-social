@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-19-junior-research-analyst
 date: 2026-11-19
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1541
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 12 Dec
   
+  Soliyog's read: This role offers early exposure to AI-driven GRC SaaS platforms. The main challenge will be grasping complex corporate governance and risk management domain concepts fast.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Diligent Governance. Check their careers page before applying.
   
   #juniorresearchanalyst #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Research Analyst at Diligent Governance
   
   Type: Full-time
   Apply by: 12 Dec
+  
+  Soliyog's read: This role offers early exposure to AI-driven GRC SaaS platforms. The main challenge will be grasping complex corporate governance and risk management domain concepts fast.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Diligent Governance. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 12 Dec
   
+  Soliyog's read: This role offers early exposure to AI-driven GRC SaaS platforms. The main challenge will be grasping complex corporate governance and risk management domain concepts fast.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1541
   Not affiliated with Diligent Governance. Check their careers page before applying.
   
   #juniorresearchanalyst #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Research Analyst at Diligent Governance
   
   Type: Full-time
   Apply by: 12 Dec
+  
+  Soliyog's read: This role offers early exposure to AI-driven GRC SaaS platforms. The main challenge will be grasping complex corporate governance and risk management domain concepts fast.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1541
