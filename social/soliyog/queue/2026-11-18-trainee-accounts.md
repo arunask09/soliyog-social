@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-18-trainee-accounts
 date: 2026-11-18
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1584
@@ -70,9 +70,9 @@ caption_telegram: |
   Not affiliated with Pon Pure Chemicals. Check their careers page before applying.
   
   #traineeaccounts #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@19c335c06324fadd2ea2da75c296694f5e38d5ff/social/soliyog/queue/assets/2026-11-18-2026-11-18-trainee-accounts.jpg
+posted_at: 2026-11-18T03:31:29.896Z
+post_ids: {"facebook":"1289252704274108_122135776467464634","instagram":"18115966328028452","linkedin":"6afd1c06bb12698d1594aee0","telegram":"130"}
 ---
 
 # Trainee - Accounts — Pon Pure Chemicals
