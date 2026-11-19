@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-19-junior-research-analyst
 date: 2026-11-19
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1541
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Diligent Governance. Check their careers page before applying.
   
   #juniorresearchanalyst #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@6b64bb87a5120c40291b0d3955fb31bb051b4b2e/social/soliyog/queue/assets/2026-11-19-2026-11-19-junior-research-analyst.jpg
+posted_at: 2026-11-19T03:31:46.138Z
+post_ids: {"facebook":"1289252704274108_122136085371464634","instagram":"18140406454645395","linkedin":"6afe6d96749099bdc708b320","telegram":"132"}
 ---
 
 # Junior Research Analyst — Diligent Governance
