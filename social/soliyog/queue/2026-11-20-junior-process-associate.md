@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-20-junior-process-associate
 date: 2026-11-20
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1606
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 18 Dec
   
+  Soliyog's read: This offers direct exposure to global market abuse and trade surveillance compliance. The hard part is handling repetitive surveillance alert reviews while maintaining the high attention to detail needed to catch genuine regulatory breaches.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorprocessassociate #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Process Associate at Guidehouse
   
   Type: Full-time
   Apply by: 18 Dec
+  
+  Soliyog's read: This offers direct exposure to global market abuse and trade surveillance compliance. The hard part is handling repetitive surveillance alert reviews while maintaining the high attention to detail needed to catch genuine regulatory breaches.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Guidehouse. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 18 Dec
   
+  Soliyog's read: This offers direct exposure to global market abuse and trade surveillance compliance. The hard part is handling repetitive surveillance alert reviews while maintaining the high attention to detail needed to catch genuine regulatory breaches.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1606
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorprocessassociate #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Process Associate at Guidehouse
   
   Type: Full-time
   Apply by: 18 Dec
+  
+  Soliyog's read: This offers direct exposure to global market abuse and trade surveillance compliance. The hard part is handling repetitive surveillance alert reviews while maintaining the high attention to detail needed to catch genuine regulatory breaches.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1606
