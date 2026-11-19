@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-20-junior-process-associate
 date: 2026-11-20
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1606
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Detecting insider trading and market abuse via technology-based surveillances
+  - Monitoring compliance with regulatory rules and internal information barriers
+  - Identifying violations of firmwide trading policies through routine surveillance
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This offers direct exposure to global market abuse and trade surveillance compliance. The hard part is handling repetitive surveillance alert reviews while maintaining the high attention to detail needed to catch genuine regulatory breaches.
 caption_instagram: |
   Junior Process Associate at Guidehouse
   
