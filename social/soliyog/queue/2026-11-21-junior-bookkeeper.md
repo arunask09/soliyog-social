@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-21-junior-bookkeeper
 date: 2026-11-21
-status: draft
+status: ready
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1618
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Junior bookkeeping responsibilities for a Delhi-based full-time finance position
+  - Working in a domain focused on US private lenders and legal compliance
+  - Understanding financial contexts around loan documentation and regulatory requirements
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  It gives freshers an entry point into specialized finance supporting US private lending operations. The hard part is adapting to complex US legal standards and regulatory requirements without full role details up front.
 caption_instagram: |
   Junior Bookkeeper at MOVE Your Biz
   
