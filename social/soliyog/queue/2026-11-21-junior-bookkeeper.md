@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-21-junior-bookkeeper
 date: 2026-11-21
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1618
@@ -18,16 +18,22 @@ caption_instagram: |
   Type: Full-time
   Apply by: 18 Dec
   
+  Soliyog's read: It gives freshers an entry point into specialized finance supporting US private lending operations. The hard part is adapting to complex US legal standards and regulatory requirements without full role details up front.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with MOVE Your Biz. Check their careers page before applying.
   
   #juniorbookkeeper #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Bookkeeper at MOVE Your Biz
   
   Location: Delhi
   Type: Full-time
   Apply by: 18 Dec
+  
+  Soliyog's read: It gives freshers an entry point into specialized finance supporting US private lending operations. The hard part is adapting to complex US legal standards and regulatory requirements without full role details up front.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with MOVE Your Biz. Check their careers page before applying.
@@ -40,17 +46,23 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 18 Dec
   
+  Soliyog's read: It gives freshers an entry point into specialized finance supporting US private lending operations. The hard part is adapting to complex US legal standards and regulatory requirements without full role details up front.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1618
   Not affiliated with MOVE Your Biz. Check their careers page before applying.
   
   #juniorbookkeeper #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Bookkeeper at MOVE Your Biz
   
   Location: Delhi
   Type: Full-time
   Apply by: 18 Dec
+  
+  Soliyog's read: It gives freshers an entry point into specialized finance supporting US private lending operations. The hard part is adapting to complex US legal standards and regulatory requirements without full role details up front.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1618
