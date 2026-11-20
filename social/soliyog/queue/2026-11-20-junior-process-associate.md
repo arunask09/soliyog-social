@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-20-junior-process-associate
 date: 2026-11-20
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1606
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorprocessassociate #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@901101352dc2e9654ea577a3d745f65c3230d06c/social/soliyog/queue/assets/2026-11-20-2026-11-20-junior-process-associate.jpg
+posted_at: 2026-11-20T03:31:32.925Z
+post_ids: {"facebook":"1289252704274108_122136415317464634","instagram":"18078863951739751","linkedin":"6affbf097b0a126ceba48628","telegram":"134"}
 ---
 
 # Junior Process Associate — Guidehouse
