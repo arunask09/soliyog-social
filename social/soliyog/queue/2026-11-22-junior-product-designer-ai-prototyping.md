@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-22-junior-product-designer-ai-prototyping
 date: 2026-11-22
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1629
@@ -20,10 +20,14 @@ caption_instagram: |
   Salary: ₹50,000–2,00,000/yr
   Apply by: 20 Dec
   
+  Soliyog's read: It offers actual fresher experience in AI product prototyping. Note the low pay at ₹15,000 per month and conflicting company names across the listing before applying.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Techglora Integrated IT services. Check their careers page before applying.
   
   #juniorproductdesigneraip #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Product designer – AI Prototyping at Techglora Integrated IT services
   
@@ -32,6 +36,8 @@ caption_facebook: |
   Experience: Freshers welcome
   Salary: ₹50,000–2,00,000/yr
   Apply by: 20 Dec
+  
+  Soliyog's read: It offers actual fresher experience in AI product prototyping. Note the low pay at ₹15,000 per month and conflicting company names across the listing before applying.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Techglora Integrated IT services. Check their careers page before applying.
@@ -46,11 +52,15 @@ caption_linkedin: |
   Salary: ₹50,000–2,00,000/yr
   Apply by: 20 Dec
   
+  Soliyog's read: It offers actual fresher experience in AI product prototyping. Note the low pay at ₹15,000 per month and conflicting company names across the listing before applying.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1629
   Not affiliated with Techglora Integrated IT services. Check their careers page before applying.
   
   #juniorproductdesigneraip #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Product designer – AI Prototyping at Techglora Integrated IT services
   
@@ -59,6 +69,8 @@ caption_telegram: |
   Experience: Freshers welcome
   Salary: ₹50,000–2,00,000/yr
   Apply by: 20 Dec
+  
+  Soliyog's read: It offers actual fresher experience in AI product prototyping. Note the low pay at ₹15,000 per month and conflicting company names across the listing before applying.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1629
