@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-21-junior-bookkeeper
 date: 2026-11-21
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1618
@@ -69,9 +69,9 @@ caption_telegram: |
   Not affiliated with MOVE Your Biz. Check their careers page before applying.
   
   #juniorbookkeeper #fresherjobs
-image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@cd35aaede489c002a471c667b0d77ff819574de9/social/soliyog/queue/assets/2026-11-21-2026-11-21-junior-bookkeeper.jpg
-posted_at:
-post_ids: {"facebook":"1289252704274108_122136727521464634","instagram":"18635992918047062","linkedin":"6b01107f9ffbc8503cf5847f"}
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@77348c7a078be31febb9966633c59f818541fd30/social/soliyog/queue/assets/2026-11-21-2026-11-21-junior-bookkeeper.jpg
+posted_at: 2026-11-21T13:29:35.428Z
+post_ids: {"facebook":"1289252704274108_122136727521464634","instagram":"18635992918047062","linkedin":"6b01107f9ffbc8503cf5847f","telegram":"137"}
 ---
 
 # Junior Bookkeeper — MOVE Your Biz
