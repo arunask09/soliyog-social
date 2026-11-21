@@ -290,11 +290,24 @@ try {
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHANNEL_ID) {
       console.warn('telegram: skipped (TELEGRAM_BOT_TOKEN / TELEGRAM_CHANNEL_ID not set)');
     } else {
-      const tr = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: TELEGRAM_CHANNEL_ID, photo: igUrl, caption: capTG }),
-      });
+      // Retry only network-level errors ("fetch failed" = connection never completed; hit
+      // 2026-11-21 after FB/IG/LinkedIn were already live). An API rejection (tj.ok false)
+      // is not retried — that's a real problem, not a blip.
+      let tr;
+      for (let attempt = 1; ; attempt++) {
+        try {
+          tr = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: TELEGRAM_CHANNEL_ID, photo: igUrl, caption: capTG }),
+          });
+          break;
+        } catch (e) {
+          if (attempt >= 3) throw new Error(`telegram: ${e.message} (after ${attempt} attempts)`);
+          console.warn(`telegram network error (attempt ${attempt}): ${e.message} — retrying in ${attempt * 5}s`);
+          await new Promise((r) => setTimeout(r, attempt * 5000));
+        }
+      }
       const tj = await tr.json();
       if (!tj.ok) throw new Error(`telegram: ${tj.description || 'sendPhoto failed'}`);
       post_ids.telegram = String(tj.result.message_id);

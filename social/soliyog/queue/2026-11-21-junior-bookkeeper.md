@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-21-junior-bookkeeper
 date: 2026-11-21
-status: failed
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1618
