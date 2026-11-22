@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-23-baker-tilly-one-junior-associate-expense-management
 date: 2026-11-23
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1643
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 21 Dec
   
+  Soliyog's read: It offers exposure to a major global advisory network in an entry-level expense management position. The job description provides very few specific requirements, so prepare for general financial operations work.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Baker Tilly. Check their careers page before applying.
   
   #bakertillyonejuniorassoc #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Baker Tilly One - Junior Associate - Expense Management at Baker Tilly
   
   Type: Full-time
   Apply by: 21 Dec
+  
+  Soliyog's read: It offers exposure to a major global advisory network in an entry-level expense management position. The job description provides very few specific requirements, so prepare for general financial operations work.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Baker Tilly. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 21 Dec
   
+  Soliyog's read: It offers exposure to a major global advisory network in an entry-level expense management position. The job description provides very few specific requirements, so prepare for general financial operations work.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1643
   Not affiliated with Baker Tilly. Check their careers page before applying.
   
   #bakertillyonejuniorassoc #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Baker Tilly One - Junior Associate - Expense Management at Baker Tilly
   
   Type: Full-time
   Apply by: 21 Dec
+  
+  Soliyog's read: It offers exposure to a major global advisory network in an entry-level expense management position. The job description provides very few specific requirements, so prepare for general financial operations work.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1643
