@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-22-junior-product-designer-ai-prototyping
 date: 2026-11-22
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1629
@@ -77,9 +77,9 @@ caption_telegram: |
   Not affiliated with Techglora Integrated IT services. Check their careers page before applying.
   
   #juniorproductdesigneraip #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://raw.githubusercontent.com/arunask09/soliyog-social/d021a00e5c29b78030536c37a96649806248b61b/social/soliyog/queue/assets/2026-11-22-2026-11-22-junior-product-designer-ai-prototyping.jpg
+posted_at: 2026-11-22T03:31:24.639Z
+post_ids: {"facebook":"1289252704274108_122137057281464634","instagram":"17997048939047731","linkedin":"6b026200d864a0110593ad63","telegram":"138"}
 ---
 
 # Junior Product designer – AI Prototyping — Techglora Integrated IT services
