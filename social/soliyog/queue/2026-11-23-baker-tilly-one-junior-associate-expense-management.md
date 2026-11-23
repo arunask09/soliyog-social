@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-23-baker-tilly-one-junior-associate-expense-management
 date: 2026-11-23
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1643
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Baker Tilly. Check their careers page before applying.
   
   #bakertillyonejuniorassoc #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@cea36f221fe63e586e11919dd7728129a1c298ec/social/soliyog/queue/assets/2026-11-23-2026-11-23-baker-tilly-one-junior-associate-expense-management.jpg
+posted_at: 2026-11-23T03:31:29.520Z
+post_ids: {"facebook":"1289252704274108_122137314447464634","instagram":"18137675761737996","linkedin":"6b03b386846b0ee907dd5e46","telegram":"140"}
 ---
 
 # Baker Tilly One - Junior Associate - Expense Management — Baker Tilly
