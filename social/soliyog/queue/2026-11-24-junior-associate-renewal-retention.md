@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-24-junior-associate-renewal-retention
 date: 2026-11-24
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1641
@@ -18,15 +18,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 21 Dec
   
+  Soliyog's read: If you hold a sales degree and know health insurance, it offers direct client retention experience. The hard part will be balancing routine documentation admin with steady cross-selling targets.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with HDFC ERGO General Insurance. Check their careers page before applying.
   
   #juniorassociaterenewalre #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Associate - Renewal Retention at HDFC ERGO General Insurance
   
   Type: Full-time
   Apply by: 21 Dec
+  
+  Soliyog's read: If you hold a sales degree and know health insurance, it offers direct client retention experience. The hard part will be balancing routine documentation admin with steady cross-selling targets.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with HDFC ERGO General Insurance. Check their careers page before applying.
@@ -38,16 +44,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 21 Dec
   
+  Soliyog's read: If you hold a sales degree and know health insurance, it offers direct client retention experience. The hard part will be balancing routine documentation admin with steady cross-selling targets.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1641
   Not affiliated with HDFC ERGO General Insurance. Check their careers page before applying.
   
   #juniorassociaterenewalre #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Associate - Renewal Retention at HDFC ERGO General Insurance
   
   Type: Full-time
   Apply by: 21 Dec
+  
+  Soliyog's read: If you hold a sales degree and know health insurance, it offers direct client retention experience. The hard part will be balancing routine documentation admin with steady cross-selling targets.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1641
