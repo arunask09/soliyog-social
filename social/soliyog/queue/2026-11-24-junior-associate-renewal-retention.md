@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-24-junior-associate-renewal-retention
 date: 2026-11-24
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1641
@@ -66,9 +66,9 @@ caption_telegram: |
   Not affiliated with HDFC ERGO General Insurance. Check their careers page before applying.
   
   #juniorassociaterenewalre #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@7bd129b06e3d7258b87f138ff5dd92c4704c960a/social/soliyog/queue/assets/2026-11-24-2026-11-24-junior-associate-renewal-retention.jpg
+posted_at: 2026-11-24T03:31:25.573Z
+post_ids: {"facebook":"1289252704274108_122137546143464634","instagram":"18117323516155882","linkedin":"6b050502f0d7b1e0deab0806","telegram":"142"}
 ---
 
 # Junior Associate - Renewal Retention — HDFC ERGO General Insurance
