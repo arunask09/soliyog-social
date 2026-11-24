@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-25-graduate-software-engineer
 date: 2026-11-25
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1658
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 23 Dec
   
+  Soliyog's read: With two openings in Mumbai, this hybrid role is built for freshers. The main challenge is the fast ramp-up, as you will be expected to ship real features within your first month.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Bramble Apps. Check their careers page before applying.
   
   #graduatesoftwareengineer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Graduate Software Engineer at Bramble Apps
   
   Type: Full-time
   Apply by: 23 Dec
+  
+  Soliyog's read: With two openings in Mumbai, this hybrid role is built for freshers. The main challenge is the fast ramp-up, as you will be expected to ship real features within your first month.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Bramble Apps. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 23 Dec
   
+  Soliyog's read: With two openings in Mumbai, this hybrid role is built for freshers. The main challenge is the fast ramp-up, as you will be expected to ship real features within your first month.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1658
   Not affiliated with Bramble Apps. Check their careers page before applying.
   
   #graduatesoftwareengineer #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Graduate Software Engineer at Bramble Apps
   
   Type: Full-time
   Apply by: 23 Dec
+  
+  Soliyog's read: With two openings in Mumbai, this hybrid role is built for freshers. The main challenge is the fast ramp-up, as you will be expected to ship real features within your first month.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1658
