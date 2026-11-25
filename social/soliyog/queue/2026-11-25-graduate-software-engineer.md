@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-25-graduate-software-engineer
 date: 2026-11-25
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1658
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with Bramble Apps. Check their careers page before applying.
   
   #graduatesoftwareengineer #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://raw.githubusercontent.com/arunask09/soliyog-social/a7530b9a3c52df9dfbc82be97f74945805a305b2/social/soliyog/queue/assets/2026-11-25-2026-11-25-graduate-software-engineer.jpg
+posted_at: 2026-11-25T03:31:32.071Z
+post_ids: {"facebook":"1289252704274108_122137796079464634","instagram":"17931832341185083","linkedin":"6b065688b6204bca46c1c146","telegram":"144"}
 ---
 
 # Graduate Software Engineer — Bramble Apps
