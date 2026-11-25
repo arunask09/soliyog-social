@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-26-junior-accountant
 date: 2026-11-26
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1688
@@ -20,10 +20,14 @@ caption_instagram: |
   Salary: ₹1,20,000–1,80,000/yr
   Apply by: 24 Dec
   
+  Soliyog's read: This role requires 6 to 12 months of experience, so it is not for complete freshers. Pay is modest at ₹1.2L–1.8L per year for a six-day workweek schedule.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Webgross. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Accountant at Webgross
   
@@ -32,6 +36,8 @@ caption_facebook: |
   Experience: 6 Months – 1 yrs
   Salary: ₹1,20,000–1,80,000/yr
   Apply by: 24 Dec
+  
+  Soliyog's read: This role requires 6 to 12 months of experience, so it is not for complete freshers. Pay is modest at ₹1.2L–1.8L per year for a six-day workweek schedule.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Webgross. Check their careers page before applying.
@@ -46,11 +52,15 @@ caption_linkedin: |
   Salary: ₹1,20,000–1,80,000/yr
   Apply by: 24 Dec
   
+  Soliyog's read: This role requires 6 to 12 months of experience, so it is not for complete freshers. Pay is modest at ₹1.2L–1.8L per year for a six-day workweek schedule.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1688
   Not affiliated with Webgross. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Accountant at Webgross
   
@@ -59,6 +69,8 @@ caption_telegram: |
   Experience: 6 Months – 1 yrs
   Salary: ₹1,20,000–1,80,000/yr
   Apply by: 24 Dec
+  
+  Soliyog's read: This role requires 6 to 12 months of experience, so it is not for complete freshers. Pay is modest at ₹1.2L–1.8L per year for a six-day workweek schedule.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1688
