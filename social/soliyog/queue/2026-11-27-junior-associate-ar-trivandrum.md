@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-27-junior-associate-ar-trivandrum
 date: 2026-11-27
-status: ready
+status: approved
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1716
@@ -18,15 +18,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 25 Dec
   
+  Soliyog's read: This junior role focuses on routine phone follow-ups with insurers over claim denials and underpayments. Expect heavy daily calling, accurate documentation, and up to 50% travel.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorassociateartrivand #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   Junior Associate AR- Trivandrum at Guidehouse
   
   Type: Full-time
   Apply by: 25 Dec
+  
+  Soliyog's read: This junior role focuses on routine phone follow-ups with insurers over claim denials and underpayments. Expect heavy daily calling, accurate documentation, and up to 50% travel.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with Guidehouse. Check their careers page before applying.
@@ -38,16 +44,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 25 Dec
   
+  Soliyog's read: This junior role focuses on routine phone follow-ups with insurers over claim denials and underpayments. Expect heavy daily calling, accurate documentation, and up to 50% travel.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1716
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorassociateartrivand #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   Junior Associate AR- Trivandrum at Guidehouse
   
   Type: Full-time
   Apply by: 25 Dec
+  
+  Soliyog's read: This junior role focuses on routine phone follow-ups with insurers over claim denials and underpayments. Expect heavy daily calling, accurate documentation, and up to 50% travel.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1716
