@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-26-junior-accountant
 date: 2026-11-26
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1688
@@ -77,9 +77,9 @@ caption_telegram: |
   Not affiliated with Webgross. Check their careers page before applying.
   
   #junioraccountant #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@d186bda889a262b8a0c81323328a2018145bde86/social/soliyog/queue/assets/2026-11-26-2026-11-26-junior-accountant.jpg
+posted_at: 2026-11-26T03:31:26.277Z
+post_ids: {"facebook":"1289252704274108_122138102049464634","instagram":"18107017610647668","linkedin":"6b07a801d4eda4b659d417be","telegram":"146"}
 ---
 
 # Junior Accountant — Webgross
