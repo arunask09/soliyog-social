@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-28-kbs-junior-process-associate-contracts-administration
 date: 2026-11-28
-status: ready
+status: approved
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1732
@@ -17,15 +17,21 @@ caption_instagram: |
   Type: Full-time
   Apply by: 26 Dec
   
+  Soliyog's read: This listing offers very few specifics about daily tools or requirements beyond contract administration. The main challenge is applying with limited visibility into the exact process workflows KONE expects.
+  
   Full listing and how to apply — link in bio.
   Not affiliated with KONE. Check their careers page before applying.
   
   #kbsjuniorprocessassociat #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts — link in bio.
 caption_facebook: |
   KBS Junior Process Associate – Contracts Administration at KONE
   
   Type: Full-time
   Apply by: 26 Dec
+  
+  Soliyog's read: This listing offers very few specifics about daily tools or requirements beyond contract administration. The main challenge is applying with limited visibility into the exact process workflows KONE expects.
   
   Full listing and how to apply — link in the comments.
   Not affiliated with KONE. Check their careers page before applying.
@@ -37,16 +43,22 @@ caption_linkedin: |
   Type: Full-time
   Apply by: 26 Dec
   
+  Soliyog's read: This listing offers very few specifics about daily tools or requirements beyond contract administration. The main challenge is applying with limited visibility into the exact process workflows KONE expects.
+  
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1732
   Not affiliated with KONE. Check their careers page before applying.
   
   #kbsjuniorprocessassociat #fresherjobs
+  
+  Join our Telegram for daily fresher job alerts: https://t.me/soliyogjobupdates
 caption_telegram: |
   KBS Junior Process Associate – Contracts Administration at KONE
   
   Type: Full-time
   Apply by: 26 Dec
+  
+  Soliyog's read: This listing offers very few specifics about daily tools or requirements beyond contract administration. The main challenge is applying with limited visibility into the exact process workflows KONE expects.
   
   Full listing and how to apply:
   https://www.soliyog.com/jobs/1732
