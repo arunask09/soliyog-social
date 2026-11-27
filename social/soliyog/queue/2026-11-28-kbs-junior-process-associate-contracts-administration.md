@@ -1,17 +1,16 @@
 ---
 slug: 2026-11-28-kbs-junior-process-associate-contracts-administration
 date: 2026-11-28
-status: draft
+status: ready
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1732
 role_tests: |
-  # "What this role tests" — 3-4 bullets, read from THIS listing only (interview mode,
-  # stated requirements, what the work actually is). No generic role-family stereotypes.
-  # Leave unfilled to omit the block from the poster.
+  - Contracts administration tasks at KONE
+  - Process associate work within KONE Business Services
+  - Full-time operational support for a global building services company
 soliyog_read: |
-  # "Why this one's worth a look" — 1-2 calm sentences grounded in what the listing says.
-  # Leave unfilled to omit it from the poster and captions.
+  This listing offers very few specifics about daily tools or requirements beyond contract administration. The main challenge is applying with limited visibility into the exact process workflows KONE expects.
 caption_instagram: |
   KBS Junior Process Associate – Contracts Administration at KONE
   
