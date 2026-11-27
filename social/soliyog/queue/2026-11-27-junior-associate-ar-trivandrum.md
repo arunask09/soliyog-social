@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-27-junior-associate-ar-trivandrum
 date: 2026-11-27
-status: approved
+status: posted
 theme: light
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1716
@@ -66,9 +66,9 @@ caption_telegram: |
   Not affiliated with Guidehouse. Check their careers page before applying.
   
   #juniorassociateartrivand #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@16b885a2702a57f0ef990d3b74e4dbfefad896a6/social/soliyog/queue/assets/2026-11-27-2026-11-27-junior-associate-ar-trivandrum.jpg
+posted_at: 2026-11-27T03:31:24.193Z
+post_ids: {"facebook":"1289252704274108_122138371713464634","instagram":"17966344650249595","linkedin":"6b08f9801fd46e62e70be162","telegram":"148"}
 ---
 
 # Junior Associate AR- Trivandrum — Guidehouse
