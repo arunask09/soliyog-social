@@ -1,7 +1,7 @@
 ---
 slug: 2026-11-28-kbs-junior-process-associate-contracts-administration
 date: 2026-11-28
-status: approved
+status: posted
 theme: dark
 platforms: [instagram, facebook, linkedin, telegram]
 source_url: https://www.soliyog.com/jobs/1732
@@ -65,9 +65,9 @@ caption_telegram: |
   Not affiliated with KONE. Check their careers page before applying.
   
   #kbsjuniorprocessassociat #fresherjobs
-image_url:
-posted_at:
-post_ids:
+image_url: https://cdn.jsdelivr.net/gh/arunask09/soliyog-social@9ef1a1b4c1310162cef3702a6c678cf88a946523/social/soliyog/queue/assets/2026-11-28-2026-11-28-kbs-junior-process-associate-contracts-administration.jpg
+posted_at: 2026-11-28T03:31:31.469Z
+post_ids: {"facebook":"1289252704274108_122138586261464634","instagram":"18170858035524962","linkedin":"6b0a4b07eab081a3f51d2f1a","telegram":"150"}
 ---
 
 # KBS Junior Process Associate – Contracts Administration — KONE
